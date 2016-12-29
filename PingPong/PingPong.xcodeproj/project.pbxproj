@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		954D3B191E1497680064374F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D3B181E1497680064374F /* AppDelegate.swift */; };
+		954D3B1B1E1497680064374F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B1A1E1497680064374F /* GameScene.sks */; };
+		954D3B1D1E1497680064374F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B1C1E1497680064374F /* Actions.sks */; };
+		954D3B1F1E1497680064374F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D3B1E1E1497680064374F /* GameScene.swift */; };
+		954D3B211E1497680064374F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D3B201E1497680064374F /* GameViewController.swift */; };
+		954D3B241E1497680064374F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B221E1497680064374F /* Main.storyboard */; };
+		954D3B261E1497680064374F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B251E1497680064374F /* Assets.xcassets */; };
+		954D3B291E1497680064374F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B271E1497680064374F /* LaunchScreen.storyboard */; };
+		954D3B371E1497AA0064374F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D3B361E1497AA0064374F /* AppDelegate.swift */; };
+		954D3B391E1497AA0064374F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B381E1497AA0064374F /* GameScene.sks */; };
+		954D3B3B1E1497AA0064374F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B3A1E1497AA0064374F /* Actions.sks */; };
+		954D3B3D1E1497AA0064374F /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B3C1E1497AA0064374F /* Game.xcassets */; };
+		954D3B3F1E1497AA0064374F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D3B3E1E1497AA0064374F /* GameScene.swift */; };
+		954D3B411E1497AA0064374F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D3B401E1497AA0064374F /* GameViewController.swift */; };
+		954D3B441E1497AA0064374F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B421E1497AA0064374F /* Main.storyboard */; };
+		954D3B461E1497AA0064374F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B451E1497AA0064374F /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		954D3B151E1497680064374F /* PingPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		954D3B181E1497680064374F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		954D3B1A1E1497680064374F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		954D3B1C1E1497680064374F /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		954D3B1E1E1497680064374F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		954D3B201E1497680064374F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		954D3B231E1497680064374F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		954D3B251E1497680064374F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		954D3B281E1497680064374F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		954D3B2A1E1497680064374F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		954D3B341E1497A90064374F /* PingPongtvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingPongtvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		954D3B361E1497AA0064374F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		954D3B381E1497AA0064374F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		954D3B3A1E1497AA0064374F /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		954D3B3C1E1497AA0064374F /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Game.xcassets; sourceTree = "<group>"; };
+		954D3B3E1E1497AA0064374F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		954D3B401E1497AA0064374F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		954D3B431E1497AA0064374F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		954D3B451E1497AA0064374F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		954D3B471E1497AA0064374F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		954D3B121E1497680064374F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		954D3B311E1497A90064374F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		954D3B0C1E1497680064374F = {
+			isa = PBXGroup;
+			children = (
+				954D3B171E1497680064374F /* PingPong */,
+				954D3B351E1497AA0064374F /* PingPongtvOS */,
+				954D3B161E1497680064374F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		954D3B161E1497680064374F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				954D3B151E1497680064374F /* PingPong.app */,
+				954D3B341E1497A90064374F /* PingPongtvOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		954D3B171E1497680064374F /* PingPong */ = {
+			isa = PBXGroup;
+			children = (
+				954D3B181E1497680064374F /* AppDelegate.swift */,
+				954D3B1A1E1497680064374F /* GameScene.sks */,
+				954D3B1C1E1497680064374F /* Actions.sks */,
+				954D3B1E1E1497680064374F /* GameScene.swift */,
+				954D3B201E1497680064374F /* GameViewController.swift */,
+				954D3B221E1497680064374F /* Main.storyboard */,
+				954D3B251E1497680064374F /* Assets.xcassets */,
+				954D3B271E1497680064374F /* LaunchScreen.storyboard */,
+				954D3B2A1E1497680064374F /* Info.plist */,
+			);
+			path = PingPong;
+			sourceTree = "<group>";
+		};
+		954D3B351E1497AA0064374F /* PingPongtvOS */ = {
+			isa = PBXGroup;
+			children = (
+				954D3B361E1497AA0064374F /* AppDelegate.swift */,
+				954D3B381E1497AA0064374F /* GameScene.sks */,
+				954D3B3A1E1497AA0064374F /* Actions.sks */,
+				954D3B3C1E1497AA0064374F /* Game.xcassets */,
+				954D3B3E1E1497AA0064374F /* GameScene.swift */,
+				954D3B401E1497AA0064374F /* GameViewController.swift */,
+				954D3B421E1497AA0064374F /* Main.storyboard */,
+				954D3B451E1497AA0064374F /* Assets.xcassets */,
+				954D3B471E1497AA0064374F /* Info.plist */,
+			);
+			path = PingPongtvOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		954D3B141E1497680064374F /* PingPong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 954D3B2D1E1497680064374F /* Build configuration list for PBXNativeTarget "PingPong" */;
+			buildPhases = (
+				954D3B111E1497680064374F /* Sources */,
+				954D3B121E1497680064374F /* Frameworks */,
+				954D3B131E1497680064374F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PingPong;
+			productName = PingPong;
+			productReference = 954D3B151E1497680064374F /* PingPong.app */;
+			productType = "com.apple.product-type.application";
+		};
+		954D3B331E1497A90064374F /* PingPongtvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 954D3B481E1497AA0064374F /* Build configuration list for PBXNativeTarget "PingPongtvOS" */;
+			buildPhases = (
+				954D3B301E1497A90064374F /* Sources */,
+				954D3B311E1497A90064374F /* Frameworks */,
+				954D3B321E1497A90064374F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PingPongtvOS;
+			productName = PingPongtvOS;
+			productReference = 954D3B341E1497A90064374F /* PingPongtvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		954D3B0D1E1497680064374F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Back St Eltons";
+				TargetAttributes = {
+					954D3B141E1497680064374F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8Q3X4RF687;
+						ProvisioningStyle = Automatic;
+					};
+					954D3B331E1497A90064374F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8Q3X4RF687;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 954D3B101E1497680064374F /* Build configuration list for PBXProject "PingPong" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 954D3B0C1E1497680064374F;
+			productRefGroup = 954D3B161E1497680064374F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				954D3B141E1497680064374F /* PingPong */,
+				954D3B331E1497A90064374F /* PingPongtvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		954D3B131E1497680064374F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954D3B241E1497680064374F /* Main.storyboard in Resources */,
+				954D3B1B1E1497680064374F /* GameScene.sks in Resources */,
+				954D3B261E1497680064374F /* Assets.xcassets in Resources */,
+				954D3B291E1497680064374F /* LaunchScreen.storyboard in Resources */,
+				954D3B1D1E1497680064374F /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		954D3B321E1497A90064374F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954D3B391E1497AA0064374F /* GameScene.sks in Resources */,
+				954D3B3B1E1497AA0064374F /* Actions.sks in Resources */,
+				954D3B3D1E1497AA0064374F /* Game.xcassets in Resources */,
+				954D3B441E1497AA0064374F /* Main.storyboard in Resources */,
+				954D3B461E1497AA0064374F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		954D3B111E1497680064374F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954D3B1F1E1497680064374F /* GameScene.swift in Sources */,
+				954D3B211E1497680064374F /* GameViewController.swift in Sources */,
+				954D3B191E1497680064374F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		954D3B301E1497A90064374F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954D3B3F1E1497AA0064374F /* GameScene.swift in Sources */,
+				954D3B411E1497AA0064374F /* GameViewController.swift in Sources */,
+				954D3B371E1497AA0064374F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		954D3B221E1497680064374F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				954D3B231E1497680064374F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		954D3B271E1497680064374F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				954D3B281E1497680064374F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		954D3B421E1497AA0064374F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				954D3B431E1497AA0064374F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		954D3B2B1E1497680064374F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		954D3B2C1E1497680064374F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		954D3B2E1E1497680064374F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8Q3X4RF687;
+				INFOPLIST_FILE = PingPong/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.memo.PingPong;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		954D3B2F1E1497680064374F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8Q3X4RF687;
+				INFOPLIST_FILE = PingPong/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.memo.PingPong;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		954D3B491E1497AA0064374F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 8Q3X4RF687;
+				INFOPLIST_FILE = PingPongtvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.memo.PingPongtvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Debug;
+		};
+		954D3B4A1E1497AA0064374F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 8Q3X4RF687;
+				INFOPLIST_FILE = PingPongtvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.memo.PingPongtvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		954D3B101E1497680064374F /* Build configuration list for PBXProject "PingPong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				954D3B2B1E1497680064374F /* Debug */,
+				954D3B2C1E1497680064374F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		954D3B2D1E1497680064374F /* Build configuration list for PBXNativeTarget "PingPong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				954D3B2E1E1497680064374F /* Debug */,
+				954D3B2F1E1497680064374F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		954D3B481E1497AA0064374F /* Build configuration list for PBXNativeTarget "PingPongtvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				954D3B491E1497AA0064374F /* Debug */,
+				954D3B4A1E1497AA0064374F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 954D3B0D1E1497680064374F /* Project object */;
+}
