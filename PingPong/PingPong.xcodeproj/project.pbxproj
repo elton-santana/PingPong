@@ -7,14 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9526E8BA1E1D5F5900F0D9BA /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9526E8B91E1D5F5900F0D9BA /* HomeView.xib */; };
-		9526E8BD1E1D600C00F0D9BA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9526E8BC1E1D600C00F0D9BA /* HomeView.swift */; };
-		9526E8C01E1D625800F0D9BA /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9526E8BF1E1D625800F0D9BA /* NavigationViewController.swift */; };
-		9526E8C31E1D63D700F0D9BA /* ScreensAnimationScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9526E8C21E1D63D700F0D9BA /* ScreensAnimationScene.sks */; };
-		9526E8C51E1D647800F0D9BA /* ScreensAnimationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9526E8C41E1D647800F0D9BA /* ScreensAnimationScene.swift */; };
-		9526E8C91E1D672F00F0D9BA /* WaitingConnectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9526E8C81E1D672F00F0D9BA /* WaitingConnectionView.xib */; };
-		9526E8CB1E1D679B00F0D9BA /* WaitingConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9526E8CA1E1D679B00F0D9BA /* WaitingConnectionView.swift */; };
-		9526E8CD1E1D7A9200F0D9BA /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9526E8CC1E1D7A9200F0D9BA /* Screen.swift */; };
+		952A14E11E1EF0D90088BA44 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A14E01E1EF0D90088BA44 /* HomeViewController.swift */; };
+		952A14E31E1EF13B0088BA44 /* WaitingPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A14E21E1EF13B0088BA44 /* WaitingPlayerViewController.swift */; };
+		952A14E71E1EF17B0088BA44 /* PrepareToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A14E61E1EF17B0088BA44 /* PrepareToPlayViewController.swift */; };
+		952A14E91E1EF1B60088BA44 /* ChooseConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A14E81E1EF1B60088BA44 /* ChooseConnectionViewController.swift */; };
 		954D3B191E1497680064374F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D3B181E1497680064374F /* AppDelegate.swift */; };
 		954D3B1B1E1497680064374F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B1A1E1497680064374F /* GameScene.sks */; };
 		954D3B1D1E1497680064374F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B1C1E1497680064374F /* Actions.sks */; };
@@ -34,14 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9526E8B91E1D5F5900F0D9BA /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeView.xib; path = Screens/HomeView.xib; sourceTree = "<group>"; };
-		9526E8BC1E1D600C00F0D9BA /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = Screens/HomeView.swift; sourceTree = "<group>"; };
-		9526E8BF1E1D625800F0D9BA /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationViewController.swift; path = VIewControllers/NavigationViewController.swift; sourceTree = "<group>"; };
-		9526E8C21E1D63D700F0D9BA /* ScreensAnimationScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = ScreensAnimationScene.sks; path = Screens/ScreensAnimationScene.sks; sourceTree = "<group>"; };
-		9526E8C41E1D647800F0D9BA /* ScreensAnimationScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreensAnimationScene.swift; path = Screens/ScreensAnimationScene.swift; sourceTree = "<group>"; };
-		9526E8C81E1D672F00F0D9BA /* WaitingConnectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WaitingConnectionView.xib; path = Screens/WaitingConnectionView.xib; sourceTree = "<group>"; };
-		9526E8CA1E1D679B00F0D9BA /* WaitingConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaitingConnectionView.swift; path = Screens/WaitingConnectionView.swift; sourceTree = "<group>"; };
-		9526E8CC1E1D7A9200F0D9BA /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Screen.swift; path = Screens/Screen.swift; sourceTree = "<group>"; };
+		952A14E01E1EF0D90088BA44 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = VIewControllers/HomeViewController.swift; sourceTree = "<group>"; };
+		952A14E21E1EF13B0088BA44 /* WaitingPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaitingPlayerViewController.swift; path = VIewControllers/WaitingPlayerViewController.swift; sourceTree = "<group>"; };
+		952A14E61E1EF17B0088BA44 /* PrepareToPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrepareToPlayViewController.swift; path = VIewControllers/PrepareToPlayViewController.swift; sourceTree = "<group>"; };
+		952A14E81E1EF1B60088BA44 /* ChooseConnectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChooseConnectionViewController.swift; path = VIewControllers/ChooseConnectionViewController.swift; sourceTree = "<group>"; };
 		954D3B151E1497680064374F /* PingPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		954D3B181E1497680064374F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		954D3B1A1E1497680064374F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -92,25 +84,14 @@
 			name = Game;
 			sourceTree = "<group>";
 		};
-		9526E8BE1E1D601500F0D9BA /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				9526E8CC1E1D7A9200F0D9BA /* Screen.swift */,
-				9526E8BC1E1D600C00F0D9BA /* HomeView.swift */,
-				9526E8B91E1D5F5900F0D9BA /* HomeView.xib */,
-				9526E8CA1E1D679B00F0D9BA /* WaitingConnectionView.swift */,
-				9526E8C81E1D672F00F0D9BA /* WaitingConnectionView.xib */,
-				9526E8C41E1D647800F0D9BA /* ScreensAnimationScene.swift */,
-				9526E8C21E1D63D700F0D9BA /* ScreensAnimationScene.sks */,
-			);
-			name = Screens;
-			sourceTree = "<group>";
-		};
 		9526E8C11E1D626600F0D9BA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				952A14E01E1EF0D90088BA44 /* HomeViewController.swift */,
+				952A14E21E1EF13B0088BA44 /* WaitingPlayerViewController.swift */,
+				952A14E81E1EF1B60088BA44 /* ChooseConnectionViewController.swift */,
+				952A14E61E1EF17B0088BA44 /* PrepareToPlayViewController.swift */,
 				954D3B201E1497680064374F /* GameViewController.swift */,
-				9526E8BF1E1D625800F0D9BA /* NavigationViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -138,7 +119,6 @@
 			children = (
 				954D3B181E1497680064374F /* AppDelegate.swift */,
 				9526E8BB1E1D5F6B00F0D9BA /* Game */,
-				9526E8BE1E1D601500F0D9BA /* Screens */,
 				9526E8C11E1D626600F0D9BA /* ViewControllers */,
 				954D3B251E1497680064374F /* Assets.xcassets */,
 				954D3B221E1497680064374F /* Main.storyboard */,
@@ -247,14 +227,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9526E8C91E1D672F00F0D9BA /* WaitingConnectionView.xib in Resources */,
 				954D3B241E1497680064374F /* Main.storyboard in Resources */,
 				954D3B1B1E1497680064374F /* GameScene.sks in Resources */,
 				954D3B261E1497680064374F /* Assets.xcassets in Resources */,
 				954D3B291E1497680064374F /* LaunchScreen.storyboard in Resources */,
-				9526E8C31E1D63D700F0D9BA /* ScreensAnimationScene.sks in Resources */,
 				954D3B1D1E1497680064374F /* Actions.sks in Resources */,
-				9526E8BA1E1D5F5900F0D9BA /* HomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,13 +255,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				954D3B1F1E1497680064374F /* GameScene.swift in Sources */,
-				9526E8CB1E1D679B00F0D9BA /* WaitingConnectionView.swift in Sources */,
-				9526E8C51E1D647800F0D9BA /* ScreensAnimationScene.swift in Sources */,
-				9526E8BD1E1D600C00F0D9BA /* HomeView.swift in Sources */,
 				954D3B211E1497680064374F /* GameViewController.swift in Sources */,
-				9526E8C01E1D625800F0D9BA /* NavigationViewController.swift in Sources */,
 				954D3B191E1497680064374F /* AppDelegate.swift in Sources */,
-				9526E8CD1E1D7A9200F0D9BA /* Screen.swift in Sources */,
+				952A14E11E1EF0D90088BA44 /* HomeViewController.swift in Sources */,
+				952A14E31E1EF13B0088BA44 /* WaitingPlayerViewController.swift in Sources */,
+				952A14E91E1EF1B60088BA44 /* ChooseConnectionViewController.swift in Sources */,
+				952A14E71E1EF17B0088BA44 /* PrepareToPlayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
