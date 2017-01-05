@@ -22,6 +22,29 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func PlayButtonAction(_ sender: UIButton) {
+        self.showConnectionPopUp()
+    }
+    
+    func showConnectionPopUp(){
+        
+        let popUp = UIAlertController(title: "Choose how start to play", message: "", preferredStyle: .alert)
+        
+        let startMatchAction = UIAlertAction(title: "Open a new match", style: .default, handler: self.goToWaitingPlayer)
+        popUp.addAction(startMatchAction)
+        
+        let joinAnExistingMatchAction = UIAlertAction(title: "Join an existing match", style: .default, handler: self.goToChooseConnection)
+        popUp.addAction(joinAnExistingMatchAction)
+        
+        self.present(popUp, animated: true, completion: nil)
+        
+    }
+    
+    func goToWaitingPlayer(alert: UIAlertAction!){
+        self.performSegue(withIdentifier: "HomeToWaitingPlayerSegue", sender: self)
+    }
+    
+    func goToChooseConnection(alert: UIAlertAction!){
+        self.performSegue(withIdentifier: "HomeToChooseConnectionSegue", sender: self)
     }
 
     /*
