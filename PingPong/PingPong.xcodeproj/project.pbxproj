@@ -27,6 +27,7 @@
 		954D3B411E1497AA0064374F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D3B401E1497AA0064374F /* GameViewController.swift */; };
 		954D3B441E1497AA0064374F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B421E1497AA0064374F /* Main.storyboard */; };
 		954D3B461E1497AA0064374F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B451E1497AA0064374F /* Assets.xcassets */; };
+		95F468281E1FCD8200D01E3B /* Tibei in Resources */ = {isa = PBXBuildFile; fileRef = 95F468271E1FCD8200D01E3B /* Tibei */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		954D3B431E1497AA0064374F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		954D3B451E1497AA0064374F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		954D3B471E1497AA0064374F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95F468271E1FCD8200D01E3B /* Tibei */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tibei; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		954D3B0C1E1497680064374F = {
 			isa = PBXGroup;
 			children = (
+				95F468271E1FCD8200D01E3B /* Tibei */,
 				954D3B171E1497680064374F /* PingPong */,
 				954D3B351E1497AA0064374F /* PingPongtvOS */,
 				954D3B161E1497680064374F /* Products */,
@@ -227,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95F468281E1FCD8200D01E3B /* Tibei in Resources */,
 				954D3B241E1497680064374F /* Main.storyboard in Resources */,
 				954D3B1B1E1497680064374F /* GameScene.sks in Resources */,
 				954D3B261E1497680064374F /* Assets.xcassets in Resources */,
