@@ -15,21 +15,18 @@ class ChooseConnectionViewController: UIViewController, UITableViewDataSource, U
     
     @IBOutlet weak var servicesTableView: UITableView!
     
-    var availableServices: [String] = ["Elton", "Oscar"]
+    var availableServices: [String] = ["Browsing Available Matchs"]
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
         self.servicesTableView.dataSource = self
         self.servicesTableView.delegate = self
 
         Facade.shared.browseForServices()
         Facade.shared.registerClientResponder(self)
-
         
     }
 
@@ -57,6 +54,28 @@ class ChooseConnectionViewController: UIViewController, UITableViewDataSource, U
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        self.confirmConnect(with: self.availableServices[row])
+        
+    }
+    
+    func confirmConnect(with player: String){
+        
+        let popUp = UIAlertController(title: "Play with \(player)?", message: "", preferredStyle: .alert)
+        
+        let dontConnectAction = UIAlertAction(title: "No", style: .destructive, handler: nil)
+        popUp.addAction(dontConnectAction)
+        
+        let connectAction = UIAlertAction(title: "Yes", style: .default) { (startMatchAction) in
+            Facade.shared.connect(serviceName: player)
+            self.performSegue(withIdentifier: "ChooseConnectionToPrepareToPlaySegue", sender: self)
+        }
+        popUp.addAction(connectAction)
+        
+        self.present(popUp, animated: true, completion: nil)
+        
+    }
     
     
     /*

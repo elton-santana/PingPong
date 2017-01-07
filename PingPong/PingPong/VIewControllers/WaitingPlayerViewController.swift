@@ -31,9 +31,8 @@ extension WaitingPlayerViewController: ConnectionResponder {
         
         switch message {
         case let textMessage as TextMessage:
-            let labelContent = NSMutableAttributedString(string: "\(textMessage.sender): \(textMessage.content)")
-            
-            labelContent.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.styleDouble.rawValue, range: NSMakeRange(0, textMessage.sender.characters.count + 1))
+                print(textMessage.sender)
+                print(textMessage.content)
        
             
         case let pingMessage as PingMessage:
@@ -45,14 +44,11 @@ extension WaitingPlayerViewController: ConnectionResponder {
     }
     
     func acceptedConnection(withID connectionID: ConnectionID) {
-        let rawContent: String = "New connection with id #\(connectionID.hashValue)"
-        let labelContent = NSMutableAttributedString(string: rawContent)
-        
-        labelContent.addAttribute(NSForegroundColorAttributeName, value: UIColor.purple, range: NSMakeRange(0, rawContent.characters.count))
-        
+       
         DispatchQueue.main.async {
-//            self.incomingMessageLabel.attributedText = labelContent
+                self.performSegue(withIdentifier: "WaitingPlayerToPrepareToPlaySegue", sender: self)
         }
+        
     }
     
     func lostConnection(withID connectionID: ConnectionID) {

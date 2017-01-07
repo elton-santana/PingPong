@@ -57,7 +57,7 @@
                     </view>
                     <connections>
                         <outlet property="servicesTableView" destination="SJu-Vg-srM" id="Wqc-a2-JhF"/>
-                        <segue destination="Ggs-1J-7po" kind="show" id="5Hv-rX-4Eh"/>
+                        <segue destination="Ggs-1J-7po" kind="show" identifier="ChooseConnectionToPrepareToPlaySegue" id="5Hv-rX-4Eh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="du3-8C-Uua" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,7 +91,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="Ggs-1J-7po" kind="show" id="A87-6k-kbB"/>
+                        <segue destination="Ggs-1J-7po" kind="show" identifier="WaitingPlayerToPrepareToPlaySegue" id="A87-6k-kbB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M09-TO-r2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
