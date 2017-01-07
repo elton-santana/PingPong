@@ -10,15 +10,26 @@ import UIKit
 import Tibei
 
 
-class ChooseConnectionViewController: UIViewController {
+class ChooseConnectionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+ {
+    
+    @IBOutlet weak var servicesTableView: UITableView!
+    
+    var availableServices: [String] = ["Elton", "Oscar"]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-        Facade.shared.registerClientResponder(self)
+        self.servicesTableView.dataSource = self
+        self.servicesTableView.delegate = self
+
         Facade.shared.browseForServices()
+        Facade.shared.registerClientResponder(self)
+
         
     }
 
@@ -27,7 +38,27 @@ class ChooseConnectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    //MARK: TableView methods
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.availableServices.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = servicesTableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath)
+        
+        let row = indexPath.row
+        cell.textLabel?.text = self.availableServices[row]
+        
+        return cell
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -44,11 +75,9 @@ class ChooseConnectionViewController: UIViewController {
 extension ChooseConnectionViewController: ClientConnectionResponder {
     func availableServicesChanged(availableServiceIDs: [String]) {
         
-        do {
-//            try self.client.connect(serviceName: availableServiceIDs.first!)
-        } catch {
-            print("An error occurred while trying to connect")
-            print(error)
+        self.availableServices = availableServiceIDs
+        DispatchQueue.main.async {
+            self.servicesTableView.reloadData()
         }
     }
     

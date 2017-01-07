@@ -11,6 +11,7 @@ import Tibei
 
 class WaitingPlayerViewController: UIViewController {
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,17 +34,10 @@ extension WaitingPlayerViewController: ConnectionResponder {
             let labelContent = NSMutableAttributedString(string: "\(textMessage.sender): \(textMessage.content)")
             
             labelContent.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.styleDouble.rawValue, range: NSMakeRange(0, textMessage.sender.characters.count + 1))
-            
-            DispatchQueue.main.async {
-//                self.incomingMessageLabel.attributedText = labelContent
-            }
+       
             
         case let pingMessage as PingMessage:
-//            let labelContent = NSMutableAttributedString(string: "PING FROM \(pingMessage.sender)!!")
-            
-            DispatchQueue.main.async {
-//                self.incomingMessageLabel.attributedText = labelContent
-            }
+                print(pingMessage.sender)
             
         default:
             break

@@ -16,16 +16,27 @@ class Facade: NSObject{
         
     }
     
-    let serviceIdentifier = "PingPong"
+    let serviceIdentifier = "_pingPong"
     var server: ServerMessenger?
     let client = ClientMessenger()
     
     func browseForServices(){
-        self.client.browseForServices(withIdentifier: "PingPong")
+        self.client.browseForServices(withIdentifier: self.serviceIdentifier)
     }
     
     func registerClientResponder(_ responder: ConnectionResponder){
         self.client.registerResponder(responder)
+    }
+    
+    func connect(serviceName: String){
+        do {
+            try self.client.connect(serviceName: serviceName)
+        } catch {
+            print("An error occurred while trying to connect")
+            print(error)
+
+    }
+    
     }
     
     func publishServer(){
