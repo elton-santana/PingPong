@@ -54,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		129DE94272BA9D0F1B90C7E6D16C9A8A /* JSONConvertibleMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONConvertibleMessage.swift; path = Tibei/Classes/message/JSONConvertibleMessage.swift; sourceTree = "<group>"; };
-		135ED8268E5E61015F084C4BEDC21BEC /* Tibei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Tibei.framework; path = Tibei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		135ED8268E5E61015F084C4BEDC21BEC /* Tibei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tibei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		149C1BB492424584E3EE020B4534FA28 /* Tibei-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tibei-umbrella.h"; sourceTree = "<group>"; };
 		14EC821746D145D3757F307F58075ED7 /* Pods-PingPong-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PingPong-resources.sh"; sourceTree = "<group>"; };
 		17D486730EED0CCA758C02294CD5F07C /* GameControllerServiceBrowserDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GameControllerServiceBrowserDelegate.swift; path = Tibei/Classes/client/GameControllerServiceBrowserDelegate.swift; sourceTree = "<group>"; };
@@ -66,19 +66,19 @@
 		31FE486C75568D79A668AE5BCE4DDD81 /* ConnectionAcceptedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionAcceptedEvent.swift; path = Tibei/Classes/common/responderChain/events/ConnectionAcceptedEvent.swift; sourceTree = "<group>"; };
 		333B26757801CF72C78F729E1FDEE0FF /* Pods-PingPong-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PingPong-dummy.m"; sourceTree = "<group>"; };
 		35C9B109D63BC9947C98A1D2E5DD94C3 /* Pods-PingPong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PingPong.debug.xcconfig"; sourceTree = "<group>"; };
-		36CC9AFCF3B6A2B2CF86612D6068A2B8 /* Pods_PingPongtvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PingPongtvOS.framework; path = "Pods-PingPongtvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36CC9AFCF3B6A2B2CF86612D6068A2B8 /* Pods_PingPongtvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PingPongtvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A931311458697CA2177A4BDCCEEBC20 /* Pods-PingPongtvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PingPongtvOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		3B31D9FFE44AFCA9F0DCF644B8D48A1F /* Pods-PingPong-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PingPong-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3DC6B653AB0EF1CC58184CF269379E16 /* Tibei-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Tibei-dummy.m"; sourceTree = "<group>"; };
 		3F1326CFAB3E4ED9F0B78FECB7030BA8 /* ConnectionResponder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionResponder.swift; path = Tibei/Classes/common/responderChain/ConnectionResponder.swift; sourceTree = "<group>"; };
 		46D1D53479E9DA30C65DE314F44676F5 /* Pods-PingPong-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PingPong-umbrella.h"; sourceTree = "<group>"; };
 		48F7123F558A3C774957F9E8B7E14BC3 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Tibei/Classes/common/Constants.swift; sourceTree = "<group>"; };
-		4CB8B1825DCED3A6D11CFCB3CEB4CB33 /* Pods_PingPong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PingPong.framework; path = "Pods-PingPong.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CB8B1825DCED3A6D11CFCB3CEB4CB33 /* Pods_PingPong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PingPong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57448F8AD39DD1AEB27B5CA3A99350B6 /* Pods-PingPong-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PingPong-acknowledgements.plist"; sourceTree = "<group>"; };
 		5C0F801F4CB46C31521589E8FCF7E3DA /* Pods-PingPongtvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PingPongtvOS.release.xcconfig"; sourceTree = "<group>"; };
 		5D86F25B0FCF8CB4C5201541D7560C35 /* ConnectionLostEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionLostEvent.swift; path = Tibei/Classes/common/responderChain/events/ConnectionLostEvent.swift; sourceTree = "<group>"; };
 		64A26FEE57526A148A05B21D92BA72B0 /* ClientResponderChainNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientResponderChainNode.swift; path = Tibei/Classes/client/responderChain/ClientResponderChainNode.swift; sourceTree = "<group>"; };
-		65C9113525A4E27A7243448B681AA653 /* Pods-PingPong.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PingPong.modulemap"; sourceTree = "<group>"; };
+		65C9113525A4E27A7243448B681AA653 /* Pods-PingPong.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PingPong.modulemap"; sourceTree = "<group>"; };
 		75E9A024D255301E969C33F2E576FAF4 /* ClientMessenger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientMessenger.swift; path = Tibei/Classes/client/ClientMessenger.swift; sourceTree = "<group>"; };
 		7893A038D867FF84341686F1BC4B4376 /* Tibei.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tibei.xcconfig; sourceTree = "<group>"; };
 		79FD4941E55449895BDC398F68127BA2 /* IncomingMessageData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IncomingMessageData.swift; path = Tibei/Classes/message/IncomingMessageData.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		844F5EA96E94AE15C593E2E6E63A2029 /* ResponderChain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponderChain.swift; path = Tibei/Classes/common/responderChain/ResponderChain.swift; sourceTree = "<group>"; };
 		8DD42B0D21E3BF60D9CB68A4FC008DCF /* IncomingMessageEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IncomingMessageEvent.swift; path = Tibei/Classes/common/responderChain/events/IncomingMessageEvent.swift; sourceTree = "<group>"; };
 		912654E9E7D05D0E34660868A819C647 /* Messenger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Messenger.swift; path = Tibei/Classes/common/Messenger.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96A0BC9412694635877DB402AD8034F1 /* Pods-PingPongtvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PingPongtvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A177CE76B18A9932EAB93C933900CC44 /* Pods-PingPongtvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PingPongtvOS-dummy.m"; sourceTree = "<group>"; };
@@ -102,13 +102,13 @@
 		DA9AD9A41E54FECE75FFCB1C4F0A1EA3 /* ServerMessenger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerMessenger.swift; path = Tibei/Classes/server/ServerMessenger.swift; sourceTree = "<group>"; };
 		E4EA624D2E7C7E6FAA8556B2D82D974B /* KeepAliveMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeepAliveMessage.swift; path = Tibei/Classes/message/KeepAliveMessage.swift; sourceTree = "<group>"; };
 		E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		EA63CA97BDC85A7C55D95C2A25608ADA /* Pods-PingPongtvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PingPongtvOS.modulemap"; sourceTree = "<group>"; };
+		EA63CA97BDC85A7C55D95C2A25608ADA /* Pods-PingPongtvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PingPongtvOS.modulemap"; sourceTree = "<group>"; };
 		EAAA5CA675813EB906FE55A80A06FB2D /* Pods-PingPong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PingPong.release.xcconfig"; sourceTree = "<group>"; };
 		EE5F9E06B7F1E2AAEACEA16AB331E2A0 /* Pods-PingPongtvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PingPongtvOS-frameworks.sh"; sourceTree = "<group>"; };
 		EF0F6E3BA00C57066DB6016D57D6BB5A /* ConnectionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionDelegate.swift; path = Tibei/Classes/connection/ConnectionDelegate.swift; sourceTree = "<group>"; };
 		F87193E5D2C89ECAC26DD4B4FF43A8DE /* ServiceAvailabilityChangeEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceAvailabilityChangeEvent.swift; path = Tibei/Classes/client/responderChain/events/ServiceAvailabilityChangeEvent.swift; sourceTree = "<group>"; };
 		FC930860E546092EB77EA2E4028E2F93 /* GameControllerServiceBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GameControllerServiceBrowser.swift; path = Tibei/Classes/client/GameControllerServiceBrowser.swift; sourceTree = "<group>"; };
-		FCC799D81180C138D7994C932073619F /* Tibei.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Tibei.modulemap; sourceTree = "<group>"; };
+		FCC799D81180C138D7994C932073619F /* Tibei.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Tibei.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,7 +254,6 @@
 				BDA85A028D4DA75AD521C7392C570274 /* StreamExtensions.swift */,
 				25C12B258BDF7FA4E82A03F327CF9FB4 /* Support Files */,
 			);
-			name = Tibei;
 			path = Tibei;
 			sourceTree = "<group>";
 		};

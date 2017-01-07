@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import Tibei
+
 
 class ChooseConnectionViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        Facade.shared.registerClientResponder(self)
+        Facade.shared.browseForServices()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +38,22 @@ class ChooseConnectionViewController: UIViewController {
     }
     */
 
+}
+
+
+extension ChooseConnectionViewController: ClientConnectionResponder {
+    func availableServicesChanged(availableServiceIDs: [String]) {
+        
+        do {
+//            try self.client.connect(serviceName: availableServiceIDs.first!)
+        } catch {
+            print("An error occurred while trying to connect")
+            print(error)
+        }
+    }
+    
+    func acceptedConnection(withID connectionID: ConnectionID) {
+//        self.sendMessageButton.isEnabled = true
+//        self.pingButton.isEnabled = true
+    }
 }

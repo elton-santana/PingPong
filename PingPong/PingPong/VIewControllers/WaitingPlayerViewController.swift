@@ -7,29 +7,74 @@
 //
 
 import UIKit
+import Tibei
 
 class WaitingPlayerViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        Facade.shared.publishServer()
+        Facade.shared.registerServerResponder(self)
+        
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension WaitingPlayerViewController: ConnectionResponder {
+    var allowedMessages: [JSONConvertibleMessage.Type] {
+        return [TextMessage.self, PingMessage.self]
     }
-    */
+    
+    func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
+        
+        switch message {
+        case let textMessage as TextMessage:
+            let labelContent = NSMutableAttributedString(string: "\(textMessage.sender): \(textMessage.content)")
+            
+            labelContent.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.styleDouble.rawValue, range: NSMakeRange(0, textMessage.sender.characters.count + 1))
+            
+            DispatchQueue.main.async {
+//                self.incomingMessageLabel.attributedText = labelContent
+            }
+            
+        case let pingMessage as PingMessage:
+//            let labelContent = NSMutableAttributedString(string: "PING FROM \(pingMessage.sender)!!")
+            
+            DispatchQueue.main.async {
+//                self.incomingMessageLabel.attributedText = labelContent
+            }
+            
+        default:
+            break
+        }
+    }
+    
+    func acceptedConnection(withID connectionID: ConnectionID) {
+        let rawContent: String = "New connection with id #\(connectionID.hashValue)"
+        let labelContent = NSMutableAttributedString(string: rawContent)
+        
+        labelContent.addAttribute(NSForegroundColorAttributeName, value: UIColor.purple, range: NSMakeRange(0, rawContent.characters.count))
+        
+        DispatchQueue.main.async {
+//            self.incomingMessageLabel.attributedText = labelContent
+        }
+    }
+    
+    func lostConnection(withID connectionID: ConnectionID) {
+        let rawContent: String = "Lost connection with id #\(connectionID.hashValue)"
+        let labelContent = NSMutableAttributedString(string: rawContent)
+        
+        labelContent.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: NSMakeRange(0, rawContent.characters.count))
+        
+        DispatchQueue.main.async {
+//            self.incomingMessageLabel.attributedText = labelContent
+        }
+    }
+    
+    func processError(_ error: Error, fromConnectionWithID connectionID: ConnectionID?) {
+        print("Error raised from connection #\(connectionID?.hashValue):")
+        print(error)
+    }
 
 }
