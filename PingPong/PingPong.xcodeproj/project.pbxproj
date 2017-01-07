@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AB376ED0784435811293A17 /* Pods_PingPongtvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC64F4A856426A4D6B611427 /* Pods_PingPongtvOS.framework */; };
 		952A14E11E1EF0D90088BA44 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A14E01E1EF0D90088BA44 /* HomeViewController.swift */; };
 		952A14E31E1EF13B0088BA44 /* WaitingPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A14E21E1EF13B0088BA44 /* WaitingPlayerViewController.swift */; };
 		952A14E71E1EF17B0088BA44 /* PrepareToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A14E61E1EF17B0088BA44 /* PrepareToPlayViewController.swift */; };
@@ -27,10 +28,18 @@
 		954D3B411E1497AA0064374F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D3B401E1497AA0064374F /* GameViewController.swift */; };
 		954D3B441E1497AA0064374F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B421E1497AA0064374F /* Main.storyboard */; };
 		954D3B461E1497AA0064374F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B451E1497AA0064374F /* Assets.xcassets */; };
-		95F468281E1FCD8200D01E3B /* Tibei in Resources */ = {isa = PBXBuildFile; fileRef = 95F468271E1FCD8200D01E3B /* Tibei */; };
+		95F468471E20699B00D01E3B /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468461E20699B00D01E3B /* TextMessage.swift */; };
+		95F4684A1E2069AE00D01E3B /* PingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468491E2069AE00D01E3B /* PingMessage.swift */; };
+		95F4684F1E206E9E00D01E3B /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F4684E1E206E9E00D01E3B /* Facade.swift */; };
+		95F468521E20734D00D01E3B /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468511E20734D00D01E3B /* ContentType.swift */; };
+		95F468531E20734D00D01E3B /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468511E20734D00D01E3B /* ContentType.swift */; };
+		D11E788988D94A5B32E9E5DB /* Pods_PingPong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3444526D7812A99775693C /* Pods_PingPong.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F2146AB8EE0A89E20B9A5E7 /* Pods-PingPong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PingPong.release.xcconfig"; path = "Pods/Target Support Files/Pods-PingPong/Pods-PingPong.release.xcconfig"; sourceTree = "<group>"; };
+		883E56004AE7E20F9D340CE5 /* Pods-PingPong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PingPong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PingPong/Pods-PingPong.debug.xcconfig"; sourceTree = "<group>"; };
+		8BC6E62091F96F48E3976EA4 /* Pods-PingPongtvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PingPongtvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PingPongtvOS/Pods-PingPongtvOS.release.xcconfig"; sourceTree = "<group>"; };
 		952A14E01E1EF0D90088BA44 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = VIewControllers/HomeViewController.swift; sourceTree = "<group>"; };
 		952A14E21E1EF13B0088BA44 /* WaitingPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaitingPlayerViewController.swift; path = VIewControllers/WaitingPlayerViewController.swift; sourceTree = "<group>"; };
 		952A14E61E1EF17B0088BA44 /* PrepareToPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrepareToPlayViewController.swift; path = VIewControllers/PrepareToPlayViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +64,13 @@
 		954D3B431E1497AA0064374F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		954D3B451E1497AA0064374F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		954D3B471E1497AA0064374F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95F468271E1FCD8200D01E3B /* Tibei */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tibei; sourceTree = "<group>"; };
+		95F468461E20699B00D01E3B /* TextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextMessage.swift; path = Messages/TextMessage.swift; sourceTree = "<group>"; };
+		95F468491E2069AE00D01E3B /* PingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PingMessage.swift; path = Messages/PingMessage.swift; sourceTree = "<group>"; };
+		95F4684E1E206E9E00D01E3B /* Facade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
+		95F468511E20734D00D01E3B /* ContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentType.swift; path = Messages/ContentType.swift; sourceTree = "<group>"; };
+		994BCDF418EC9BC80502D64B /* Pods-PingPongtvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PingPongtvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PingPongtvOS/Pods-PingPongtvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		DB3444526D7812A99775693C /* Pods_PingPong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PingPong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC64F4A856426A4D6B611427 /* Pods_PingPongtvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PingPongtvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11E788988D94A5B32E9E5DB /* Pods_PingPong.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB376ED0784435811293A17 /* Pods_PingPongtvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5308235AB6600BF2AB1508A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				883E56004AE7E20F9D340CE5 /* Pods-PingPong.debug.xcconfig */,
+				2F2146AB8EE0A89E20B9A5E7 /* Pods-PingPong.release.xcconfig */,
+				994BCDF418EC9BC80502D64B /* Pods-PingPongtvOS.debug.xcconfig */,
+				8BC6E62091F96F48E3976EA4 /* Pods-PingPongtvOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9526E8BB1E1D5F6B00F0D9BA /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +129,12 @@
 		954D3B0C1E1497680064374F = {
 			isa = PBXGroup;
 			children = (
-				95F468271E1FCD8200D01E3B /* Tibei */,
+				95F4684D1E2069C100D01E3B /* Messages */,
 				954D3B171E1497680064374F /* PingPong */,
 				954D3B351E1497AA0064374F /* PingPongtvOS */,
 				954D3B161E1497680064374F /* Products */,
+				5308235AB6600BF2AB1508A9 /* Pods */,
+				B47F2B8D017C886D6E95356F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +157,7 @@
 				954D3B221E1497680064374F /* Main.storyboard */,
 				954D3B271E1497680064374F /* LaunchScreen.storyboard */,
 				954D3B2A1E1497680064374F /* Info.plist */,
+				95F4684E1E206E9E00D01E3B /* Facade.swift */,
 			);
 			path = PingPong;
 			sourceTree = "<group>";
@@ -147,6 +178,25 @@
 			path = PingPongtvOS;
 			sourceTree = "<group>";
 		};
+		95F4684D1E2069C100D01E3B /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				95F468461E20699B00D01E3B /* TextMessage.swift */,
+				95F468491E2069AE00D01E3B /* PingMessage.swift */,
+				95F468511E20734D00D01E3B /* ContentType.swift */,
+			);
+			name = Messages;
+			sourceTree = "<group>";
+		};
+		B47F2B8D017C886D6E95356F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB3444526D7812A99775693C /* Pods_PingPong.framework */,
+				FC64F4A856426A4D6B611427 /* Pods_PingPongtvOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 954D3B2D1E1497680064374F /* Build configuration list for PBXNativeTarget "PingPong" */;
 			buildPhases = (
+				DDA3D7DF2B6351BFD5BB3BC7 /* [CP] Check Pods Manifest.lock */,
 				954D3B111E1497680064374F /* Sources */,
 				954D3B121E1497680064374F /* Frameworks */,
 				954D3B131E1497680064374F /* Resources */,
+				A95B3ECEEC9C62761750798A /* [CP] Embed Pods Frameworks */,
+				3AD06F337CA6E75369983B32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,9 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 954D3B481E1497AA0064374F /* Build configuration list for PBXNativeTarget "PingPongtvOS" */;
 			buildPhases = (
+				89DD7E9BAD63773CEC0A5560 /* [CP] Check Pods Manifest.lock */,
 				954D3B301E1497A90064374F /* Sources */,
 				954D3B311E1497A90064374F /* Frameworks */,
 				954D3B321E1497A90064374F /* Resources */,
+				54DF76A041788555B77ED444 /* [CP] Embed Pods Frameworks */,
+				FEAB542DA636C0EAB98A444F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,7 +286,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95F468281E1FCD8200D01E3B /* Tibei in Resources */,
 				954D3B241E1497680064374F /* Main.storyboard in Resources */,
 				954D3B1B1E1497680064374F /* GameScene.sks in Resources */,
 				954D3B261E1497680064374F /* Assets.xcassets in Resources */,
@@ -253,17 +308,114 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3AD06F337CA6E75369983B32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PingPong/Pods-PingPong-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54DF76A041788555B77ED444 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PingPongtvOS/Pods-PingPongtvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89DD7E9BAD63773CEC0A5560 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A95B3ECEEC9C62761750798A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PingPong/Pods-PingPong-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDA3D7DF2B6351BFD5BB3BC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FEAB542DA636C0EAB98A444F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PingPongtvOS/Pods-PingPongtvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		954D3B111E1497680064374F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				954D3B1F1E1497680064374F /* GameScene.swift in Sources */,
+				95F4684F1E206E9E00D01E3B /* Facade.swift in Sources */,
+				95F468521E20734D00D01E3B /* ContentType.swift in Sources */,
+				95F4684A1E2069AE00D01E3B /* PingMessage.swift in Sources */,
 				954D3B211E1497680064374F /* GameViewController.swift in Sources */,
 				954D3B191E1497680064374F /* AppDelegate.swift in Sources */,
 				952A14E11E1EF0D90088BA44 /* HomeViewController.swift in Sources */,
 				952A14E31E1EF13B0088BA44 /* WaitingPlayerViewController.swift in Sources */,
 				952A14E91E1EF1B60088BA44 /* ChooseConnectionViewController.swift in Sources */,
+				95F468471E20699B00D01E3B /* TextMessage.swift in Sources */,
 				952A14E71E1EF17B0088BA44 /* PrepareToPlayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				954D3B3F1E1497AA0064374F /* GameScene.swift in Sources */,
+				95F468531E20734D00D01E3B /* ContentType.swift in Sources */,
 				954D3B411E1497AA0064374F /* GameViewController.swift in Sources */,
 				954D3B371E1497AA0064374F /* AppDelegate.swift in Sources */,
 			);
@@ -403,6 +556,7 @@
 		};
 		954D3B2E1E1497680064374F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 883E56004AE7E20F9D340CE5 /* Pods-PingPong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8Q3X4RF687;
@@ -417,6 +571,7 @@
 		};
 		954D3B2F1E1497680064374F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F2146AB8EE0A89E20B9A5E7 /* Pods-PingPong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8Q3X4RF687;
@@ -431,6 +586,7 @@
 		};
 		954D3B491E1497AA0064374F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 994BCDF418EC9BC80502D64B /* Pods-PingPongtvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -448,6 +604,7 @@
 		};
 		954D3B4A1E1497AA0064374F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BC6E62091F96F48E3976EA4 /* Pods-PingPongtvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

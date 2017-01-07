@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08027E4D2221FDDFC7DCE82AE833599F /* ConnectionAcceptedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE486C75568D79A668AE5BCE4DDD81 /* ConnectionAcceptedEvent.swift */; };
+		15FF13026F45ACBE62CF7D1ED14DD4F5 /* ConnectionLostEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D86F25B0FCF8CB4C5201541D7560C35 /* ConnectionLostEvent.swift */; };
+		18442408BBACDB42B315C74DEFCC0FCE /* ClientMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E9A024D255301E969C33F2E576FAF4 /* ClientMessenger.swift */; };
+		1A9DED58DD1B20D8B3A4EC3BF93AE0E5 /* KeepAliveMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EA624D2E7C7E6FAA8556B2D82D974B /* KeepAliveMessage.swift */; };
+		2AA81AABF2359A762E39501A8CECB7D0 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E98AED2192188A8C5B23A30E5C2EA4 /* ConnectionError.swift */; };
+		2EA2AAEB167EC80DF5F6A5AE97A17308 /* ConnectionResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1326CFAB3E4ED9F0B78FECB7030BA8 /* ConnectionResponder.swift */; };
+		3AAB786261105F2F5427B1757B919E56 /* Pods-PingPongtvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A177CE76B18A9932EAB93C933900CC44 /* Pods-PingPongtvOS-dummy.m */; };
+		4144F2334E2E255156BEB509BD17FBF6 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6D4581850915B69E51E1FA906A352B /* Connection.swift */; };
+		4AE62E552233C2BCD4835D64A916322A /* ServerMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9AD9A41E54FECE75FFCB1C4F0A1EA3 /* ServerMessenger.swift */; };
+		545B8FD873D2EBFBE46031F77FC6339B /* IncomingMessageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD42B0D21E3BF60D9CB68A4FC008DCF /* IncomingMessageEvent.swift */; };
+		55A2E04DA676A37129DD656D4AF828B9 /* IncomingMessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FD4941E55449895BDC398F68127BA2 /* IncomingMessageData.swift */; };
+		5913B4621A286CF18A84C3422BE57EE1 /* Tibei-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 149C1BB492424584E3EE020B4534FA28 /* Tibei-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6313CE758574A4625AB9A6DEEA32350A /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912654E9E7D05D0E34660868A819C647 /* Messenger.swift */; };
+		6575E2B7418B20498E96CF7D82AEA66D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
+		69DE3B25612F444933E4057D58B61656 /* JSONConvertibleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129DE94272BA9D0F1B90C7E6D16C9A8A /* JSONConvertibleMessage.swift */; };
+		755F94CB70421BCB18D4D37BC477D601 /* ConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F6E3BA00C57066DB6016D57D6BB5A /* ConnectionDelegate.swift */; };
+		7A704920FE1225BDDF2D637B87DF18AD /* ClientConnectionResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B6A936B5495D085CF993C0E4ABA47 /* ClientConnectionResponder.swift */; };
+		7B3B57586574432CB358B7B202A8E3A8 /* Pods-PingPongtvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DBB69D6737E8664F09218BB5FCA6739 /* Pods-PingPongtvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F230A85D788DBD5A3BE171DD96DCBBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
+		7F44BCECAF77529A04EC335AE466A906 /* GameControllerServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56DCABFF27AB71FE1AA468A195D278D /* GameControllerServer.swift */; };
+		80AA00846DD9DFC5CD898F8988B0072D /* ResponderChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F5EA96E94AE15C593E2E6E63A2029 /* ResponderChain.swift */; };
+		865AC5EDEABB605EC70779FA4962AB09 /* ServiceAvailabilityChangeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87193E5D2C89ECAC26DD4B4FF43A8DE /* ServiceAvailabilityChangeEvent.swift */; };
+		8793F0B9D64E05AC853832339930BEFB /* ConnectionID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B80005795B0FF62C0AF23141BF9B8CC /* ConnectionID.swift */; };
+		90916B4F4CBC210F38E253746583262A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F7123F558A3C774957F9E8B7E14BC3 /* Constants.swift */; };
+		90955A35C342F7B97EFDAA5A4FA63FE2 /* GameControllerServiceBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC930860E546092EB77EA2E4028E2F93 /* GameControllerServiceBrowser.swift */; };
+		932C5296F884190AE709551E34ADE3C4 /* StreamExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA85A028D4DA75AD521C7392C570274 /* StreamExtensions.swift */; };
+		AEDCE09E20AD8B4101EEC86EBD1F30F1 /* GameControllerServiceBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D486730EED0CCA758C02294CD5F07C /* GameControllerServiceBrowserDelegate.swift */; };
+		C460994028C30F1968DB4A293128D8FE /* ConnectionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B001D19000FA5575FE7E8C101D96CC /* ConnectionEvent.swift */; };
+		D5C48C6B540AC81A872269B138A636AB /* Tibei-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6B653AB0EF1CC58184CF269379E16 /* Tibei-dummy.m */; };
+		DC3880E23B7B1664CDBAF68E6CF29159 /* Pods-PingPong-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D1D53479E9DA30C65DE314F44676F5 /* Pods-PingPong-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF5ABAB173B1F94358A428BA2D81F34 /* Pods-PingPong-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B26757801CF72C78F729E1FDEE0FF /* Pods-PingPong-dummy.m */; };
+		DEF0DC025EF074BB0119D8278881630C /* ClientResponderChainNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A26FEE57526A148A05B21D92BA72B0 /* ClientResponderChainNode.swift */; };
+		EED693ED767DE9719A3F2E2EC7D7C90F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		987FD18B36353B30F2DDAA29655429AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DCC0FB0D4DD7AFFAFB189103A3BF396;
+			remoteInfo = Tibei;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		129DE94272BA9D0F1B90C7E6D16C9A8A /* JSONConvertibleMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONConvertibleMessage.swift; path = Tibei/Classes/message/JSONConvertibleMessage.swift; sourceTree = "<group>"; };
+		135ED8268E5E61015F084C4BEDC21BEC /* Tibei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tibei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		149C1BB492424584E3EE020B4534FA28 /* Tibei-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tibei-umbrella.h"; sourceTree = "<group>"; };
+		14EC821746D145D3757F307F58075ED7 /* Pods-PingPong-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PingPong-resources.sh"; sourceTree = "<group>"; };
+		17D486730EED0CCA758C02294CD5F07C /* GameControllerServiceBrowserDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GameControllerServiceBrowserDelegate.swift; path = Tibei/Classes/client/GameControllerServiceBrowserDelegate.swift; sourceTree = "<group>"; };
+		1AEEF3849505ED0DF622E84994D68EDF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B80005795B0FF62C0AF23141BF9B8CC /* ConnectionID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionID.swift; path = Tibei/Classes/connection/ConnectionID.swift; sourceTree = "<group>"; };
+		1DBB69D6737E8664F09218BB5FCA6739 /* Pods-PingPongtvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PingPongtvOS-umbrella.h"; sourceTree = "<group>"; };
+		29E98AED2192188A8C5B23A30E5C2EA4 /* ConnectionError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionError.swift; path = Tibei/Classes/connection/ConnectionError.swift; sourceTree = "<group>"; };
+		31B001D19000FA5575FE7E8C101D96CC /* ConnectionEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionEvent.swift; path = Tibei/Classes/common/responderChain/events/ConnectionEvent.swift; sourceTree = "<group>"; };
+		31FE486C75568D79A668AE5BCE4DDD81 /* ConnectionAcceptedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionAcceptedEvent.swift; path = Tibei/Classes/common/responderChain/events/ConnectionAcceptedEvent.swift; sourceTree = "<group>"; };
+		333B26757801CF72C78F729E1FDEE0FF /* Pods-PingPong-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PingPong-dummy.m"; sourceTree = "<group>"; };
+		35C9B109D63BC9947C98A1D2E5DD94C3 /* Pods-PingPong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PingPong.debug.xcconfig"; sourceTree = "<group>"; };
+		36CC9AFCF3B6A2B2CF86612D6068A2B8 /* Pods_PingPongtvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PingPongtvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A931311458697CA2177A4BDCCEEBC20 /* Pods-PingPongtvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PingPongtvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		3B31D9FFE44AFCA9F0DCF644B8D48A1F /* Pods-PingPong-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PingPong-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3DC6B653AB0EF1CC58184CF269379E16 /* Tibei-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Tibei-dummy.m"; sourceTree = "<group>"; };
+		3F1326CFAB3E4ED9F0B78FECB7030BA8 /* ConnectionResponder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionResponder.swift; path = Tibei/Classes/common/responderChain/ConnectionResponder.swift; sourceTree = "<group>"; };
+		46D1D53479E9DA30C65DE314F44676F5 /* Pods-PingPong-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PingPong-umbrella.h"; sourceTree = "<group>"; };
+		48F7123F558A3C774957F9E8B7E14BC3 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Tibei/Classes/common/Constants.swift; sourceTree = "<group>"; };
+		4CB8B1825DCED3A6D11CFCB3CEB4CB33 /* Pods_PingPong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PingPong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57448F8AD39DD1AEB27B5CA3A99350B6 /* Pods-PingPong-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PingPong-acknowledgements.plist"; sourceTree = "<group>"; };
+		5C0F801F4CB46C31521589E8FCF7E3DA /* Pods-PingPongtvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PingPongtvOS.release.xcconfig"; sourceTree = "<group>"; };
+		5D86F25B0FCF8CB4C5201541D7560C35 /* ConnectionLostEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionLostEvent.swift; path = Tibei/Classes/common/responderChain/events/ConnectionLostEvent.swift; sourceTree = "<group>"; };
+		64A26FEE57526A148A05B21D92BA72B0 /* ClientResponderChainNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientResponderChainNode.swift; path = Tibei/Classes/client/responderChain/ClientResponderChainNode.swift; sourceTree = "<group>"; };
+		65C9113525A4E27A7243448B681AA653 /* Pods-PingPong.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PingPong.modulemap"; sourceTree = "<group>"; };
+		75E9A024D255301E969C33F2E576FAF4 /* ClientMessenger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientMessenger.swift; path = Tibei/Classes/client/ClientMessenger.swift; sourceTree = "<group>"; };
+		7893A038D867FF84341686F1BC4B4376 /* Tibei.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tibei.xcconfig; sourceTree = "<group>"; };
+		79FD4941E55449895BDC398F68127BA2 /* IncomingMessageData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IncomingMessageData.swift; path = Tibei/Classes/message/IncomingMessageData.swift; sourceTree = "<group>"; };
+		7E866805B5225E225399F9CAFA61E5B2 /* Pods-PingPong-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PingPong-frameworks.sh"; sourceTree = "<group>"; };
+		844F5EA96E94AE15C593E2E6E63A2029 /* ResponderChain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponderChain.swift; path = Tibei/Classes/common/responderChain/ResponderChain.swift; sourceTree = "<group>"; };
+		8DD42B0D21E3BF60D9CB68A4FC008DCF /* IncomingMessageEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IncomingMessageEvent.swift; path = Tibei/Classes/common/responderChain/events/IncomingMessageEvent.swift; sourceTree = "<group>"; };
+		912654E9E7D05D0E34660868A819C647 /* Messenger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Messenger.swift; path = Tibei/Classes/common/Messenger.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96A0BC9412694635877DB402AD8034F1 /* Pods-PingPongtvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PingPongtvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A177CE76B18A9932EAB93C933900CC44 /* Pods-PingPongtvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PingPongtvOS-dummy.m"; sourceTree = "<group>"; };
+		AE6D4581850915B69E51E1FA906A352B /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Tibei/Classes/connection/Connection.swift; sourceTree = "<group>"; };
+		B2E7ADC68A531568977390FD11379542 /* Pods-PingPongtvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PingPongtvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B5B137B93725AC690B88CF01802CE1B5 /* Pods-PingPongtvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PingPongtvOS-resources.sh"; sourceTree = "<group>"; };
+		BDA85A028D4DA75AD521C7392C570274 /* StreamExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamExtensions.swift; path = Tibei/Classes/StreamExtensions.swift; sourceTree = "<group>"; };
+		C0940B74DB0FBD8E464125AB5060D43D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C47B6A936B5495D085CF993C0E4ABA47 /* ClientConnectionResponder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientConnectionResponder.swift; path = Tibei/Classes/client/responderChain/ClientConnectionResponder.swift; sourceTree = "<group>"; };
+		C56DCABFF27AB71FE1AA468A195D278D /* GameControllerServer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GameControllerServer.swift; path = Tibei/Classes/server/GameControllerServer.swift; sourceTree = "<group>"; };
+		CA41B6FBB0AFFAEC4660389468F986FE /* Tibei-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tibei-prefix.pch"; sourceTree = "<group>"; };
+		D5E8C63A588DDEA49DFCB70376C59BD8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA9AD9A41E54FECE75FFCB1C4F0A1EA3 /* ServerMessenger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerMessenger.swift; path = Tibei/Classes/server/ServerMessenger.swift; sourceTree = "<group>"; };
+		E4EA624D2E7C7E6FAA8556B2D82D974B /* KeepAliveMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeepAliveMessage.swift; path = Tibei/Classes/message/KeepAliveMessage.swift; sourceTree = "<group>"; };
+		E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EA63CA97BDC85A7C55D95C2A25608ADA /* Pods-PingPongtvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PingPongtvOS.modulemap"; sourceTree = "<group>"; };
+		EAAA5CA675813EB906FE55A80A06FB2D /* Pods-PingPong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PingPong.release.xcconfig"; sourceTree = "<group>"; };
+		EE5F9E06B7F1E2AAEACEA16AB331E2A0 /* Pods-PingPongtvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PingPongtvOS-frameworks.sh"; sourceTree = "<group>"; };
+		EF0F6E3BA00C57066DB6016D57D6BB5A /* ConnectionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionDelegate.swift; path = Tibei/Classes/connection/ConnectionDelegate.swift; sourceTree = "<group>"; };
+		F87193E5D2C89ECAC26DD4B4FF43A8DE /* ServiceAvailabilityChangeEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceAvailabilityChangeEvent.swift; path = Tibei/Classes/client/responderChain/events/ServiceAvailabilityChangeEvent.swift; sourceTree = "<group>"; };
+		FC930860E546092EB77EA2E4028E2F93 /* GameControllerServiceBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GameControllerServiceBrowser.swift; path = Tibei/Classes/client/GameControllerServiceBrowser.swift; sourceTree = "<group>"; };
+		FCC799D81180C138D7994C932073619F /* Tibei.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Tibei.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E5F7FF77A3680AA4B46E31B929DA59E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F230A85D788DBD5A3BE171DD96DCBBF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16DCDDF9C956870C859ACCE6ACA2CF83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED693ED767DE9719A3F2E2EC7D7C90F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2990CCF5B8C12800393F3114FFDECE43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6575E2B7418B20498E96CF7D82AEA66D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25C12B258BDF7FA4E82A03F327CF9FB4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5E8C63A588DDEA49DFCB70376C59BD8 /* Info.plist */,
+				FCC799D81180C138D7994C932073619F /* Tibei.modulemap */,
+				7893A038D867FF84341686F1BC4B4376 /* Tibei.xcconfig */,
+				3DC6B653AB0EF1CC58184CF269379E16 /* Tibei-dummy.m */,
+				CA41B6FBB0AFFAEC4660389468F986FE /* Tibei-prefix.pch */,
+				149C1BB492424584E3EE020B4534FA28 /* Tibei-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Tibei";
+			sourceTree = "<group>";
+		};
+		28298C289FD2FE7089B63C596169FC7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CB8B1825DCED3A6D11CFCB3CEB4CB33 /* Pods_PingPong.framework */,
+				36CC9AFCF3B6A2B2CF86612D6068A2B8 /* Pods_PingPongtvOS.framework */,
+				135ED8268E5E61015F084C4BEDC21BEC /* Tibei.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A0314AFAC6D23D6EFEEFDA7764003F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C70FDD8FB5415D8FA38D4F0743B395E5 /* Tibei */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		40E69F54529E0CEE3EFB3A6D66970E1D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				A42F72DC1D780481325DD00969B19BB6 /* Frameworks */,
+				3A0314AFAC6D23D6EFEEFDA7764003F2 /* Pods */,
+				28298C289FD2FE7089B63C596169FC7F /* Products */,
+				F4E4FE7B9074AD10AD87103221E37500 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8E58F122EBB6B4160DEDD5671E5257B3 /* Pods-PingPong */ = {
+			isa = PBXGroup;
+			children = (
+				1AEEF3849505ED0DF622E84994D68EDF /* Info.plist */,
+				65C9113525A4E27A7243448B681AA653 /* Pods-PingPong.modulemap */,
+				3B31D9FFE44AFCA9F0DCF644B8D48A1F /* Pods-PingPong-acknowledgements.markdown */,
+				57448F8AD39DD1AEB27B5CA3A99350B6 /* Pods-PingPong-acknowledgements.plist */,
+				333B26757801CF72C78F729E1FDEE0FF /* Pods-PingPong-dummy.m */,
+				7E866805B5225E225399F9CAFA61E5B2 /* Pods-PingPong-frameworks.sh */,
+				14EC821746D145D3757F307F58075ED7 /* Pods-PingPong-resources.sh */,
+				46D1D53479E9DA30C65DE314F44676F5 /* Pods-PingPong-umbrella.h */,
+				35C9B109D63BC9947C98A1D2E5DD94C3 /* Pods-PingPong.debug.xcconfig */,
+				EAAA5CA675813EB906FE55A80A06FB2D /* Pods-PingPong.release.xcconfig */,
+			);
+			name = "Pods-PingPong";
+			path = "Target Support Files/Pods-PingPong";
+			sourceTree = "<group>";
+		};
+		A42F72DC1D780481325DD00969B19BB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40E69F54529E0CEE3EFB3A6D66970E1D /* iOS */,
+				B95AAC6DF73A3AFC4B77A363C70E8A09 /* tvOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B95AAC6DF73A3AFC4B77A363C70E8A09 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		C70FDD8FB5415D8FA38D4F0743B395E5 /* Tibei */ = {
+			isa = PBXGroup;
+			children = (
+				C47B6A936B5495D085CF993C0E4ABA47 /* ClientConnectionResponder.swift */,
+				75E9A024D255301E969C33F2E576FAF4 /* ClientMessenger.swift */,
+				64A26FEE57526A148A05B21D92BA72B0 /* ClientResponderChainNode.swift */,
+				AE6D4581850915B69E51E1FA906A352B /* Connection.swift */,
+				31FE486C75568D79A668AE5BCE4DDD81 /* ConnectionAcceptedEvent.swift */,
+				EF0F6E3BA00C57066DB6016D57D6BB5A /* ConnectionDelegate.swift */,
+				29E98AED2192188A8C5B23A30E5C2EA4 /* ConnectionError.swift */,
+				31B001D19000FA5575FE7E8C101D96CC /* ConnectionEvent.swift */,
+				1B80005795B0FF62C0AF23141BF9B8CC /* ConnectionID.swift */,
+				5D86F25B0FCF8CB4C5201541D7560C35 /* ConnectionLostEvent.swift */,
+				3F1326CFAB3E4ED9F0B78FECB7030BA8 /* ConnectionResponder.swift */,
+				48F7123F558A3C774957F9E8B7E14BC3 /* Constants.swift */,
+				C56DCABFF27AB71FE1AA468A195D278D /* GameControllerServer.swift */,
+				FC930860E546092EB77EA2E4028E2F93 /* GameControllerServiceBrowser.swift */,
+				17D486730EED0CCA758C02294CD5F07C /* GameControllerServiceBrowserDelegate.swift */,
+				79FD4941E55449895BDC398F68127BA2 /* IncomingMessageData.swift */,
+				8DD42B0D21E3BF60D9CB68A4FC008DCF /* IncomingMessageEvent.swift */,
+				129DE94272BA9D0F1B90C7E6D16C9A8A /* JSONConvertibleMessage.swift */,
+				E4EA624D2E7C7E6FAA8556B2D82D974B /* KeepAliveMessage.swift */,
+				912654E9E7D05D0E34660868A819C647 /* Messenger.swift */,
+				844F5EA96E94AE15C593E2E6E63A2029 /* ResponderChain.swift */,
+				DA9AD9A41E54FECE75FFCB1C4F0A1EA3 /* ServerMessenger.swift */,
+				F87193E5D2C89ECAC26DD4B4FF43A8DE /* ServiceAvailabilityChangeEvent.swift */,
+				BDA85A028D4DA75AD521C7392C570274 /* StreamExtensions.swift */,
+				25C12B258BDF7FA4E82A03F327CF9FB4 /* Support Files */,
+			);
+			path = Tibei;
+			sourceTree = "<group>";
+		};
+		DC0A7239629A94E1431D2121D97E7D24 /* Pods-PingPongtvOS */ = {
+			isa = PBXGroup;
+			children = (
+				C0940B74DB0FBD8E464125AB5060D43D /* Info.plist */,
+				EA63CA97BDC85A7C55D95C2A25608ADA /* Pods-PingPongtvOS.modulemap */,
+				96A0BC9412694635877DB402AD8034F1 /* Pods-PingPongtvOS-acknowledgements.markdown */,
+				3A931311458697CA2177A4BDCCEEBC20 /* Pods-PingPongtvOS-acknowledgements.plist */,
+				A177CE76B18A9932EAB93C933900CC44 /* Pods-PingPongtvOS-dummy.m */,
+				EE5F9E06B7F1E2AAEACEA16AB331E2A0 /* Pods-PingPongtvOS-frameworks.sh */,
+				B5B137B93725AC690B88CF01802CE1B5 /* Pods-PingPongtvOS-resources.sh */,
+				1DBB69D6737E8664F09218BB5FCA6739 /* Pods-PingPongtvOS-umbrella.h */,
+				B2E7ADC68A531568977390FD11379542 /* Pods-PingPongtvOS.debug.xcconfig */,
+				5C0F801F4CB46C31521589E8FCF7E3DA /* Pods-PingPongtvOS.release.xcconfig */,
+			);
+			name = "Pods-PingPongtvOS";
+			path = "Target Support Files/Pods-PingPongtvOS";
+			sourceTree = "<group>";
+		};
+		F4E4FE7B9074AD10AD87103221E37500 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E58F122EBB6B4160DEDD5671E5257B3 /* Pods-PingPong */,
+				DC0A7239629A94E1431D2121D97E7D24 /* Pods-PingPongtvOS */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		54EF559FB4EE93E8AA882AF14F127D3A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B3B57586574432CB358B7B202A8E3A8 /* Pods-PingPongtvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4F855BB25ADEC351F58034FF31AE177 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC3880E23B7B1664CDBAF68E6CF29159 /* Pods-PingPong-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D23136D5A80700B48DF59EABA171753C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5913B4621A286CF18A84C3422BE57EE1 /* Tibei-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1DCC0FB0D4DD7AFFAFB189103A3BF396 /* Tibei */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CC626212678C003443E0BB5687FB488 /* Build configuration list for PBXNativeTarget "Tibei" */;
+			buildPhases = (
+				5758CDB8C3BE562C58881C0A9AC7C3B6 /* Sources */,
+				0E5F7FF77A3680AA4B46E31B929DA59E /* Frameworks */,
+				D23136D5A80700B48DF59EABA171753C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tibei;
+			productName = Tibei;
+			productReference = 135ED8268E5E61015F084C4BEDC21BEC /* Tibei.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1F11FCB99551B6D9D29DD2840A6E5492 /* Pods-PingPong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3565FE86C131C0C72158AB2640AA754 /* Build configuration list for PBXNativeTarget "Pods-PingPong" */;
+			buildPhases = (
+				BB7270F89051F39B53FCFAB00E4A7AC3 /* Sources */,
+				2990CCF5B8C12800393F3114FFDECE43 /* Frameworks */,
+				A4F855BB25ADEC351F58034FF31AE177 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4A6FC5E6604F7C51119E72AF298F63D /* PBXTargetDependency */,
+			);
+			name = "Pods-PingPong";
+			productName = "Pods-PingPong";
+			productReference = 4CB8B1825DCED3A6D11CFCB3CEB4CB33 /* Pods_PingPong.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DDB8FB8C14FA27A9C27AE1DA2E519D28 /* Pods-PingPongtvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C47F6B7E9F2FEA8D559778C94DC5A86 /* Build configuration list for PBXNativeTarget "Pods-PingPongtvOS" */;
+			buildPhases = (
+				6C8B23AC6581159C826BC5B8BE9745A1 /* Sources */,
+				16DCDDF9C956870C859ACCE6ACA2CF83 /* Frameworks */,
+				54EF559FB4EE93E8AA882AF14F127D3A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PingPongtvOS";
+			productName = "Pods-PingPongtvOS";
+			productReference = 36CC9AFCF3B6A2B2CF86612D6068A2B8 /* Pods_PingPongtvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 28298C289FD2FE7089B63C596169FC7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F11FCB99551B6D9D29DD2840A6E5492 /* Pods-PingPong */,
+				DDB8FB8C14FA27A9C27AE1DA2E519D28 /* Pods-PingPongtvOS */,
+				1DCC0FB0D4DD7AFFAFB189103A3BF396 /* Tibei */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5758CDB8C3BE562C58881C0A9AC7C3B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A704920FE1225BDDF2D637B87DF18AD /* ClientConnectionResponder.swift in Sources */,
+				18442408BBACDB42B315C74DEFCC0FCE /* ClientMessenger.swift in Sources */,
+				DEF0DC025EF074BB0119D8278881630C /* ClientResponderChainNode.swift in Sources */,
+				4144F2334E2E255156BEB509BD17FBF6 /* Connection.swift in Sources */,
+				08027E4D2221FDDFC7DCE82AE833599F /* ConnectionAcceptedEvent.swift in Sources */,
+				755F94CB70421BCB18D4D37BC477D601 /* ConnectionDelegate.swift in Sources */,
+				2AA81AABF2359A762E39501A8CECB7D0 /* ConnectionError.swift in Sources */,
+				C460994028C30F1968DB4A293128D8FE /* ConnectionEvent.swift in Sources */,
+				8793F0B9D64E05AC853832339930BEFB /* ConnectionID.swift in Sources */,
+				15FF13026F45ACBE62CF7D1ED14DD4F5 /* ConnectionLostEvent.swift in Sources */,
+				2EA2AAEB167EC80DF5F6A5AE97A17308 /* ConnectionResponder.swift in Sources */,
+				90916B4F4CBC210F38E253746583262A /* Constants.swift in Sources */,
+				7F44BCECAF77529A04EC335AE466A906 /* GameControllerServer.swift in Sources */,
+				90955A35C342F7B97EFDAA5A4FA63FE2 /* GameControllerServiceBrowser.swift in Sources */,
+				AEDCE09E20AD8B4101EEC86EBD1F30F1 /* GameControllerServiceBrowserDelegate.swift in Sources */,
+				55A2E04DA676A37129DD656D4AF828B9 /* IncomingMessageData.swift in Sources */,
+				545B8FD873D2EBFBE46031F77FC6339B /* IncomingMessageEvent.swift in Sources */,
+				69DE3B25612F444933E4057D58B61656 /* JSONConvertibleMessage.swift in Sources */,
+				1A9DED58DD1B20D8B3A4EC3BF93AE0E5 /* KeepAliveMessage.swift in Sources */,
+				6313CE758574A4625AB9A6DEEA32350A /* Messenger.swift in Sources */,
+				80AA00846DD9DFC5CD898F8988B0072D /* ResponderChain.swift in Sources */,
+				4AE62E552233C2BCD4835D64A916322A /* ServerMessenger.swift in Sources */,
+				865AC5EDEABB605EC70779FA4962AB09 /* ServiceAvailabilityChangeEvent.swift in Sources */,
+				932C5296F884190AE709551E34ADE3C4 /* StreamExtensions.swift in Sources */,
+				D5C48C6B540AC81A872269B138A636AB /* Tibei-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C8B23AC6581159C826BC5B8BE9745A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AAB786261105F2F5427B1757B919E56 /* Pods-PingPongtvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB7270F89051F39B53FCFAB00E4A7AC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF5ABAB173B1F94358A428BA2D81F34 /* Pods-PingPong-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4A6FC5E6604F7C51119E72AF298F63D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Tibei;
+			target = 1DCC0FB0D4DD7AFFAFB189103A3BF396 /* Tibei */;
+			targetProxy = 987FD18B36353B30F2DDAA29655429AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07C34D56DFA29750D7FADBC6D197F536 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7893A038D867FF84341686F1BC4B4376 /* Tibei.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Tibei/Tibei-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Tibei/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Tibei/Tibei.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Tibei;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5CE11C4592A29C7B456E0AC619362381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7893A038D867FF84341686F1BC4B4376 /* Tibei.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Tibei/Tibei-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Tibei/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Tibei/Tibei.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Tibei;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		727B893A184FDCE23B0156E3990748EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85D5FEA63C45D895A42EE9DEF6A4FC0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C0F801F4CB46C31521589E8FCF7E3DA /* Pods-PingPongtvOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PingPongtvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PingPongtvOS/Pods-PingPongtvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PingPongtvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A92B14AB4699064D441653ABC7CA1C3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35C9B109D63BC9947C98A1D2E5DD94C3 /* Pods-PingPong.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PingPong/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PingPong/Pods-PingPong.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PingPong;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA91A241729824084D7881F4073CAD1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAAA5CA675813EB906FE55A80A06FB2D /* Pods-PingPong.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PingPong/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PingPong/Pods-PingPong.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PingPong;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C35B197670913EBA81B5B980651FE4A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Debug;
+		};
+		FF4B8AB9BB6A638826444870131553DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2E7ADC68A531568977390FD11379542 /* Pods-PingPongtvOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PingPongtvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PingPongtvOS/Pods-PingPongtvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PingPongtvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C35B197670913EBA81B5B980651FE4A8 /* Debug */,
+				727B893A184FDCE23B0156E3990748EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C47F6B7E9F2FEA8D559778C94DC5A86 /* Build configuration list for PBXNativeTarget "Pods-PingPongtvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF4B8AB9BB6A638826444870131553DC /* Debug */,
+				85D5FEA63C45D895A42EE9DEF6A4FC0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CC626212678C003443E0BB5687FB488 /* Build configuration list for PBXNativeTarget "Tibei" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE11C4592A29C7B456E0AC619362381 /* Debug */,
+				07C34D56DFA29750D7FADBC6D197F536 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3565FE86C131C0C72158AB2640AA754 /* Build configuration list for PBXNativeTarget "Pods-PingPong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A92B14AB4699064D441653ABC7CA1C3D /* Debug */,
+				AA91A241729824084D7881F4073CAD1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

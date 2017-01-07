@@ -7,29 +7,64 @@
 //
 
 import UIKit
+import Tibei
 
 class WaitingPlayerViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        Facade.shared.publishServer()
+        Facade.shared.registerServerResponder(self)
+        
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension WaitingPlayerViewController: ConnectionResponder {
+    var allowedMessages: [JSONConvertibleMessage.Type] {
+        return [TextMessage.self, PingMessage.self]
     }
-    */
+    
+    func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
+        
+        switch message {
+        case let textMessage as TextMessage:
+                print(textMessage.sender)
+                print(textMessage.content)
+       
+            
+        case let pingMessage as PingMessage:
+                print(pingMessage.sender)
+            
+        default:
+            break
+        }
+    }
+    
+    func acceptedConnection(withID connectionID: ConnectionID) {
+       
+        DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "WaitingPlayerToPrepareToPlaySegue", sender: self)
+        }
+        
+    }
+    
+    func lostConnection(withID connectionID: ConnectionID) {
+        let rawContent: String = "Lost connection with id #\(connectionID.hashValue)"
+        let labelContent = NSMutableAttributedString(string: rawContent)
+        
+        labelContent.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: NSMakeRange(0, rawContent.characters.count))
+        
+        DispatchQueue.main.async {
+//            self.incomingMessageLabel.attributedText = labelContent
+        }
+    }
+    
+    func processError(_ error: Error, fromConnectionWithID connectionID: ConnectionID?) {
+        print("Error raised from connection #\(connectionID?.hashValue):")
+        print(error)
+    }
 
 }
