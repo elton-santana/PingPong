@@ -87,6 +87,16 @@ class Facade: NSObject{
         self.currentMatch = Match(withOpponentName: opponent)
     }
     
+    func changeLocalPlayerStatus(to status: Bool){
+        self.currentMatch?.localPlayer.isReady = status
+    }
+    func changeOpponentStatus(to status: Bool){
+        self.currentMatch?.opponent.isReady = status
+    }
+    func areBothPlayersReady() -> Bool{
+        return (currentMatch?.localPlayer.isReady)! && (currentMatch?.opponent.isReady)!
+    }
+    
     
     
 }

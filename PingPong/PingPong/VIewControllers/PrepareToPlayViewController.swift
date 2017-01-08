@@ -32,8 +32,29 @@ class PrepareToPlayViewController: UIViewController {
     }
     
     @IBAction func startButtonAction(_ sender: UIButton) {
-
+        Facade.shared.sendMessage(StatusMessage(content: true))
+        sender.isHidden = true
+        self.checkPlayersStatus()
     }
+    
+    func checkPlayersStatus(){
+        if Facade.shared.areBothPlayersReady(){
+            self.performSegue(withIdentifier: "PrepareToPlayToGameSegue", sender: self)
+        }
+        
+        
+    }
+    
+//    func updatePlayerStatus(to status: Bool){
+//        switch status {
+//        case true:
+//            print("estou pronto")
+//            Facade.shared.
+//        default:
+//            break
+//        }
+//        
+//    }
 
     /*
     // MARK: - Navigation
@@ -49,7 +70,7 @@ class PrepareToPlayViewController: UIViewController {
 
 extension PrepareToPlayViewController: ConnectionResponder {
     var allowedMessages: [JSONConvertibleMessage.Type] {
-        return [TextMessage.self, PingMessage.self, CoordMessage.self]
+        return [TextMessage.self, PingMessage.self, CoordMessage.self, StatusMessage.self]
     }
     
     func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
@@ -64,8 +85,11 @@ extension PrepareToPlayViewController: ConnectionResponder {
             
             
         case let pingMessage as PingMessage:
-                Facade.shared.initializeMatch(with: pingMessage.sender)
-                self.playWithLabel.text = "Play with \(pingMessage.sender)"
+            Facade.shared.initializeMatch(with: pingMessage.sender)
+            self.playWithLabel.text = "Play with \(pingMessage.sender)"
+        case let statusMessage as StatusMessage:
+            Facade.shared.changeOpponentStatus(to: statusMessage.content)
+            self.checkPlayersStatus()
         default:
             break
         }
