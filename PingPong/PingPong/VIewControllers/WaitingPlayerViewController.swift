@@ -44,7 +44,7 @@ extension WaitingPlayerViewController: ConnectionResponder {
     }
     
     func acceptedConnection(withID connectionID: ConnectionID) {
-       
+        Facade.shared.registerServerConnectionID(connectionID)
         DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "WaitingPlayerToPrepareToPlaySegue", sender: self)
         }
@@ -53,13 +53,7 @@ extension WaitingPlayerViewController: ConnectionResponder {
     
     func lostConnection(withID connectionID: ConnectionID) {
         let rawContent: String = "Lost connection with id #\(connectionID.hashValue)"
-        let labelContent = NSMutableAttributedString(string: rawContent)
-        
-        labelContent.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: NSMakeRange(0, rawContent.characters.count))
-        
-        DispatchQueue.main.async {
-//            self.incomingMessageLabel.attributedText = labelContent
-        }
+        print(rawContent)
     }
     
     func processError(_ error: Error, fromConnectionWithID connectionID: ConnectionID?) {

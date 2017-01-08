@@ -86,6 +86,7 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pHL-ko-jHv">
                                 <rect key="frame" x="266" y="164" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.78039215689999997" green="0.1843137255" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -168,12 +169,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonAction:" destination="Ggs-1J-7po" eventType="touchUpInside" id="pLD-An-jg7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="BV1-FR-VrT" kind="show" id="46K-oK-mR9"/>
+                        <outlet property="playWithLabel" destination="pQA-14-L9j" id="R22-Jh-fHL"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="PrepareToPlayToGameSegue" id="46K-oK-mR9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEI-wb-syt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,6 +205,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5Hv-rX-4Eh"/>
+        <segue reference="A87-6k-kbB"/>
     </inferredMetricsTieBreakers>
 </document>
