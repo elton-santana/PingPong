@@ -86,6 +86,9 @@ class Facade: NSObject{
     func initializeMatch(with opponent: String){
         self.currentMatch = Match(withOpponentName: opponent)
     }
+    func getOpponentName() -> String{
+        return (self.currentMatch?.getOpponentName())!
+    }
     
     func changeLocalPlayerStatus(to status: Bool){
         self.currentMatch?.localPlayer.isReady = status
@@ -94,7 +97,7 @@ class Facade: NSObject{
         self.currentMatch?.opponent.isReady = status
     }
     func areBothPlayersReady() -> Bool{
-        return (currentMatch?.localPlayer.isReady)! && (currentMatch?.opponent.isReady)!
+        return (self.currentMatch?.areBothPlayersReady())!
     }
     
     

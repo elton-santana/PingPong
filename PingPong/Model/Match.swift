@@ -19,4 +19,12 @@ class Match {
         self.localPlayer.name = UIDevice.current.name
     }
     
+    func getOpponentName() -> String{
+        return self.opponent.name
+    }
+    
+    func areBothPlayersReady() -> Bool{
+        return self.opponent.isReady && self.localPlayer.isReady
+    }
+    
 }

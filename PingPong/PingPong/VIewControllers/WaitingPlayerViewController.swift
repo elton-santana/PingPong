@@ -36,7 +36,12 @@ extension WaitingPlayerViewController: ConnectionResponder {
        
             
         case let pingMessage as PingMessage:
-                print(pingMessage.sender)
+            print(pingMessage.sender)
+            Facade.shared.initializeMatch(with: pingMessage.sender)
+            Facade.shared.sendMessage(PingMessage(sender: UIDevice.current.name))
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "WaitingPlayerToPrepareToPlaySegue", sender: self)
+            }
             
         default:
             break
@@ -45,9 +50,6 @@ extension WaitingPlayerViewController: ConnectionResponder {
     
     func acceptedConnection(withID connectionID: ConnectionID) {
         Facade.shared.registerServerConnectionID(connectionID)
-        DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "WaitingPlayerToPrepareToPlaySegue", sender: self)
-        }
         
     }
     

@@ -18,6 +18,8 @@ class PrepareToPlayViewController: UIViewController {
 
         Facade.shared.registerClientResponder(self)
         Facade.shared.registerServerResponder(self)
+        
+        self.playWithLabel.text = Facade.shared.getOpponentName()
 
         
     }
@@ -28,10 +30,10 @@ class PrepareToPlayViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        Facade.shared.sendMessage(PingMessage(sender: UIDevice.current.name))
     }
     
     @IBAction func startButtonAction(_ sender: UIButton) {
+        Facade.shared.changeLocalPlayerStatus(to: true)
         Facade.shared.sendMessage(StatusMessage(content: true))
         sender.isHidden = true
         self.checkPlayersStatus()
@@ -39,7 +41,9 @@ class PrepareToPlayViewController: UIViewController {
     
     func checkPlayersStatus(){
         if Facade.shared.areBothPlayersReady(){
-            self.performSegue(withIdentifier: "PrepareToPlayToGameSegue", sender: self)
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "PrepareToPlayToGameSegue", sender: self)
+            }
         }
         
         
@@ -84,9 +88,7 @@ extension PrepareToPlayViewController: ConnectionResponder {
             print(textMessage.content)
             
             
-        case let pingMessage as PingMessage:
-            Facade.shared.initializeMatch(with: pingMessage.sender)
-            self.playWithLabel.text = "Play with \(pingMessage.sender)"
+//        case let pingMessage as PingMessage:
         case let statusMessage as StatusMessage:
             Facade.shared.changeOpponentStatus(to: statusMessage.content)
             self.checkPlayersStatus()
