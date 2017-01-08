@@ -17,8 +17,13 @@ class Facade: NSObject{
     }
     
     let serviceIdentifier = "_pingPong"
+    let localSender = UIDevice.current.name
     var server: ServerMessenger?
+    var connection: ConnectionID?
     let client = ClientMessenger()
+    
+    
+    
     
     func browseForServices(){
         self.client.browseForServices(withIdentifier: self.serviceIdentifier)
@@ -46,6 +51,55 @@ class Facade: NSObject{
     func registerServerResponder(_ responder: ConnectionResponder){
         self.server?.registerResponder(responder)
     }
+    
+    func registerServerConnectionID(_ id: ConnectionID){
+        self.connection = id
+    }
+    
+    func sendMessage<Message: JSONConvertibleMessage>(_ message: Message){
+        guard self.server == nil else {
+            do {
+                try  self.server?.sendMessage(message, toConnectionWithID: self.connection!)
+                
+            } catch {
+                print("Error trying to send message:")
+                print(error)
+            }
+            return
+        }
+        
+        
+        do {
+            try self.client.sendMessage(message)
+        } catch{
+            print("Error trying to send message:")
+            print(error)
+        }
+     
+        
+    }
+    
+    //MARK: Match related code
+    
+    var currentMatch: Match?
+    
+    func initializeMatch(with opponent: String){
+        self.currentMatch = Match(withOpponentName: opponent)
+    }
+    func getOpponentName() -> String{
+        return (self.currentMatch?.getOpponentName())!
+    }
+    
+    func changeLocalPlayerStatus(to status: Bool){
+        self.currentMatch?.localPlayer.isReady = status
+    }
+    func changeOpponentStatus(to status: Bool){
+        self.currentMatch?.opponent.isReady = status
+    }
+    func areBothPlayersReady() -> Bool{
+        return (self.currentMatch?.areBothPlayersReady())!
+    }
+    
     
     
 }

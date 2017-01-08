@@ -69,7 +69,6 @@ class ChooseConnectionViewController: UIViewController, UITableViewDataSource, U
         
         let connectAction = UIAlertAction(title: "Yes", style: .default) { (startMatchAction) in
             Facade.shared.connect(serviceName: player)
-            self.performSegue(withIdentifier: "ChooseConnectionToPrepareToPlaySegue", sender: self)
         }
         popUp.addAction(connectAction)
         
@@ -92,6 +91,31 @@ class ChooseConnectionViewController: UIViewController, UITableViewDataSource, U
 
 
 extension ChooseConnectionViewController: ClientConnectionResponder {
+    var allowedMessages: [JSONConvertibleMessage.Type] {
+        return [TextMessage.self, PingMessage.self]
+    }
+    
+    func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
+        
+        switch message {
+        case let textMessage as TextMessage:
+            print(textMessage.sender)
+            print(textMessage.content)
+            
+            
+        case let pingMessage as PingMessage:
+            Facade.shared.initializeMatch(with: pingMessage.sender)
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "ChooseConnectionToPrepareToPlaySegue", sender: self)
+            }
+            
+            print(pingMessage.sender)
+            
+        default:
+            break
+        }
+    }
+
     func availableServicesChanged(availableServiceIDs: [String]) {
         
         self.availableServices = availableServiceIDs
@@ -101,6 +125,7 @@ extension ChooseConnectionViewController: ClientConnectionResponder {
     }
     
     func acceptedConnection(withID connectionID: ConnectionID) {
+        Facade.shared.sendMessage(PingMessage(sender: UIDevice.current.name))
 //        self.sendMessageButton.isEnabled = true
 //        self.pingButton.isEnabled = true
     }

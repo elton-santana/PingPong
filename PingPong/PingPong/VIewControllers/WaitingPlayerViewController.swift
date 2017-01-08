@@ -36,7 +36,12 @@ extension WaitingPlayerViewController: ConnectionResponder {
        
             
         case let pingMessage as PingMessage:
-                print(pingMessage.sender)
+            print(pingMessage.sender)
+            Facade.shared.initializeMatch(with: pingMessage.sender)
+            Facade.shared.sendMessage(PingMessage(sender: UIDevice.current.name))
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "WaitingPlayerToPrepareToPlaySegue", sender: self)
+            }
             
         default:
             break
@@ -44,22 +49,13 @@ extension WaitingPlayerViewController: ConnectionResponder {
     }
     
     func acceptedConnection(withID connectionID: ConnectionID) {
-       
-        DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "WaitingPlayerToPrepareToPlaySegue", sender: self)
-        }
+        Facade.shared.registerServerConnectionID(connectionID)
         
     }
     
     func lostConnection(withID connectionID: ConnectionID) {
         let rawContent: String = "Lost connection with id #\(connectionID.hashValue)"
-        let labelContent = NSMutableAttributedString(string: rawContent)
-        
-        labelContent.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: NSMakeRange(0, rawContent.characters.count))
-        
-        DispatchQueue.main.async {
-//            self.incomingMessageLabel.attributedText = labelContent
-        }
+        print(rawContent)
     }
     
     func processError(_ error: Error, fromConnectionWithID connectionID: ConnectionID?) {
