@@ -21,6 +21,9 @@ class Match {
         self.localPlayerIsPlayerAtHome = atHome
     }
     
+    func getLocalPlayerName()-> String{
+        return self.localPlayer.name
+    }
     func getOpponentName() -> String{
         return self.opponent.name
     }

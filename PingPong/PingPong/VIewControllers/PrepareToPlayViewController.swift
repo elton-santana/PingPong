@@ -74,21 +74,17 @@ class PrepareToPlayViewController: UIViewController {
 
 extension PrepareToPlayViewController: ConnectionResponder {
     var allowedMessages: [JSONConvertibleMessage.Type] {
-        return [TextMessage.self, PingMessage.self, CoordMessage.self, StatusMessage.self]
+        return [TextMessage.self, PingMessage.self, StatusMessage.self]
     }
     
     func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
         
         switch message {
-        case let coordMessage as CoordMessage:
-            print(coordMessage.content)
-            
         case let textMessage as TextMessage:
             print(textMessage.sender)
             print(textMessage.content)
             
             
-//        case let pingMessage as PingMessage:
         case let statusMessage as StatusMessage:
             Facade.shared.changeOpponentStatus(to: statusMessage.content)
             self.checkPlayersStatus()

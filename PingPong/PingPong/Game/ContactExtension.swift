@@ -14,7 +14,7 @@ extension GameScene {
         
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
-        if (contact.bodyA.categoryBitMask >= contact.bodyB.categoryBitMask) {
+        if (contact.bodyA.categoryBitMask <= contact.bodyB.categoryBitMask) {
             firstBody = contact.bodyA;
             secondBody = contact.bodyB;
         }
@@ -23,19 +23,37 @@ extension GameScene {
             secondBody = contact.bodyA;
         }
         
-        if firstBody.categoryBitMask == (self.ball?.physicsBody?.categoryBitMask)! &&
-            secondBody.categoryBitMask == (self.rightSideBar?.physicsBody?.categoryBitMask)! {
+        if firstBody.categoryBitMask == PhysicsCategory.ball &&
+            secondBody.categoryBitMask == PhysicsCategory.sideBar {
             
             let ball = firstBody.node as! SKSpriteNode
             let ballVelocity = ball.physicsBody?.velocity
             ball.physicsBody?.velocity.dx = -(ballVelocity?.dx)!
         }
-        if secondBody.categoryBitMask == (self.ball?.physicsBody?.categoryBitMask)! &&
-           firstBody.categoryBitMask == (self.playerRacket?.physicsBody?.categoryBitMask)! {
+        if firstBody.categoryBitMask == PhysicsCategory.ball &&
+           secondBody.categoryBitMask == PhysicsCategory.racket {
             
-            let ball = secondBody.node as! SKSpriteNode
+            let ball = firstBody.node as! SKSpriteNode
             let ballVelocity = ball.physicsBody?.velocity
             ball.physicsBody?.velocity.dy = -(ballVelocity?.dy)!
+        }
+        if firstBody.categoryBitMask == PhysicsCategory.ball &&
+            secondBody.categoryBitMask == PhysicsCategory.transferSensor {
+            
+            let ball = firstBody.node as! SKSpriteNode
+            let ballVelocity = ball.physicsBody?.velocity
+            let normalizedCoord = ball.position.x/self.size.width/2
+            ball.removeFromParent()
+//            Facade.shared.sendMessage(BallMessage(coord: normalizedCoord, velocity: ballVelocity)
+            print("did send coord:\(normalizedCoord)")
+        }
+        if firstBody.categoryBitMask == PhysicsCategory.ball &&
+            secondBody.categoryBitMask == PhysicsCategory.goalSensor {
+            
+            let ball = firstBody.node as! SKSpriteNode
+            ball.removeFromParent()
+            Facade.shared.opponentPlayerDidScore()
+            Facade.shared.sendMessage(ScoreMessage())
         }
         
     }

@@ -10,6 +10,13 @@ import SpriteKit
 import GameplayKit
 import Tibei
 
+struct PhysicsCategory {
+    static let ball: UInt32 = 1
+    static let sideBar: UInt32 = 2
+    static let racket: UInt32 = 3
+    static let goalSensor: UInt32 = 4
+    static let transferSensor: UInt32 = 5
+}
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var entities = [GKEntity]()
@@ -22,6 +29,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var playerRacket: SKSpriteNode?
     var ball: SKSpriteNode?
     
+    var transferSensor: SKSpriteNode?
+    var goalSensor: SKSpriteNode?
+    
+    var localPlayerScore: SKLabelNode?
+    var localPlayerNameLabel: SKLabelNode?
+    var opponentPlayerScore: SKLabelNode?
+    var opponentPlayerNameLabel: SKLabelNode?
     
     
     private var lastUpdateTime : TimeInterval = 0
@@ -41,7 +55,53 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.rightSideBar = self.childNode(withName: "RightSideBar") as? SKSpriteNode
         self.playerRacket = self.childNode(withName: "RacketNode") as? SKSpriteNode
         self.ball = self.childNode(withName: "BallNode") as? SKSpriteNode
-        self.ball?.physicsBody?.contactTestBitMask = (self.playerRacket?.physicsBody?.categoryBitMask)! | (self.rightSideBar?.physicsBody?.categoryBitMask)!
+        
+        self.goalSensor = self.childNode(withName: "GoalSensor") as? SKSpriteNode
+        self.transferSensor = self.childNode(withName: "TransferSensor") as? SKSpriteNode
+        
+        self.localPlayerScore = self.childNode(withName: "LocalPlayerScore") as? SKLabelNode
+        self.localPlayerNameLabel = self.childNode(withName: "LocalPlayerName") as? SKLabelNode
+        self.opponentPlayerScore = self.childNode(withName: "OpponentPlayerScore") as? SKLabelNode
+        self.opponentPlayerNameLabel = self.childNode(withName: "OpponentPlayerName") as? SKLabelNode
+        
+        self.setContactTestBitMask()
+//        self.setNameLabels()
+//        self.startGame()
+    }
+    
+    func setContactTestBitMask(){
+        guard self.ball == nil else {
+            self.ball?.physicsBody?.contactTestBitMask = PhysicsCategory.racket |
+                PhysicsCategory.sideBar |
+                PhysicsCategory.goalSensor |
+                PhysicsCategory.transferSensor
+            return
+        }
+    }
+    
+    func setNameLabels(){
+        self.localPlayerNameLabel?.text = Facade.shared.getLocalPlayerName()
+        self.opponentPlayerNameLabel?.text = Facade.shared.getOpponentName()
+    }
+    
+    func startGame(){
+        if Facade.shared.localPlayerIsAtHome(){
+            
+        }else{
+            self.ball?.removeFromParent()
+        }
+    }
+    
+    func updateScore(){
+        
+        
+    }
+    
+    func fireBall(withInitialX coord: CGFloat, andVelocity velocity: CGVector){
+        self.ball?.position = CGPoint(x: self.size.width/2 * coord, y: self.frame.maxY)
+        self.ball?.physicsBody?.velocity = CGVector(dx: -velocity.dx, dy: -velocity.dy)
+        self.addChild(self.ball!)
+
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -95,14 +155,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 extension GameScene: ConnectionResponder {
     var allowedMessages: [JSONConvertibleMessage.Type] {
-        return [TextMessage.self, PingMessage.self, CoordMessage.self, StatusMessage.self]
+        return [TextMessage.self, PingMessage.self, BallMessage.self, ScoreMessage.self]
     }
     
     func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
         
         switch message {
-        case let coordMessage as CoordMessage:
-            print(coordMessage.content)
+        case let ballMessage as BallMessage:
+            self.fireBall(withInitialX: ballMessage.coord, andVelocity: ballMessage.velocity)
             
         case let textMessage as TextMessage:
             print(textMessage.sender)
