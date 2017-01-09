@@ -229,7 +229,7 @@ extension GameScene: ConnectionResponder {
         case let ballMessage as BallMessage:
             self.fireBall(withInitialX: ballMessage.coord, andVelocity: ballMessage.velocity)
             
-        case let scoreMessage as ScoreMessage:
+        case _ as ScoreMessage:
             self.updateLocalScore()
         case let textMessage as TextMessage:
             print(textMessage.sender)

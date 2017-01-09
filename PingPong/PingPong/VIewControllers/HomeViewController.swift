@@ -21,6 +21,10 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func unwindToHomeSegue(_ sender: UIStoryboardSegue){
+        
+    }
+    
     @IBAction func PlayButtonAction(_ sender: UIButton) {
         self.showConnectionPopUp()
     }
