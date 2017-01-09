@@ -9,6 +9,7 @@
 import SpriteKit
 import GameplayKit
 import Tibei
+import CoreMotion
 
 struct PhysicsCategory {
     static let ball: UInt32 = 1
@@ -24,19 +25,41 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //MARK: - Nodes variables
     
+    // Primary elements
+    
     var leftSideBar: SKSpriteNode?
     var rightSideBar: SKSpriteNode?
     var playerRacket: SKSpriteNode?
     var ball: SKSpriteNode?
     
+    // Sensors
+    
     var transferSensor: SKSpriteNode?
     var goalSensor: SKSpriteNode?
+    
+    // Score
     
     var localPlayerScore: SKLabelNode?
     var localPlayerNameLabel: SKLabelNode?
     var opponentPlayerScore: SKLabelNode?
     var opponentPlayerNameLabel: SKLabelNode?
     
+    // Game Over
+    
+    var finishLabel: SKLabelNode?
+    var playAgainButton: SKLabelNode?
+    var mainMenuButton: SKLabelNode?
+    
+    let maxScore = 5
+    
+    var motionManager : CMMotionManager = {
+        let motion = CMMotionManager()
+        motion.accelerometerUpdateInterval = 0.01
+        
+        return motion
+        
+    }()
+
     
     private var lastUpdateTime : TimeInterval = 0
 
@@ -47,9 +70,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
 //        self.lastUpdateTime = 0
         
+        self.motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (accelerometerData: CMAccelerometerData?, NSError)-> Void in
+            self.moveRacket()
+            if(NSError != nil) {
+                print("\(NSError)")
+            }
+        }
+        
         self.initializeNodesVariables()
         
     }
+    
+    
     func initializeNodesVariables(){
         self.leftSideBar = self.childNode(withName: "LeftSideBar") as? SKSpriteNode
         self.rightSideBar = self.childNode(withName: "RightSideBar") as? SKSpriteNode
@@ -64,9 +96,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.opponentPlayerScore = self.childNode(withName: "OpponentPlayerScore") as? SKLabelNode
         self.opponentPlayerNameLabel = self.childNode(withName: "OpponentPlayerName") as? SKLabelNode
         
+        self.finishLabel = self.childNode(withName: "FinishLabel") as? SKLabelNode
+        self.playAgainButton = self.childNode(withName: "PlayAgainButton") as? SKLabelNode
+        self.mainMenuButton = self.childNode(withName: "MainMenuButon") as? SKLabelNode
+        
+        self.setNodes()
+        self.startGame()
+    }
+    
+    func setNodes(){
         self.setContactTestBitMask()
         self.setNameLabels()
-        self.startGame()
+        
+        self.finishLabel?.removeFromParent()
+        self.playAgainButton?.removeFromParent()
+        self.mainMenuButton?.removeFromParent()
+
+    
     }
     
     func setContactTestBitMask(){
@@ -93,10 +139,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func updateScore(){
+    func fireBall(withInitialX coord: CGFloat, andVelocity velocity: CGVector){
+        self.ball?.position = CGPoint(x: self.size.width/2 * coord, y: self.frame.maxY)
+        self.ball?.physicsBody?.velocity = CGVector(dx: -velocity.dx, dy: -velocity.dy)
+        self.addChild(self.ball!)
+        
+        
+    }
+    
+    func updateLocalScore(){
         Facade.shared.localPlayerDidScore()
         self.updateScoreLabels()
-        self.restart()
+        if self.gameIsOver(){
+            self.finishGame()
+        }else{
+            self.restart()
+        }
         
     }
     
@@ -104,20 +162,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let velocity = CGVector(dx: 0, dy: -250)
         self.ball?.physicsBody?.velocity = velocity
         self.ball?.position = CGPoint.zero
-        
-        
     }
+    
     func updateScoreLabels(){
         self.localPlayerScore?.text = String(Facade.shared.getLocalPlayerScore())
         self.opponentPlayerScore?.text = String(Facade.shared.getOpponentPlayerScore())
     }
     
-    func fireBall(withInitialX coord: CGFloat, andVelocity velocity: CGVector){
-        self.ball?.position = CGPoint(x: self.size.width/2 * coord, y: self.frame.maxY)
-        self.ball?.physicsBody?.velocity = CGVector(dx: -velocity.dx, dy: -velocity.dy)
-        self.addChild(self.ball!)
-
-    }
     
     func touchDown(atPoint pos : CGPoint) {
         self.playerRacket?.position.x = pos.x
@@ -126,7 +177,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func touchMoved(toPoint pos : CGPoint) {
         
     }
-    
     func touchUp(atPoint pos : CGPoint) {
         
     }
@@ -180,7 +230,7 @@ extension GameScene: ConnectionResponder {
             self.fireBall(withInitialX: ballMessage.coord, andVelocity: ballMessage.velocity)
             
         case let scoreMessage as ScoreMessage:
-            self.updateScore()
+            self.updateLocalScore()
         case let textMessage as TextMessage:
             print(textMessage.sender)
             print(textMessage.content)

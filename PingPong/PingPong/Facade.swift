@@ -116,6 +116,9 @@ class Facade: NSObject{
     func getOpponentPlayerScore()-> Int{
         return (self.currentMatch?.opponentPlayer.score)!
     }
+    func getPlayerWithBestScoreName() -> String{
+        return (self.currentMatch?.getPlayerWithTheBestScoreName())!
+    }
     
     
     

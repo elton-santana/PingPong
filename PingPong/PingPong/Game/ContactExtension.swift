@@ -55,6 +55,9 @@ extension GameScene {
             Facade.shared.opponentPlayerDidScore()
             Facade.shared.sendMessage(ScoreMessage())
             self.updateScoreLabels()
+            if self.gameIsOver(){
+                self.finishGame()
+            }
         }
         
     }

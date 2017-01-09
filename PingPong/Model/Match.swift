@@ -31,5 +31,14 @@ class Match {
     func areBothPlayersReady() -> Bool{
         return self.opponentPlayer.isReady && self.localPlayer.isReady
     }
+    func getPlayerWithTheBestScoreName()->String{
+        var winnerName = ""
+        if self.opponentPlayer.score > self.localPlayer.score{
+            winnerName = self.opponentPlayer.name
+        }else if self.opponentPlayer.score < self.localPlayer.score{
+            winnerName = self.localPlayer.name
+        }
+        return winnerName
+    }
     
 }
