@@ -89,14 +89,14 @@ class Facade: NSObject{
     func getLocalPlayerName() -> String{
         return (self.currentMatch?.getLocalPlayerName())!
     }
-    func getOpponentName() -> String{
+    func getOpponentPlayerName() -> String{
         return (self.currentMatch?.getOpponentName())!
     }
     func changeLocalPlayerStatus(to status: Bool){
         self.currentMatch?.localPlayer.isReady = status
     }
-    func changeOpponentStatus(to status: Bool){
-        self.currentMatch?.opponent.isReady = status
+    func changeOpponentPlayerStatus(to status: Bool){
+        self.currentMatch?.opponentPlayer.isReady = status
     }
     func areBothPlayersReady() -> Bool{
         return (self.currentMatch?.areBothPlayersReady())!
@@ -108,7 +108,13 @@ class Facade: NSObject{
         self.currentMatch?.localPlayer.improveScore()
     }
     func opponentPlayerDidScore(){
-        self.currentMatch?.opponent.improveScore()
+        self.currentMatch?.opponentPlayer.improveScore()
+    }
+    func getLocalPlayerScore()-> Int{
+        return (self.currentMatch?.localPlayer.score)!
+    }
+    func getOpponentPlayerScore()-> Int{
+        return (self.currentMatch?.opponentPlayer.score)!
     }
     
     

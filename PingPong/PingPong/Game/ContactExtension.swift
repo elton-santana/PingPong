@@ -44,7 +44,7 @@ extension GameScene {
             let ballVelocity = ball.physicsBody?.velocity
             let normalizedCoord = ball.position.x/self.size.width/2
             ball.removeFromParent()
-//            Facade.shared.sendMessage(BallMessage(coord: normalizedCoord, velocity: ballVelocity)
+            Facade.shared.sendMessage(BallMessage(coord: normalizedCoord, velocity: ballVelocity!))
             print("did send coord:\(normalizedCoord)")
         }
         if firstBody.categoryBitMask == PhysicsCategory.ball &&
@@ -54,6 +54,7 @@ extension GameScene {
             ball.removeFromParent()
             Facade.shared.opponentPlayerDidScore()
             Facade.shared.sendMessage(ScoreMessage())
+            self.updateScoreLabels()
         }
         
     }

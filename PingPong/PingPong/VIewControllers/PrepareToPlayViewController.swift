@@ -19,7 +19,7 @@ class PrepareToPlayViewController: UIViewController {
         Facade.shared.registerClientResponder(self)
         Facade.shared.registerServerResponder(self)
         
-        self.playWithLabel.text = Facade.shared.getOpponentName()
+        self.playWithLabel.text = Facade.shared.getOpponentPlayerName()
 
         
     }
@@ -86,7 +86,7 @@ extension PrepareToPlayViewController: ConnectionResponder {
             
             
         case let statusMessage as StatusMessage:
-            Facade.shared.changeOpponentStatus(to: statusMessage.content)
+            Facade.shared.changeOpponentPlayerStatus(to: statusMessage.content)
             self.checkPlayersStatus()
         default:
             break

@@ -11,12 +11,12 @@ import UIKit
 
 class Match {
     
-    let opponent: Player = Player()
+    let opponentPlayer: Player = Player()
     let localPlayer: Player = Player()
     var localPlayerIsPlayerAtHome: Bool = false
     
     init(withOpponentName opponent: String, atHome: Bool){
-        self.opponent.name = opponent
+        self.opponentPlayer.name = opponent
         self.localPlayer.name = UIDevice.current.name
         self.localPlayerIsPlayerAtHome = atHome
     }
@@ -25,11 +25,11 @@ class Match {
         return self.localPlayer.name
     }
     func getOpponentName() -> String{
-        return self.opponent.name
+        return self.opponentPlayer.name
     }
     
     func areBothPlayersReady() -> Bool{
-        return self.opponent.isReady && self.localPlayer.isReady
+        return self.opponentPlayer.isReady && self.localPlayer.isReady
     }
     
 }

@@ -65,8 +65,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.opponentPlayerNameLabel = self.childNode(withName: "OpponentPlayerName") as? SKLabelNode
         
         self.setContactTestBitMask()
-//        self.setNameLabels()
-//        self.startGame()
+        self.setNameLabels()
+        self.startGame()
     }
     
     func setContactTestBitMask(){
@@ -81,20 +81,35 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func setNameLabels(){
         self.localPlayerNameLabel?.text = Facade.shared.getLocalPlayerName()
-        self.opponentPlayerNameLabel?.text = Facade.shared.getOpponentName()
+        self.opponentPlayerNameLabel?.text = Facade.shared.getOpponentPlayerName()
     }
     
     func startGame(){
         if Facade.shared.localPlayerIsAtHome(){
-            
+            let velocity = CGVector(dx: 250, dy: -250)
+            self.ball?.physicsBody?.velocity = velocity
         }else{
             self.ball?.removeFromParent()
         }
     }
     
     func updateScore(){
+        Facade.shared.localPlayerDidScore()
+        self.updateScoreLabels()
+        self.restart()
+        
+    }
+    
+    func restart(){
+        let velocity = CGVector(dx: 0, dy: -250)
+        self.ball?.physicsBody?.velocity = velocity
+        self.ball?.position = CGPoint.zero
         
         
+    }
+    func updateScoreLabels(){
+        self.localPlayerScore?.text = String(Facade.shared.getLocalPlayerScore())
+        self.opponentPlayerScore?.text = String(Facade.shared.getOpponentPlayerScore())
     }
     
     func fireBall(withInitialX coord: CGFloat, andVelocity velocity: CGVector){
@@ -164,6 +179,8 @@ extension GameScene: ConnectionResponder {
         case let ballMessage as BallMessage:
             self.fireBall(withInitialX: ballMessage.coord, andVelocity: ballMessage.velocity)
             
+        case let scoreMessage as ScoreMessage:
+            self.updateScore()
         case let textMessage as TextMessage:
             print(textMessage.sender)
             print(textMessage.content)
