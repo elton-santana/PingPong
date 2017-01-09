@@ -104,7 +104,7 @@ extension ChooseConnectionViewController: ClientConnectionResponder {
             
             
         case let pingMessage as PingMessage:
-            Facade.shared.initializeMatch(with: pingMessage.sender)
+            Facade.shared.initializeMatch(with: pingMessage.sender, atHome: false)
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "ChooseConnectionToPrepareToPlaySegue", sender: self)
             }

@@ -13,10 +13,12 @@ class Match {
     
     let opponent: Player = Player()
     let localPlayer: Player = Player()
+    var localPlayerIsPlayerAtHome: Bool = false
     
-    init(withOpponentName opponent: String){
+    init(withOpponentName opponent: String, atHome: Bool){
         self.opponent.name = opponent
         self.localPlayer.name = UIDevice.current.name
+        self.localPlayerIsPlayerAtHome = atHome
     }
     
     func getOpponentName() -> String{

@@ -83,8 +83,8 @@ class Facade: NSObject{
     
     var currentMatch: Match?
     
-    func initializeMatch(with opponent: String){
-        self.currentMatch = Match(withOpponentName: opponent)
+    func initializeMatch(with opponent: String, atHome: Bool){
+        self.currentMatch = Match(withOpponentName: opponent, atHome: atHome)
     }
     func getOpponentName() -> String{
         return (self.currentMatch?.getOpponentName())!
@@ -98,6 +98,9 @@ class Facade: NSObject{
     }
     func areBothPlayersReady() -> Bool{
         return (self.currentMatch?.areBothPlayersReady())!
+    }
+    func localPlayerIsAtHome()-> Bool{
+        return (self.currentMatch?.localPlayerIsPlayerAtHome)!
     }
     
     

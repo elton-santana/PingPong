@@ -28,6 +28,7 @@
 		954D3B411E1497AA0064374F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D3B401E1497AA0064374F /* GameViewController.swift */; };
 		954D3B441E1497AA0064374F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B421E1497AA0064374F /* Main.storyboard */; };
 		954D3B461E1497AA0064374F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B451E1497AA0064374F /* Assets.xcassets */; };
+		95F41B321E235E7C0087CACC /* ContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F41B311E235E7C0087CACC /* ContactExtension.swift */; };
 		95F468471E20699B00D01E3B /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468461E20699B00D01E3B /* TextMessage.swift */; };
 		95F4684A1E2069AE00D01E3B /* PingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468491E2069AE00D01E3B /* PingMessage.swift */; };
 		95F4684F1E206E9E00D01E3B /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F4684E1E206E9E00D01E3B /* Facade.swift */; };
@@ -70,6 +71,7 @@
 		954D3B431E1497AA0064374F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		954D3B451E1497AA0064374F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		954D3B471E1497AA0064374F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95F41B311E235E7C0087CACC /* ContactExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactExtension.swift; path = Game/ContactExtension.swift; sourceTree = "<group>"; };
 		95F468461E20699B00D01E3B /* TextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextMessage.swift; path = Messages/TextMessage.swift; sourceTree = "<group>"; };
 		95F468491E2069AE00D01E3B /* PingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PingMessage.swift; path = Messages/PingMessage.swift; sourceTree = "<group>"; };
 		95F4684E1E206E9E00D01E3B /* Facade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				954D3B1A1E1497680064374F /* GameScene.sks */,
 				954D3B1C1E1497680064374F /* Actions.sks */,
 				954D3B1E1E1497680064374F /* GameScene.swift */,
+				95F41B311E235E7C0087CACC /* ContactExtension.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				95F4684A1E2069AE00D01E3B /* PingMessage.swift in Sources */,
 				95F468591E21961E00D01E3B /* Player.swift in Sources */,
 				954D3B211E1497680064374F /* GameViewController.swift in Sources */,
+				95F41B321E235E7C0087CACC /* ContactExtension.swift in Sources */,
 				954D3B191E1497680064374F /* AppDelegate.swift in Sources */,
 				952A14E11E1EF0D90088BA44 /* HomeViewController.swift in Sources */,
 				952A14E31E1EF13B0088BA44 /* WaitingPlayerViewController.swift in Sources */,
