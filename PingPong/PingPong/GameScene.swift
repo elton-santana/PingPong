@@ -47,8 +47,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Game Over
     
     var finishLabel: SKLabelNode?
-    var playAgainButton: SKLabelNode?
-    var mainMenuButton: SKLabelNode?
+    var playAgainButton: SKSpriteNode?
+    var mainMenuButton: SKSpriteNode?
     
     let maxScore = 5
     
@@ -66,15 +66,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func sceneDidLoad() {
         
-        self.physicsWorld.contactDelegate = self
+        Facade.shared.registerClientResponder(self)
+        Facade.shared.registerServerResponder(self)
+        
+//        self.physicsWorld.contactDelegate = self
         
 //        self.lastUpdateTime = 0
         
-        self.motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (accelerometerData: CMAccelerometerData?, NSError)-> Void in
+        self.motionManager.startGyroUpdates(to: OperationQueue.current!) { (gyroData: CMGyroData?, NSError) in
             self.moveRacket()
             if(NSError != nil) {
                 print("\(NSError)")
             }
+
         }
         
         self.initializeNodesVariables()
@@ -97,16 +101,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.opponentPlayerNameLabel = self.childNode(withName: "OpponentPlayerName") as? SKLabelNode
         
         self.finishLabel = self.childNode(withName: "FinishLabel") as? SKLabelNode
-        self.playAgainButton = self.childNode(withName: "PlayAgainButton") as? SKLabelNode
-        self.mainMenuButton = self.childNode(withName: "MainMenuButon") as? SKLabelNode
+        self.playAgainButton = self.childNode(withName: "PlayAgainButton") as? SKSpriteNode
+        self.mainMenuButton = self.childNode(withName: "MainMenuButton") as? SKSpriteNode
         
         self.setNodes()
-        self.startGame()
+//        self.startGame()
     }
     
     func setNodes(){
-        self.setContactTestBitMask()
-        self.setNameLabels()
+//        self.setContactTestBitMask()
+//        self.setNameLabels()
         
         self.finishLabel?.removeFromParent()
         self.playAgainButton?.removeFromParent()
@@ -132,17 +136,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func startGame(){
         if Facade.shared.localPlayerIsAtHome(){
-            let velocity = CGVector(dx: 250, dy: -250)
+            let velocity = CGVector(dx: 0, dy: -250)
             self.ball?.physicsBody?.velocity = velocity
         }else{
-            self.ball?.removeFromParent()
+            self.ball?.isHidden = true
         }
     }
     
     func fireBall(withInitialX coord: CGFloat, andVelocity velocity: CGVector){
+        
         self.ball?.position = CGPoint(x: self.size.width/2 * coord, y: self.frame.maxY)
         self.ball?.physicsBody?.velocity = CGVector(dx: -velocity.dx, dy: -velocity.dy)
-        self.addChild(self.ball!)
+        self.ball?.isHidden = false
         
         
     }
@@ -227,7 +232,9 @@ extension GameScene: ConnectionResponder {
         
         switch message {
         case let ballMessage as BallMessage:
-            self.fireBall(withInitialX: ballMessage.coord, andVelocity: ballMessage.velocity)
+            self.fireBall(withInitialX: ballMessage.coord,
+                          andVelocity: CGVector(dx: ballMessage.velocityDx,
+                                                dy: ballMessage.velocityDy))
             
         case _ as ScoreMessage:
             self.updateLocalScore()

@@ -30,7 +30,7 @@
 		954D3B461E1497AA0064374F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B451E1497AA0064374F /* Assets.xcassets */; };
 		95F41B321E235E7C0087CACC /* ContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F41B311E235E7C0087CACC /* ContactExtension.swift */; };
 		95F41B341E238FD00087CACC /* ScoreMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F41B331E238FD00087CACC /* ScoreMessage.swift */; };
-		95F41B361E23BA820087CACC /* FInishGameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F41B351E23BA820087CACC /* FInishGameExtension.swift */; };
+		95F41B361E23BA820087CACC /* FinishGameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F41B351E23BA820087CACC /* FinishGameExtension.swift */; };
 		95F41B381E23C8650087CACC /* RacketMoveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F41B371E23C8650087CACC /* RacketMoveExtension.swift */; };
 		95F468471E20699B00D01E3B /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468461E20699B00D01E3B /* TextMessage.swift */; };
 		95F4684A1E2069AE00D01E3B /* PingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468491E2069AE00D01E3B /* PingMessage.swift */; };
@@ -76,7 +76,7 @@
 		954D3B471E1497AA0064374F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95F41B311E235E7C0087CACC /* ContactExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactExtension.swift; path = Game/ContactExtension.swift; sourceTree = "<group>"; };
 		95F41B331E238FD00087CACC /* ScoreMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScoreMessage.swift; path = Messages/ScoreMessage.swift; sourceTree = "<group>"; };
-		95F41B351E23BA820087CACC /* FInishGameExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FInishGameExtension.swift; path = Game/FInishGameExtension.swift; sourceTree = "<group>"; };
+		95F41B351E23BA820087CACC /* FinishGameExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinishGameExtension.swift; path = Game/FinishGameExtension.swift; sourceTree = "<group>"; };
 		95F41B371E23C8650087CACC /* RacketMoveExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RacketMoveExtension.swift; sourceTree = "<group>"; };
 		95F468461E20699B00D01E3B /* TextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextMessage.swift; path = Messages/TextMessage.swift; sourceTree = "<group>"; };
 		95F468491E2069AE00D01E3B /* PingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PingMessage.swift; path = Messages/PingMessage.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				954D3B1C1E1497680064374F /* Actions.sks */,
 				954D3B1E1E1497680064374F /* GameScene.swift */,
 				95F41B371E23C8650087CACC /* RacketMoveExtension.swift */,
-				95F41B351E23BA820087CACC /* FInishGameExtension.swift */,
+				95F41B351E23BA820087CACC /* FinishGameExtension.swift */,
 				95F41B311E235E7C0087CACC /* ContactExtension.swift */,
 			);
 			name = Game;
@@ -439,7 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				954D3B1F1E1497680064374F /* GameScene.swift in Sources */,
-				95F41B361E23BA820087CACC /* FInishGameExtension.swift in Sources */,
+				95F41B361E23BA820087CACC /* FinishGameExtension.swift in Sources */,
 				95F4684F1E206E9E00D01E3B /* Facade.swift in Sources */,
 				95F4684A1E2069AE00D01E3B /* PingMessage.swift in Sources */,
 				95F468591E21961E00D01E3B /* Player.swift in Sources */,

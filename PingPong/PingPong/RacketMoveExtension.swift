@@ -14,10 +14,10 @@ extension GameScene{
     
     func moveRacket() {
         
-        let XForce = self.motionManager.accelerometerData!.acceleration.x
-        
-            let dxVelocity = self.playerRacket?.physicsBody?.velocity.dx
-            self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! + CGFloat(XForce)
+        let xForce = self.motionManager.gyroData!.rotationRate.x
+        print(xForce)
+        let dxVelocity = self.playerRacket?.physicsBody?.velocity.dx
+        self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! + 45*CGFloat(xForce)
         
         //"lock" the ship on the game area
         

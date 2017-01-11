@@ -43,7 +43,7 @@ extension GameScene {
             let ball = firstBody.node as! SKSpriteNode
             let ballVelocity = ball.physicsBody?.velocity
             let normalizedCoord = ball.position.x/self.size.width/2
-            ball.removeFromParent()
+            ball.isHidden = true
             Facade.shared.sendMessage(BallMessage(coord: normalizedCoord, velocity: ballVelocity!))
             print("did send coord:\(normalizedCoord)")
         }

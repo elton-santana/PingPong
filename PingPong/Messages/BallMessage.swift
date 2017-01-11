@@ -10,22 +10,26 @@ import Tibei
 
 class BallMessage: JSONConvertibleMessage {
     var coord: CGFloat
-    var velocity: CGVector
+    var velocityDx: CGFloat
+    var velocityDy: CGFloat
     
     init(coord: CGFloat, velocity: CGVector) {
         self.coord = coord
-        self.velocity = velocity
+        self.velocityDx = velocity.dx
+        self.velocityDy = velocity.dy
     }
     
     required init(jsonObject: [String : Any]) {
         self.coord = jsonObject["coord"] as! CGFloat
-        self.velocity = jsonObject["velocity"] as! CGVector
+        self.velocityDx = jsonObject["velocityDx"] as! CGFloat
+        self.velocityDy = jsonObject["velocityDy"] as! CGFloat
     }
     
     func toJSONObject() -> [String : Any] {
         return [
             "coord": self.coord,
-            "velocity": self.velocity
+            "velocityDx": self.velocityDx,
+            "velocityDy": self.velocityDy
         ]
     }
 }
