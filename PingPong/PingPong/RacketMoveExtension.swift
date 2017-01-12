@@ -15,17 +15,17 @@ extension GameScene{
     func moveRacket() {
         
         let xForce = self.motionManager.gyroData!.rotationRate.x
-        print(xForce)
+
         let dxVelocity = self.playerRacket?.physicsBody?.velocity.dx
-        self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! + 45*CGFloat(xForce)
+        self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! + 50*CGFloat(xForce)
         
-        //"lock" the ship on the game area
+        //"lock" the racket on the game area
         
-        if (playerRacket?.position.x)! > self.frame.maxX - ((playerRacket?.size.width)!/2){
-            playerRacket?.position.x = self.frame.maxX - ((playerRacket?.size.width)!/2)
+        if (playerRacket?.position.x)! > self.frame.maxX - ((playerRacket?.size.width)!){
+            playerRacket?.position.x = self.frame.maxX - ((playerRacket?.size.width)!)
         }
-        if (playerRacket?.position.x)! < self.frame.minX + ((playerRacket?.size.width)!/2){
-            playerRacket?.position.x = self.frame.minX + ((playerRacket?.size.width)!/2)
+        if (playerRacket?.position.x)! < self.frame.minX + ((playerRacket?.size.width)!){
+            playerRacket?.position.x = self.frame.minX + ((playerRacket?.size.width)!)
         }
         
         
