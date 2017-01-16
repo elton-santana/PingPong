@@ -69,7 +69,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         Facade.shared.registerClientResponder(self)
         Facade.shared.registerServerResponder(self)
         
-//        self.physicsWorld.contactDelegate = self
+        self.physicsWorld.contactDelegate = self
         
 //        self.lastUpdateTime = 0
         
@@ -105,12 +105,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.mainMenuButton = self.childNode(withName: "MainMenuButton") as? SKSpriteNode
         
         self.setNodes()
-//        self.startGame()
+        self.startGame()
     }
     
     func setNodes(){
-//        self.setContactTestBitMask()
-//        self.setNameLabels()
+        self.setContactTestBitMask()
+        self.setNameLabels()
         
         self.finishLabel?.removeFromParent()
         self.playAgainButton?.removeFromParent()
