@@ -16,8 +16,6 @@ class PrepareToPlayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Facade.shared.registerClientResponder(self)
-        Facade.shared.registerServerResponder(self)
         
         self.playWithLabel.text = Facade.shared.getOpponentPlayerName()
 
@@ -30,7 +28,15 @@ class PrepareToPlayViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        if Facade.shared.localPlayerIsAtHome(){
+            Facade.shared.registerServerResponder(self)
+        }else{
+            Facade.shared.registerClientResponder(self)
+        }
+        
     }
+    
     
     @IBAction func startButtonAction(_ sender: UIButton) {
         Facade.shared.changeLocalPlayerStatus(to: true)
@@ -41,24 +47,14 @@ class PrepareToPlayViewController: UIViewController {
     
     func checkPlayersStatus(){
         if Facade.shared.areBothPlayersReady(){
+            Facade.shared.unregisterClientResponder(self)
+            Facade.shared.unregisterServerResponder(self)
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "PrepareToPlayToGameSegue", sender: self)
             }
         }
-        
-        
     }
     
-//    func updatePlayerStatus(to status: Bool){
-//        switch status {
-//        case true:
-//            print("estou pronto")
-//            Facade.shared.
-//        default:
-//            break
-//        }
-//        
-//    }
 
     /*
     // MARK: - Navigation

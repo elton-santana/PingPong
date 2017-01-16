@@ -22,12 +22,16 @@ class ChooseConnectionViewController: UIViewController, UITableViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.servicesTableView.dataSource = self
         self.servicesTableView.delegate = self
-
+        
         Facade.shared.browseForServices()
         Facade.shared.registerClientResponder(self)
-        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -105,6 +109,7 @@ extension ChooseConnectionViewController: ClientConnectionResponder {
             
         case let pingMessage as PingMessage:
             Facade.shared.initializeMatch(with: pingMessage.sender, atHome: false)
+            Facade.shared.unregisterClientResponder(self)
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "ChooseConnectionToPrepareToPlaySegue", sender: self)
             }

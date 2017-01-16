@@ -33,6 +33,10 @@ class Facade: NSObject{
         self.client.registerResponder(responder)
     }
     
+    func unregisterClientResponder(_ responder: ConnectionResponder){
+        self.client.unregisterResponder(responder)
+    }
+    
     func connect(serviceName: String){
         do {
             try self.client.connect(serviceName: serviceName)
@@ -50,6 +54,10 @@ class Facade: NSObject{
     
     func registerServerResponder(_ responder: ConnectionResponder){
         self.server?.registerResponder(responder)
+    }
+    
+    func unregisterServerResponder(_ responder: ConnectionResponder){
+        self.server?.unregisterResponder(responder)
     }
     
     func registerServerConnectionID(_ id: ConnectionID){

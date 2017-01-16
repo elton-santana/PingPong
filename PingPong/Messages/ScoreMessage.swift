@@ -10,8 +10,7 @@ import Foundation
 import Tibei
 
 class ScoreMessage: JSONConvertibleMessage {
-    
-    
+
     init() {
         
     }
