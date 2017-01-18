@@ -50,6 +50,7 @@ class Facade: NSObject{
     
     func publishServer(){
         self.server = ServerMessenger(serviceIdentifier: serviceIdentifier)
+        self.server?.publishService()
     }
     
     func registerServerResponder(_ responder: ConnectionResponder){
