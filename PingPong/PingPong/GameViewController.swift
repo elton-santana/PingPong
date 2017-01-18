@@ -27,10 +27,9 @@ class GameViewController: UIViewController {
                 sceneNode.graphs = scene.graphs
                 
                 // Set the scale mode to scale to fit the window
-                sceneNode.scaleMode = .aspectFill
+                sceneNode.scaleMode = .fill
                 
 //                TODO: - Ajustar o size pra não rolar um muito maior que o outro
-//                sceneNode.size =
                 
                 // Present the scene
                 if let view = self.view as! SKView? {
