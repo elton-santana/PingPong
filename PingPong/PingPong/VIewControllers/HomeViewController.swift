@@ -53,6 +53,18 @@ class HomeViewController: UIViewController {
                 }
             }
         }
+//        if let view = self.view as! SKView? {
+//
+//            let scene = BackgroundScene(fileNamed:"BackgroundScene")
+//            scene?.scaleMode = .aspectFill
+//            view.presentScene(scene)
+//            
+//            view.ignoresSiblingOrder = true
+//            view.showsPhysics = false
+//            view.showsFPS = false
+//            view.showsNodeCount = false
+//        
+//        }
     }
     
     func showConnectionPopUp(){
