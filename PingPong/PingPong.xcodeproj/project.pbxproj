@@ -43,6 +43,7 @@
 		95F468631E21CC7100D01E3B /* BallMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468611E21CC7100D01E3B /* BallMessage.swift */; };
 		95F468651E2265C300D01E3B /* StatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468641E2265C300D01E3B /* StatusMessage.swift */; };
 		95F468661E2265C300D01E3B /* StatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468641E2265C300D01E3B /* StatusMessage.swift */; };
+		95FBBB911E325583003C3EC1 /* GameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBBB901E325583003C3EC1 /* GameDelegate.swift */; };
 		D11E788988D94A5B32E9E5DB /* Pods_PingPong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3444526D7812A99775693C /* Pods_PingPong.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		95F4685B1E21962E00D01E3B /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Model/Match.swift; sourceTree = "<group>"; };
 		95F468611E21CC7100D01E3B /* BallMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BallMessage.swift; path = Messages/BallMessage.swift; sourceTree = "<group>"; };
 		95F468641E2265C300D01E3B /* StatusMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusMessage.swift; path = Messages/StatusMessage.swift; sourceTree = "<group>"; };
+		95FBBB901E325583003C3EC1 /* GameDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameDelegate.swift; path = Game/GameDelegate.swift; sourceTree = "<group>"; };
 		994BCDF418EC9BC80502D64B /* Pods-PingPongtvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PingPongtvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PingPongtvOS/Pods-PingPongtvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DB3444526D7812A99775693C /* Pods_PingPong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PingPong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC64F4A856426A4D6B611427 /* Pods_PingPongtvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PingPongtvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				95F41B371E23C8650087CACC /* RacketMoveExtension.swift */,
 				95F41B351E23BA820087CACC /* FinishGameExtension.swift */,
 				95F41B311E235E7C0087CACC /* ContactExtension.swift */,
+				95FBBB901E325583003C3EC1 /* GameDelegate.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				954D3B1F1E1497680064374F /* GameScene.swift in Sources */,
 				95F41B361E23BA820087CACC /* FinishGameExtension.swift in Sources */,
 				95F4684F1E206E9E00D01E3B /* Facade.swift in Sources */,
+				95FBBB911E325583003C3EC1 /* GameDelegate.swift in Sources */,
 				95F4684A1E2069AE00D01E3B /* PingMessage.swift in Sources */,
 				95F468591E21961E00D01E3B /* Player.swift in Sources */,
 				954D3B211E1497680064374F /* GameViewController.swift in Sources */,
