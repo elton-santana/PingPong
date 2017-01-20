@@ -7,39 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08027E4D2221FDDFC7DCE82AE833599F /* ConnectionAcceptedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE486C75568D79A668AE5BCE4DDD81 /* ConnectionAcceptedEvent.swift */; };
-		15FF13026F45ACBE62CF7D1ED14DD4F5 /* ConnectionLostEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D86F25B0FCF8CB4C5201541D7560C35 /* ConnectionLostEvent.swift */; };
-		18442408BBACDB42B315C74DEFCC0FCE /* ClientMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E9A024D255301E969C33F2E576FAF4 /* ClientMessenger.swift */; };
-		1A9DED58DD1B20D8B3A4EC3BF93AE0E5 /* KeepAliveMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EA624D2E7C7E6FAA8556B2D82D974B /* KeepAliveMessage.swift */; };
-		2AA81AABF2359A762E39501A8CECB7D0 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E98AED2192188A8C5B23A30E5C2EA4 /* ConnectionError.swift */; };
-		2EA2AAEB167EC80DF5F6A5AE97A17308 /* ConnectionResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1326CFAB3E4ED9F0B78FECB7030BA8 /* ConnectionResponder.swift */; };
+		13E33B61D9799DACCEE0EC7112E26FAB /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B695319336F05F1CD4195DECC2FC39C4 /* Connection.swift */; };
+		17B65DF80835EADE44758DC96393B9DA /* ConnectionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8388784A417906FEB2AC51CA3911DC1 /* ConnectionEvent.swift */; };
+		29DFA04665A78F09E4955A36A80AAF7F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147A2913ECFFA89C6D32DF553E4F068C /* Constants.swift */; };
+		399F651B502F807612CA7E5478728997 /* ClientResponderChainNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3736DA09163E222A006FB6F2A85EC93 /* ClientResponderChainNode.swift */; };
 		3AAB786261105F2F5427B1757B919E56 /* Pods-PingPongtvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A177CE76B18A9932EAB93C933900CC44 /* Pods-PingPongtvOS-dummy.m */; };
-		4144F2334E2E255156BEB509BD17FBF6 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6D4581850915B69E51E1FA906A352B /* Connection.swift */; };
-		4AE62E552233C2BCD4835D64A916322A /* ServerMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9AD9A41E54FECE75FFCB1C4F0A1EA3 /* ServerMessenger.swift */; };
-		545B8FD873D2EBFBE46031F77FC6339B /* IncomingMessageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD42B0D21E3BF60D9CB68A4FC008DCF /* IncomingMessageEvent.swift */; };
-		55A2E04DA676A37129DD656D4AF828B9 /* IncomingMessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FD4941E55449895BDC398F68127BA2 /* IncomingMessageData.swift */; };
-		5913B4621A286CF18A84C3422BE57EE1 /* Tibei-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 149C1BB492424584E3EE020B4534FA28 /* Tibei-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6313CE758574A4625AB9A6DEEA32350A /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912654E9E7D05D0E34660868A819C647 /* Messenger.swift */; };
+		42F00AAFF14A03D69821DDDD96569D0C /* GameControllerServiceBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335DAAA0BB05F21880B99983F3FD2A01 /* GameControllerServiceBrowserDelegate.swift */; };
+		484508C38C93C45EC509FA526F1392D9 /* GameControllerServiceBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA14AD140513BA1AD25141D12FCA29 /* GameControllerServiceBrowser.swift */; };
+		5913B4621A286CF18A84C3422BE57EE1 /* Tibei-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 301154364FB690E10831897DE963091C /* Tibei-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AA2E9EB8097F4E6B783AC3E797CC133 /* GameControllerServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E1C93ECDC99B1B546D23669C28143 /* GameControllerServer.swift */; };
 		6575E2B7418B20498E96CF7D82AEA66D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
-		69DE3B25612F444933E4057D58B61656 /* JSONConvertibleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129DE94272BA9D0F1B90C7E6D16C9A8A /* JSONConvertibleMessage.swift */; };
-		755F94CB70421BCB18D4D37BC477D601 /* ConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F6E3BA00C57066DB6016D57D6BB5A /* ConnectionDelegate.swift */; };
-		7A704920FE1225BDDF2D637B87DF18AD /* ClientConnectionResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B6A936B5495D085CF993C0E4ABA47 /* ClientConnectionResponder.swift */; };
+		65EF771525A3BE5FCDC4D409C5B714FB /* JSONConvertibleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7E9BE842EF969375600C8FE2EA453 /* JSONConvertibleMessage.swift */; };
+		692F40A5BBCC6086DEF4B85C78F48CFD /* ServerMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591D30F479AFA82CBC6E8FB3969017F /* ServerMessenger.swift */; };
+		73B0454195166754CBDDFAF8A74C7F98 /* ConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3B63808D017838F5D9D7AB5AAED948 /* ConnectionDelegate.swift */; };
+		77201DA5290544A72EC94E6DB33EDC78 /* ClientConnectionResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD66EE7B9009B0A09CDB9F445CABB2 /* ClientConnectionResponder.swift */; };
+		7A8C401682DEA48DC989BA8A3A593A2A /* ConnectionResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000A819E861A6E4C5B34E0000E6E14DC /* ConnectionResponder.swift */; };
 		7B3B57586574432CB358B7B202A8E3A8 /* Pods-PingPongtvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DBB69D6737E8664F09218BB5FCA6739 /* Pods-PingPongtvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F230A85D788DBD5A3BE171DD96DCBBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
-		7F44BCECAF77529A04EC335AE466A906 /* GameControllerServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56DCABFF27AB71FE1AA468A195D278D /* GameControllerServer.swift */; };
-		80AA00846DD9DFC5CD898F8988B0072D /* ResponderChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F5EA96E94AE15C593E2E6E63A2029 /* ResponderChain.swift */; };
-		865AC5EDEABB605EC70779FA4962AB09 /* ServiceAvailabilityChangeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87193E5D2C89ECAC26DD4B4FF43A8DE /* ServiceAvailabilityChangeEvent.swift */; };
-		8793F0B9D64E05AC853832339930BEFB /* ConnectionID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B80005795B0FF62C0AF23141BF9B8CC /* ConnectionID.swift */; };
-		90916B4F4CBC210F38E253746583262A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F7123F558A3C774957F9E8B7E14BC3 /* Constants.swift */; };
-		90955A35C342F7B97EFDAA5A4FA63FE2 /* GameControllerServiceBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC930860E546092EB77EA2E4028E2F93 /* GameControllerServiceBrowser.swift */; };
-		932C5296F884190AE709551E34ADE3C4 /* StreamExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA85A028D4DA75AD521C7392C570274 /* StreamExtensions.swift */; };
-		AEDCE09E20AD8B4101EEC86EBD1F30F1 /* GameControllerServiceBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D486730EED0CCA758C02294CD5F07C /* GameControllerServiceBrowserDelegate.swift */; };
-		C460994028C30F1968DB4A293128D8FE /* ConnectionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B001D19000FA5575FE7E8C101D96CC /* ConnectionEvent.swift */; };
-		D5C48C6B540AC81A872269B138A636AB /* Tibei-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6B653AB0EF1CC58184CF269379E16 /* Tibei-dummy.m */; };
+		7FB4A8851753486D4CB563270D0E8F53 /* ResponderChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55437E44351FBA2177B23B60C2C147A /* ResponderChain.swift */; };
+		91E065B41044DE9E0C5DEE2F19D8219B /* IncomingMessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3FAB255CB37AAF406E4E78D3EB496 /* IncomingMessageData.swift */; };
+		9AE19055939CB866CE122C3B6F279881 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3355603054552655B564C69BC810CC0B /* Messenger.swift */; };
+		A11E25225FD4780081E106E33152BF51 /* ConnectionAcceptedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3217EA6056E262CE71DA2496C4AD4082 /* ConnectionAcceptedEvent.swift */; };
+		B76E015E49A2AA61D5CDD33CE29C184B /* KeepAliveMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF78162E154BD965786D9832F3F97A8 /* KeepAliveMessage.swift */; };
+		C6816E9E4234FB1B9B80FA634DF9F1CC /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211A811167A3E9949671B23AA5789407 /* ConnectionError.swift */; };
+		C968117B8EF43B5BB2C267D29FC1F64E /* IncomingMessageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28A21CFBD6AAA5529171F67FC44F123 /* IncomingMessageEvent.swift */; };
+		D5C48C6B540AC81A872269B138A636AB /* Tibei-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B758636BFAF810C80D3CF7A0565CD98 /* Tibei-dummy.m */; };
+		DB5E446FF686EB25A0D2A701C4E888A4 /* StreamExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527843355965739F3D03E054A38035BB /* StreamExtensions.swift */; };
 		DC3880E23B7B1664CDBAF68E6CF29159 /* Pods-PingPong-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D1D53479E9DA30C65DE314F44676F5 /* Pods-PingPong-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF5ABAB173B1F94358A428BA2D81F34 /* Pods-PingPong-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B26757801CF72C78F729E1FDEE0FF /* Pods-PingPong-dummy.m */; };
-		DEF0DC025EF074BB0119D8278881630C /* ClientResponderChainNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A26FEE57526A148A05B21D92BA72B0 /* ClientResponderChainNode.swift */; };
+		E3EF00F80ABE7966C4D41E80849770D5 /* ServiceAvailabilityChangeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90B0892AE223E819B31B9F344A31721 /* ServiceAvailabilityChangeEvent.swift */; };
+		E78BF0C8D03D779F98E307DCC291A53E /* ClientMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D7993B066EDD44AB61AFE12C17C72 /* ClientMessenger.swift */; };
 		EED693ED767DE9719A3F2E2EC7D7C90F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */; };
+		EF4786D7D1A4DD9F4D28DAB71CD8DBC3 /* ConnectionLostEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF9FFCCA61BEC7F7D5EEC70C331F335 /* ConnectionLostEvent.swift */; };
+		FFF16FFA71BB78BCCC2D4FCBC9B8D08F /* ConnectionID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C19272065D503D8635971E75E37ADA /* ConnectionID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,62 +53,62 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		129DE94272BA9D0F1B90C7E6D16C9A8A /* JSONConvertibleMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONConvertibleMessage.swift; path = Tibei/Classes/message/JSONConvertibleMessage.swift; sourceTree = "<group>"; };
-		135ED8268E5E61015F084C4BEDC21BEC /* Tibei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tibei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		149C1BB492424584E3EE020B4534FA28 /* Tibei-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tibei-umbrella.h"; sourceTree = "<group>"; };
+		000A819E861A6E4C5B34E0000E6E14DC /* ConnectionResponder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionResponder.swift; path = Sources/Tibei/common/responderChain/ConnectionResponder.swift; sourceTree = "<group>"; };
+		0BE3FAB255CB37AAF406E4E78D3EB496 /* IncomingMessageData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IncomingMessageData.swift; path = Sources/Tibei/message/IncomingMessageData.swift; sourceTree = "<group>"; };
+		135ED8268E5E61015F084C4BEDC21BEC /* Tibei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Tibei.framework; path = Tibei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		147A2913ECFFA89C6D32DF553E4F068C /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/Tibei/common/Constants.swift; sourceTree = "<group>"; };
 		14EC821746D145D3757F307F58075ED7 /* Pods-PingPong-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PingPong-resources.sh"; sourceTree = "<group>"; };
-		17D486730EED0CCA758C02294CD5F07C /* GameControllerServiceBrowserDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GameControllerServiceBrowserDelegate.swift; path = Tibei/Classes/client/GameControllerServiceBrowserDelegate.swift; sourceTree = "<group>"; };
+		1A3B63808D017838F5D9D7AB5AAED948 /* ConnectionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionDelegate.swift; path = Sources/Tibei/connection/ConnectionDelegate.swift; sourceTree = "<group>"; };
 		1AEEF3849505ED0DF622E84994D68EDF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B80005795B0FF62C0AF23141BF9B8CC /* ConnectionID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionID.swift; path = Tibei/Classes/connection/ConnectionID.swift; sourceTree = "<group>"; };
 		1DBB69D6737E8664F09218BB5FCA6739 /* Pods-PingPongtvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PingPongtvOS-umbrella.h"; sourceTree = "<group>"; };
-		29E98AED2192188A8C5B23A30E5C2EA4 /* ConnectionError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionError.swift; path = Tibei/Classes/connection/ConnectionError.swift; sourceTree = "<group>"; };
-		31B001D19000FA5575FE7E8C101D96CC /* ConnectionEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionEvent.swift; path = Tibei/Classes/common/responderChain/events/ConnectionEvent.swift; sourceTree = "<group>"; };
-		31FE486C75568D79A668AE5BCE4DDD81 /* ConnectionAcceptedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionAcceptedEvent.swift; path = Tibei/Classes/common/responderChain/events/ConnectionAcceptedEvent.swift; sourceTree = "<group>"; };
+		206E1C93ECDC99B1B546D23669C28143 /* GameControllerServer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GameControllerServer.swift; path = Sources/Tibei/server/GameControllerServer.swift; sourceTree = "<group>"; };
+		211A811167A3E9949671B23AA5789407 /* ConnectionError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionError.swift; path = Sources/Tibei/connection/ConnectionError.swift; sourceTree = "<group>"; };
+		301154364FB690E10831897DE963091C /* Tibei-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tibei-umbrella.h"; sourceTree = "<group>"; };
+		30FA14AD140513BA1AD25141D12FCA29 /* GameControllerServiceBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GameControllerServiceBrowser.swift; path = Sources/Tibei/client/GameControllerServiceBrowser.swift; sourceTree = "<group>"; };
+		3217EA6056E262CE71DA2496C4AD4082 /* ConnectionAcceptedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionAcceptedEvent.swift; path = Sources/Tibei/common/responderChain/events/ConnectionAcceptedEvent.swift; sourceTree = "<group>"; };
 		333B26757801CF72C78F729E1FDEE0FF /* Pods-PingPong-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PingPong-dummy.m"; sourceTree = "<group>"; };
+		3355603054552655B564C69BC810CC0B /* Messenger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Messenger.swift; path = Sources/Tibei/common/Messenger.swift; sourceTree = "<group>"; };
+		335DAAA0BB05F21880B99983F3FD2A01 /* GameControllerServiceBrowserDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GameControllerServiceBrowserDelegate.swift; path = Sources/Tibei/client/GameControllerServiceBrowserDelegate.swift; sourceTree = "<group>"; };
 		35C9B109D63BC9947C98A1D2E5DD94C3 /* Pods-PingPong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PingPong.debug.xcconfig"; sourceTree = "<group>"; };
-		36CC9AFCF3B6A2B2CF86612D6068A2B8 /* Pods_PingPongtvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PingPongtvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36CC9AFCF3B6A2B2CF86612D6068A2B8 /* Pods_PingPongtvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PingPongtvOS.framework; path = "Pods-PingPongtvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39C19272065D503D8635971E75E37ADA /* ConnectionID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionID.swift; path = Sources/Tibei/connection/ConnectionID.swift; sourceTree = "<group>"; };
 		3A931311458697CA2177A4BDCCEEBC20 /* Pods-PingPongtvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PingPongtvOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		3B31D9FFE44AFCA9F0DCF644B8D48A1F /* Pods-PingPong-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PingPong-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3DC6B653AB0EF1CC58184CF269379E16 /* Tibei-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Tibei-dummy.m"; sourceTree = "<group>"; };
-		3F1326CFAB3E4ED9F0B78FECB7030BA8 /* ConnectionResponder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionResponder.swift; path = Tibei/Classes/common/responderChain/ConnectionResponder.swift; sourceTree = "<group>"; };
 		46D1D53479E9DA30C65DE314F44676F5 /* Pods-PingPong-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PingPong-umbrella.h"; sourceTree = "<group>"; };
-		48F7123F558A3C774957F9E8B7E14BC3 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Tibei/Classes/common/Constants.swift; sourceTree = "<group>"; };
-		4CB8B1825DCED3A6D11CFCB3CEB4CB33 /* Pods_PingPong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PingPong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47D3643ED5ED50CBC1B0DFB3D3AF20FC /* Tibei.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Tibei.modulemap; sourceTree = "<group>"; };
+		4B758636BFAF810C80D3CF7A0565CD98 /* Tibei-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Tibei-dummy.m"; sourceTree = "<group>"; };
+		4CB8B1825DCED3A6D11CFCB3CEB4CB33 /* Pods_PingPong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PingPong.framework; path = "Pods-PingPong.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		527843355965739F3D03E054A38035BB /* StreamExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamExtensions.swift; path = Sources/Tibei/StreamExtensions.swift; sourceTree = "<group>"; };
 		57448F8AD39DD1AEB27B5CA3A99350B6 /* Pods-PingPong-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PingPong-acknowledgements.plist"; sourceTree = "<group>"; };
 		5C0F801F4CB46C31521589E8FCF7E3DA /* Pods-PingPongtvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PingPongtvOS.release.xcconfig"; sourceTree = "<group>"; };
-		5D86F25B0FCF8CB4C5201541D7560C35 /* ConnectionLostEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionLostEvent.swift; path = Tibei/Classes/common/responderChain/events/ConnectionLostEvent.swift; sourceTree = "<group>"; };
-		64A26FEE57526A148A05B21D92BA72B0 /* ClientResponderChainNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientResponderChainNode.swift; path = Tibei/Classes/client/responderChain/ClientResponderChainNode.swift; sourceTree = "<group>"; };
-		65C9113525A4E27A7243448B681AA653 /* Pods-PingPong.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PingPong.modulemap"; sourceTree = "<group>"; };
-		75E9A024D255301E969C33F2E576FAF4 /* ClientMessenger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientMessenger.swift; path = Tibei/Classes/client/ClientMessenger.swift; sourceTree = "<group>"; };
-		7893A038D867FF84341686F1BC4B4376 /* Tibei.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tibei.xcconfig; sourceTree = "<group>"; };
-		79FD4941E55449895BDC398F68127BA2 /* IncomingMessageData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IncomingMessageData.swift; path = Tibei/Classes/message/IncomingMessageData.swift; sourceTree = "<group>"; };
+		5FF78162E154BD965786D9832F3F97A8 /* KeepAliveMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeepAliveMessage.swift; path = Sources/Tibei/message/KeepAliveMessage.swift; sourceTree = "<group>"; };
+		60C7E9BE842EF969375600C8FE2EA453 /* JSONConvertibleMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONConvertibleMessage.swift; path = Sources/Tibei/message/JSONConvertibleMessage.swift; sourceTree = "<group>"; };
+		65C9113525A4E27A7243448B681AA653 /* Pods-PingPong.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PingPong.modulemap"; sourceTree = "<group>"; };
+		6DE624902BE64A985790AFA056A7BBEB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F1186457C378FA1D2DA800C2E6394C8 /* Tibei.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tibei.xcconfig; sourceTree = "<group>"; };
 		7E866805B5225E225399F9CAFA61E5B2 /* Pods-PingPong-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PingPong-frameworks.sh"; sourceTree = "<group>"; };
-		844F5EA96E94AE15C593E2E6E63A2029 /* ResponderChain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponderChain.swift; path = Tibei/Classes/common/responderChain/ResponderChain.swift; sourceTree = "<group>"; };
-		8DD42B0D21E3BF60D9CB68A4FC008DCF /* IncomingMessageEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IncomingMessageEvent.swift; path = Tibei/Classes/common/responderChain/events/IncomingMessageEvent.swift; sourceTree = "<group>"; };
-		912654E9E7D05D0E34660868A819C647 /* Messenger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Messenger.swift; path = Tibei/Classes/common/Messenger.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96A0BC9412694635877DB402AD8034F1 /* Pods-PingPongtvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PingPongtvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		998DDA2DD93C2AC833A51EA2B4FD7F66 /* Tibei-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tibei-prefix.pch"; sourceTree = "<group>"; };
 		9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A177CE76B18A9932EAB93C933900CC44 /* Pods-PingPongtvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PingPongtvOS-dummy.m"; sourceTree = "<group>"; };
-		AE6D4581850915B69E51E1FA906A352B /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Tibei/Classes/connection/Connection.swift; sourceTree = "<group>"; };
+		A55437E44351FBA2177B23B60C2C147A /* ResponderChain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponderChain.swift; path = Sources/Tibei/common/responderChain/ResponderChain.swift; sourceTree = "<group>"; };
 		B2E7ADC68A531568977390FD11379542 /* Pods-PingPongtvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PingPongtvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B5B137B93725AC690B88CF01802CE1B5 /* Pods-PingPongtvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PingPongtvOS-resources.sh"; sourceTree = "<group>"; };
-		BDA85A028D4DA75AD521C7392C570274 /* StreamExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamExtensions.swift; path = Tibei/Classes/StreamExtensions.swift; sourceTree = "<group>"; };
+		B695319336F05F1CD4195DECC2FC39C4 /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Sources/Tibei/connection/Connection.swift; sourceTree = "<group>"; };
 		C0940B74DB0FBD8E464125AB5060D43D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C47B6A936B5495D085CF993C0E4ABA47 /* ClientConnectionResponder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientConnectionResponder.swift; path = Tibei/Classes/client/responderChain/ClientConnectionResponder.swift; sourceTree = "<group>"; };
-		C56DCABFF27AB71FE1AA468A195D278D /* GameControllerServer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GameControllerServer.swift; path = Tibei/Classes/server/GameControllerServer.swift; sourceTree = "<group>"; };
-		CA41B6FBB0AFFAEC4660389468F986FE /* Tibei-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tibei-prefix.pch"; sourceTree = "<group>"; };
-		D5E8C63A588DDEA49DFCB70376C59BD8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA9AD9A41E54FECE75FFCB1C4F0A1EA3 /* ServerMessenger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerMessenger.swift; path = Tibei/Classes/server/ServerMessenger.swift; sourceTree = "<group>"; };
-		E4EA624D2E7C7E6FAA8556B2D82D974B /* KeepAliveMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeepAliveMessage.swift; path = Tibei/Classes/message/KeepAliveMessage.swift; sourceTree = "<group>"; };
+		C591D30F479AFA82CBC6E8FB3969017F /* ServerMessenger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerMessenger.swift; path = Sources/Tibei/server/ServerMessenger.swift; sourceTree = "<group>"; };
+		C90B0892AE223E819B31B9F344A31721 /* ServiceAvailabilityChangeEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceAvailabilityChangeEvent.swift; path = Sources/Tibei/client/responderChain/events/ServiceAvailabilityChangeEvent.swift; sourceTree = "<group>"; };
+		D28A21CFBD6AAA5529171F67FC44F123 /* IncomingMessageEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IncomingMessageEvent.swift; path = Sources/Tibei/common/responderChain/events/IncomingMessageEvent.swift; sourceTree = "<group>"; };
+		D2DD66EE7B9009B0A09CDB9F445CABB2 /* ClientConnectionResponder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientConnectionResponder.swift; path = Sources/Tibei/client/responderChain/ClientConnectionResponder.swift; sourceTree = "<group>"; };
+		E8388784A417906FEB2AC51CA3911DC1 /* ConnectionEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionEvent.swift; path = Sources/Tibei/common/responderChain/events/ConnectionEvent.swift; sourceTree = "<group>"; };
 		E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		EA63CA97BDC85A7C55D95C2A25608ADA /* Pods-PingPongtvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PingPongtvOS.modulemap"; sourceTree = "<group>"; };
+		EA63CA97BDC85A7C55D95C2A25608ADA /* Pods-PingPongtvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PingPongtvOS.modulemap"; sourceTree = "<group>"; };
 		EAAA5CA675813EB906FE55A80A06FB2D /* Pods-PingPong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PingPong.release.xcconfig"; sourceTree = "<group>"; };
 		EE5F9E06B7F1E2AAEACEA16AB331E2A0 /* Pods-PingPongtvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PingPongtvOS-frameworks.sh"; sourceTree = "<group>"; };
-		EF0F6E3BA00C57066DB6016D57D6BB5A /* ConnectionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionDelegate.swift; path = Tibei/Classes/connection/ConnectionDelegate.swift; sourceTree = "<group>"; };
-		F87193E5D2C89ECAC26DD4B4FF43A8DE /* ServiceAvailabilityChangeEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceAvailabilityChangeEvent.swift; path = Tibei/Classes/client/responderChain/events/ServiceAvailabilityChangeEvent.swift; sourceTree = "<group>"; };
-		FC930860E546092EB77EA2E4028E2F93 /* GameControllerServiceBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GameControllerServiceBrowser.swift; path = Tibei/Classes/client/GameControllerServiceBrowser.swift; sourceTree = "<group>"; };
-		FCC799D81180C138D7994C932073619F /* Tibei.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Tibei.modulemap; sourceTree = "<group>"; };
+		EFF9FFCCA61BEC7F7D5EEC70C331F335 /* ConnectionLostEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionLostEvent.swift; path = Sources/Tibei/common/responderChain/events/ConnectionLostEvent.swift; sourceTree = "<group>"; };
+		F3736DA09163E222A006FB6F2A85EC93 /* ClientResponderChainNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientResponderChainNode.swift; path = Sources/Tibei/client/responderChain/ClientResponderChainNode.swift; sourceTree = "<group>"; };
+		FC7D7993B066EDD44AB61AFE12C17C72 /* ClientMessenger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientMessenger.swift; path = Sources/Tibei/client/ClientMessenger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,20 +139,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25C12B258BDF7FA4E82A03F327CF9FB4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D5E8C63A588DDEA49DFCB70376C59BD8 /* Info.plist */,
-				FCC799D81180C138D7994C932073619F /* Tibei.modulemap */,
-				7893A038D867FF84341686F1BC4B4376 /* Tibei.xcconfig */,
-				3DC6B653AB0EF1CC58184CF269379E16 /* Tibei-dummy.m */,
-				CA41B6FBB0AFFAEC4660389468F986FE /* Tibei-prefix.pch */,
-				149C1BB492424584E3EE020B4534FA28 /* Tibei-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Tibei";
-			sourceTree = "<group>";
-		};
 		28298C289FD2FE7089B63C596169FC7F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,10 +149,43 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		35E61FB5D949FE095EF52ED5B9CB4EF1 /* Tibei */ = {
+			isa = PBXGroup;
+			children = (
+				D2DD66EE7B9009B0A09CDB9F445CABB2 /* ClientConnectionResponder.swift */,
+				FC7D7993B066EDD44AB61AFE12C17C72 /* ClientMessenger.swift */,
+				F3736DA09163E222A006FB6F2A85EC93 /* ClientResponderChainNode.swift */,
+				B695319336F05F1CD4195DECC2FC39C4 /* Connection.swift */,
+				3217EA6056E262CE71DA2496C4AD4082 /* ConnectionAcceptedEvent.swift */,
+				1A3B63808D017838F5D9D7AB5AAED948 /* ConnectionDelegate.swift */,
+				211A811167A3E9949671B23AA5789407 /* ConnectionError.swift */,
+				E8388784A417906FEB2AC51CA3911DC1 /* ConnectionEvent.swift */,
+				39C19272065D503D8635971E75E37ADA /* ConnectionID.swift */,
+				EFF9FFCCA61BEC7F7D5EEC70C331F335 /* ConnectionLostEvent.swift */,
+				000A819E861A6E4C5B34E0000E6E14DC /* ConnectionResponder.swift */,
+				147A2913ECFFA89C6D32DF553E4F068C /* Constants.swift */,
+				206E1C93ECDC99B1B546D23669C28143 /* GameControllerServer.swift */,
+				30FA14AD140513BA1AD25141D12FCA29 /* GameControllerServiceBrowser.swift */,
+				335DAAA0BB05F21880B99983F3FD2A01 /* GameControllerServiceBrowserDelegate.swift */,
+				0BE3FAB255CB37AAF406E4E78D3EB496 /* IncomingMessageData.swift */,
+				D28A21CFBD6AAA5529171F67FC44F123 /* IncomingMessageEvent.swift */,
+				60C7E9BE842EF969375600C8FE2EA453 /* JSONConvertibleMessage.swift */,
+				5FF78162E154BD965786D9832F3F97A8 /* KeepAliveMessage.swift */,
+				3355603054552655B564C69BC810CC0B /* Messenger.swift */,
+				A55437E44351FBA2177B23B60C2C147A /* ResponderChain.swift */,
+				C591D30F479AFA82CBC6E8FB3969017F /* ServerMessenger.swift */,
+				C90B0892AE223E819B31B9F344A31721 /* ServiceAvailabilityChangeEvent.swift */,
+				527843355965739F3D03E054A38035BB /* StreamExtensions.swift */,
+				6108BCC6605EEBFA77ECBA49F1230869 /* Support Files */,
+			);
+			name = Tibei;
+			path = Tibei;
+			sourceTree = "<group>";
+		};
 		3A0314AFAC6D23D6EFEEFDA7764003F2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C70FDD8FB5415D8FA38D4F0743B395E5 /* Tibei */,
+				35E61FB5D949FE095EF52ED5B9CB4EF1 /* Tibei */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -177,6 +196,20 @@
 				9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		6108BCC6605EEBFA77ECBA49F1230869 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DE624902BE64A985790AFA056A7BBEB /* Info.plist */,
+				47D3643ED5ED50CBC1B0DFB3D3AF20FC /* Tibei.modulemap */,
+				6F1186457C378FA1D2DA800C2E6394C8 /* Tibei.xcconfig */,
+				4B758636BFAF810C80D3CF7A0565CD98 /* Tibei-dummy.m */,
+				998DDA2DD93C2AC833A51EA2B4FD7F66 /* Tibei-prefix.pch */,
+				301154364FB690E10831897DE963091C /* Tibei-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Tibei";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -223,38 +256,6 @@
 				E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */,
 			);
 			name = tvOS;
-			sourceTree = "<group>";
-		};
-		C70FDD8FB5415D8FA38D4F0743B395E5 /* Tibei */ = {
-			isa = PBXGroup;
-			children = (
-				C47B6A936B5495D085CF993C0E4ABA47 /* ClientConnectionResponder.swift */,
-				75E9A024D255301E969C33F2E576FAF4 /* ClientMessenger.swift */,
-				64A26FEE57526A148A05B21D92BA72B0 /* ClientResponderChainNode.swift */,
-				AE6D4581850915B69E51E1FA906A352B /* Connection.swift */,
-				31FE486C75568D79A668AE5BCE4DDD81 /* ConnectionAcceptedEvent.swift */,
-				EF0F6E3BA00C57066DB6016D57D6BB5A /* ConnectionDelegate.swift */,
-				29E98AED2192188A8C5B23A30E5C2EA4 /* ConnectionError.swift */,
-				31B001D19000FA5575FE7E8C101D96CC /* ConnectionEvent.swift */,
-				1B80005795B0FF62C0AF23141BF9B8CC /* ConnectionID.swift */,
-				5D86F25B0FCF8CB4C5201541D7560C35 /* ConnectionLostEvent.swift */,
-				3F1326CFAB3E4ED9F0B78FECB7030BA8 /* ConnectionResponder.swift */,
-				48F7123F558A3C774957F9E8B7E14BC3 /* Constants.swift */,
-				C56DCABFF27AB71FE1AA468A195D278D /* GameControllerServer.swift */,
-				FC930860E546092EB77EA2E4028E2F93 /* GameControllerServiceBrowser.swift */,
-				17D486730EED0CCA758C02294CD5F07C /* GameControllerServiceBrowserDelegate.swift */,
-				79FD4941E55449895BDC398F68127BA2 /* IncomingMessageData.swift */,
-				8DD42B0D21E3BF60D9CB68A4FC008DCF /* IncomingMessageEvent.swift */,
-				129DE94272BA9D0F1B90C7E6D16C9A8A /* JSONConvertibleMessage.swift */,
-				E4EA624D2E7C7E6FAA8556B2D82D974B /* KeepAliveMessage.swift */,
-				912654E9E7D05D0E34660868A819C647 /* Messenger.swift */,
-				844F5EA96E94AE15C593E2E6E63A2029 /* ResponderChain.swift */,
-				DA9AD9A41E54FECE75FFCB1C4F0A1EA3 /* ServerMessenger.swift */,
-				F87193E5D2C89ECAC26DD4B4FF43A8DE /* ServiceAvailabilityChangeEvent.swift */,
-				BDA85A028D4DA75AD521C7392C570274 /* StreamExtensions.swift */,
-				25C12B258BDF7FA4E82A03F327CF9FB4 /* Support Files */,
-			);
-			path = Tibei;
 			sourceTree = "<group>";
 		};
 		DC0A7239629A94E1431D2121D97E7D24 /* Pods-PingPongtvOS */ = {
@@ -399,30 +400,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A704920FE1225BDDF2D637B87DF18AD /* ClientConnectionResponder.swift in Sources */,
-				18442408BBACDB42B315C74DEFCC0FCE /* ClientMessenger.swift in Sources */,
-				DEF0DC025EF074BB0119D8278881630C /* ClientResponderChainNode.swift in Sources */,
-				4144F2334E2E255156BEB509BD17FBF6 /* Connection.swift in Sources */,
-				08027E4D2221FDDFC7DCE82AE833599F /* ConnectionAcceptedEvent.swift in Sources */,
-				755F94CB70421BCB18D4D37BC477D601 /* ConnectionDelegate.swift in Sources */,
-				2AA81AABF2359A762E39501A8CECB7D0 /* ConnectionError.swift in Sources */,
-				C460994028C30F1968DB4A293128D8FE /* ConnectionEvent.swift in Sources */,
-				8793F0B9D64E05AC853832339930BEFB /* ConnectionID.swift in Sources */,
-				15FF13026F45ACBE62CF7D1ED14DD4F5 /* ConnectionLostEvent.swift in Sources */,
-				2EA2AAEB167EC80DF5F6A5AE97A17308 /* ConnectionResponder.swift in Sources */,
-				90916B4F4CBC210F38E253746583262A /* Constants.swift in Sources */,
-				7F44BCECAF77529A04EC335AE466A906 /* GameControllerServer.swift in Sources */,
-				90955A35C342F7B97EFDAA5A4FA63FE2 /* GameControllerServiceBrowser.swift in Sources */,
-				AEDCE09E20AD8B4101EEC86EBD1F30F1 /* GameControllerServiceBrowserDelegate.swift in Sources */,
-				55A2E04DA676A37129DD656D4AF828B9 /* IncomingMessageData.swift in Sources */,
-				545B8FD873D2EBFBE46031F77FC6339B /* IncomingMessageEvent.swift in Sources */,
-				69DE3B25612F444933E4057D58B61656 /* JSONConvertibleMessage.swift in Sources */,
-				1A9DED58DD1B20D8B3A4EC3BF93AE0E5 /* KeepAliveMessage.swift in Sources */,
-				6313CE758574A4625AB9A6DEEA32350A /* Messenger.swift in Sources */,
-				80AA00846DD9DFC5CD898F8988B0072D /* ResponderChain.swift in Sources */,
-				4AE62E552233C2BCD4835D64A916322A /* ServerMessenger.swift in Sources */,
-				865AC5EDEABB605EC70779FA4962AB09 /* ServiceAvailabilityChangeEvent.swift in Sources */,
-				932C5296F884190AE709551E34ADE3C4 /* StreamExtensions.swift in Sources */,
+				77201DA5290544A72EC94E6DB33EDC78 /* ClientConnectionResponder.swift in Sources */,
+				E78BF0C8D03D779F98E307DCC291A53E /* ClientMessenger.swift in Sources */,
+				399F651B502F807612CA7E5478728997 /* ClientResponderChainNode.swift in Sources */,
+				13E33B61D9799DACCEE0EC7112E26FAB /* Connection.swift in Sources */,
+				A11E25225FD4780081E106E33152BF51 /* ConnectionAcceptedEvent.swift in Sources */,
+				73B0454195166754CBDDFAF8A74C7F98 /* ConnectionDelegate.swift in Sources */,
+				C6816E9E4234FB1B9B80FA634DF9F1CC /* ConnectionError.swift in Sources */,
+				17B65DF80835EADE44758DC96393B9DA /* ConnectionEvent.swift in Sources */,
+				FFF16FFA71BB78BCCC2D4FCBC9B8D08F /* ConnectionID.swift in Sources */,
+				EF4786D7D1A4DD9F4D28DAB71CD8DBC3 /* ConnectionLostEvent.swift in Sources */,
+				7A8C401682DEA48DC989BA8A3A593A2A /* ConnectionResponder.swift in Sources */,
+				29DFA04665A78F09E4955A36A80AAF7F /* Constants.swift in Sources */,
+				5AA2E9EB8097F4E6B783AC3E797CC133 /* GameControllerServer.swift in Sources */,
+				484508C38C93C45EC509FA526F1392D9 /* GameControllerServiceBrowser.swift in Sources */,
+				42F00AAFF14A03D69821DDDD96569D0C /* GameControllerServiceBrowserDelegate.swift in Sources */,
+				91E065B41044DE9E0C5DEE2F19D8219B /* IncomingMessageData.swift in Sources */,
+				C968117B8EF43B5BB2C267D29FC1F64E /* IncomingMessageEvent.swift in Sources */,
+				65EF771525A3BE5FCDC4D409C5B714FB /* JSONConvertibleMessage.swift in Sources */,
+				B76E015E49A2AA61D5CDD33CE29C184B /* KeepAliveMessage.swift in Sources */,
+				9AE19055939CB866CE122C3B6F279881 /* Messenger.swift in Sources */,
+				7FB4A8851753486D4CB563270D0E8F53 /* ResponderChain.swift in Sources */,
+				692F40A5BBCC6086DEF4B85C78F48CFD /* ServerMessenger.swift in Sources */,
+				E3EF00F80ABE7966C4D41E80849770D5 /* ServiceAvailabilityChangeEvent.swift in Sources */,
+				DB5E446FF686EB25A0D2A701C4E888A4 /* StreamExtensions.swift in Sources */,
 				D5C48C6B540AC81A872269B138A636AB /* Tibei-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,9 +456,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		07C34D56DFA29750D7FADBC6D197F536 /* Release */ = {
+		22A1F68AE16A6F4FE5F5991DB76FECEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7893A038D867FF84341686F1BC4B4376 /* Tibei.xcconfig */;
+			baseConfigurationReference = 6F1186457C378FA1D2DA800C2E6394C8 /* Tibei.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -473,7 +474,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Tibei/Tibei-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Tibei/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Tibei/Tibei.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -486,39 +487,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		5CE11C4592A29C7B456E0AC619362381 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7893A038D867FF84341686F1BC4B4376 /* Tibei.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Tibei/Tibei-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Tibei/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Tibei/Tibei.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Tibei;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		727B893A184FDCE23B0156E3990748EB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -667,6 +635,39 @@
 			};
 			name = Release;
 		};
+		B03396872CCEBAD10DEDB900C95650A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F1186457C378FA1D2DA800C2E6394C8 /* Tibei.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Tibei/Tibei-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Tibei/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Tibei/Tibei.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Tibei;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		C35B197670913EBA81B5B980651FE4A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -771,8 +772,8 @@
 		9CC626212678C003443E0BB5687FB488 /* Build configuration list for PBXNativeTarget "Tibei" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5CE11C4592A29C7B456E0AC619362381 /* Debug */,
-				07C34D56DFA29750D7FADBC6D197F536 /* Release */,
+				B03396872CCEBAD10DEDB900C95650A9 /* Debug */,
+				22A1F68AE16A6F4FE5F5991DB76FECEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

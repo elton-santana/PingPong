@@ -18,7 +18,7 @@ struct PhysicsCategory {
     static let goalSensor: UInt32 = 4
     static let transferSensor: UInt32 = 5
 }
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
@@ -65,13 +65,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     
     override func sceneDidLoad() {
-        
-        Facade.shared.registerClientResponder(self)
-        Facade.shared.registerServerResponder(self)
-        
+    
         self.physicsWorld.contactDelegate = self
-        
-//        self.lastUpdateTime = 0
         
         self.motionManager.startGyroUpdates(to: OperationQueue.current!) { (gyroData: CMGyroData?, NSError) in
             self.moveRacket()
@@ -223,46 +218,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 }
 
-extension GameScene: ConnectionResponder {
-    var allowedMessages: [JSONConvertibleMessage.Type] {
-        return [TextMessage.self, PingMessage.self, BallMessage.self, ScoreMessage.self]
-    }
-    
-    func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
-        
-        switch message {
-        case let ballMessage as BallMessage:
-            self.fireBall(withInitialX: ballMessage.coord,
-                          andVelocity: CGVector(dx: ballMessage.velocityDx,
-                                                dy: ballMessage.velocityDy))
-            
-        case _ as ScoreMessage:
-            self.updateLocalScore()
-        case let textMessage as TextMessage:
-            print(textMessage.sender)
-            print(textMessage.content)
-            
-            
-        case let pingMessage as PingMessage:
-            print("recebeu um ping do \(pingMessage.sender)")
-            
-        default:
-            break
-        }
-    }
-    
-    func acceptedConnection(withID connectionID: ConnectionID) {
-    }
-    
-    func lostConnection(withID connectionID: ConnectionID) {
-    }
-    
-    func processError(_ error: Error, fromConnectionWithID connectionID: ConnectionID?) {
-        print("Error raised from connection #\(connectionID?.hashValue):")
-        print(error)
-    }
-    
-}
 
 
 
