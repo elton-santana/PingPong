@@ -71,8 +71,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.physicsWorld.contactDelegate = self
         
-//        self.lastUpdateTime = 0
-        
         self.motionManager.startGyroUpdates(to: OperationQueue.current!) { (gyroData: CMGyroData?, NSError) in
             self.moveRacket()
             if(NSError != nil) {
@@ -235,9 +233,14 @@ extension GameScene: ConnectionResponder {
             self.fireBall(withInitialX: ballMessage.coord,
                           andVelocity: CGVector(dx: ballMessage.velocityDx,
                                                 dy: ballMessage.velocityDy))
-            
+            print("//////////////////////////")
+            print("did process a ball message")
+            print("//////////////////////////")
         case _ as ScoreMessage:
             self.updateLocalScore()
+            print("///////////////////////////")
+            print("did process a score message")
+            print("///////////////////////////")
         case let textMessage as TextMessage:
             print(textMessage.sender)
             print(textMessage.content)

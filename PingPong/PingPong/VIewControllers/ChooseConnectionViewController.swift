@@ -22,15 +22,16 @@ class ChooseConnectionViewController: UIViewController, UITableViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         self.servicesTableView.dataSource = self
         self.servicesTableView.delegate = self
         
-        Facade.shared.browseForServices()
         Facade.shared.registerClientResponder(self)
+        Facade.shared.browseForServices()
 
     }
 
@@ -80,6 +81,12 @@ class ChooseConnectionViewController: UIViewController, UITableViewDataSource, U
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        Facade.shared.unregisterClientResponder(self)
+    }
+    
     
     /*
     // MARK: - Navigation
@@ -96,20 +103,14 @@ class ChooseConnectionViewController: UIViewController, UITableViewDataSource, U
 
 extension ChooseConnectionViewController: ClientConnectionResponder {
     var allowedMessages: [JSONConvertibleMessage.Type] {
-        return [TextMessage.self, PingMessage.self]
+        return [PingMessage.self]
     }
     
     func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
         
         switch message {
-        case let textMessage as TextMessage:
-            print(textMessage.sender)
-            print(textMessage.content)
-            
-            
         case let pingMessage as PingMessage:
             Facade.shared.initializeMatch(with: pingMessage.sender, atHome: false)
-            Facade.shared.unregisterClientResponder(self)
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "ChooseConnectionToPrepareToPlaySegue", sender: self)
             }
@@ -131,7 +132,6 @@ extension ChooseConnectionViewController: ClientConnectionResponder {
     
     func acceptedConnection(withID connectionID: ConnectionID) {
         Facade.shared.sendMessage(PingMessage(sender: UIDevice.current.name))
-//        self.sendMessageButton.isEnabled = true
-//        self.pingButton.isEnabled = true
+
     }
 }

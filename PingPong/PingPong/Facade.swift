@@ -9,20 +9,21 @@
 import Foundation
 import Tibei
 
-class Facade: NSObject{
+class Facade {
     static let shared = Facade()
-    private override init() {
-        super.init()
-        
-    }
+
     
     let serviceIdentifier = "_pingPong"
     let localSender = UIDevice.current.name
-    var server: ServerMessenger?
+    var server: ServerMessenger
     var connection: ConnectionID?
-    let client = ClientMessenger()
+    var client: ClientMessenger
     
     
+    private init() {
+        self.client = ClientMessenger()
+        self.server = ServerMessenger(serviceIdentifier: self.serviceIdentifier)
+    }
     
     
     func browseForServices(){
@@ -49,16 +50,15 @@ class Facade: NSObject{
     }
     
     func publishServer(){
-        self.server = ServerMessenger(serviceIdentifier: serviceIdentifier)
-        self.server?.publishService()
+        self.server.publishService()
     }
     
     func registerServerResponder(_ responder: ConnectionResponder){
-        self.server?.registerResponder(responder)
+        self.server.registerResponder(responder)
     }
     
     func unregisterServerResponder(_ responder: ConnectionResponder){
-        self.server?.unregisterResponder(responder)
+        self.server.unregisterResponder(responder)
     }
     
     func registerServerConnectionID(_ id: ConnectionID){
@@ -66,9 +66,9 @@ class Facade: NSObject{
     }
     
     func sendMessage<Message: JSONConvertibleMessage>(_ message: Message){
-        guard self.server == nil else {
+        guard self.connection == nil else {
             do {
-                try  self.server?.sendMessage(message, toConnectionWithID: self.connection!)
+                try  self.server.sendMessage(message, toConnectionWithID: self.connection!)
                 
             } catch {
                 print("Error trying to send message:")
