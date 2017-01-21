@@ -82,7 +82,7 @@ class GameViewController: UIViewController {
 
 extension GameViewController: ConnectionResponder {
     var allowedMessages: [JSONConvertibleMessage.Type] {
-        return [TextMessage.self, PingMessage.self, BallMessage.self, ScoreMessage.self]
+        return [BallMessage.self, ScoreMessage.self]
     }
     
     func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
@@ -92,21 +92,8 @@ extension GameViewController: ConnectionResponder {
             self.gameDelegate?.fireBall(withInitialX: ballMessage.coord,
                           andVelocity: CGVector(dx: ballMessage.velocityDx,
                                                 dy: ballMessage.velocityDy))
-            print("//////////////////////////")
-            print("did process a ball message")
-            print("//////////////////////////")
         case _ as ScoreMessage:
             self.gameDelegate?.updateLocalScore()
-            print("///////////////////////////")
-            print("did process a score message")
-            print("///////////////////////////")
-        case let textMessage as TextMessage:
-            print(textMessage.sender)
-            print(textMessage.content)
-            
-            
-        case let pingMessage as PingMessage:
-            print("recebeu um ping do \(pingMessage.sender)")
             
         default:
             break

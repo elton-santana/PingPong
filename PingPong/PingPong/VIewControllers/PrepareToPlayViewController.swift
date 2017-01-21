@@ -66,7 +66,7 @@ class PrepareToPlayViewController: UIViewController {
 
 extension PrepareToPlayViewController: ConnectionResponder {
     var allowedMessages: [JSONConvertibleMessage.Type] {
-        return [PingMessage.self, StatusMessage.self]
+        return [StatusMessage.self]
     }
     
     func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
@@ -75,9 +75,6 @@ extension PrepareToPlayViewController: ConnectionResponder {
         case let statusMessage as StatusMessage:
             Facade.shared.changeOpponentPlayerStatus(to: statusMessage.content)
             self.checkPlayersStatus()
-            print("////////////////////////////")
-            print("did process a status message")
-            print("////////////////////////////")
         default:
             break
         }

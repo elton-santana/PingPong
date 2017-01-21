@@ -45,7 +45,6 @@ extension GameScene {
             let normalizedCoord = ball.position.x/self.size.width/2
             ball.isHidden = true
             Facade.shared.sendMessage(BallMessage(coord: normalizedCoord, velocity: ballVelocity!))
-            print("did send coord:\(normalizedCoord)")
         }
         if firstBody.categoryBitMask == PhysicsCategory.ball &&
             secondBody.categoryBitMask == PhysicsCategory.goalSensor {
