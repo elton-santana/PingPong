@@ -21,13 +21,6 @@ extension GameScene {
     
     func finishGame(){
         
-        self.finishLabel?.alpha = 0
-        self.playAgainButton?.alpha = 0
-        self.mainMenuButton?.alpha = 0
-        self.addChild(self.finishLabel!)
-        self.addChild(self.playAgainButton!)
-        self.addChild(self.mainMenuButton!)
-        
         let winnerName = Facade.shared.getPlayerWithBestScoreName()
         self.finishLabel?.text = "\(winnerName) won!!"
         

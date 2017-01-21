@@ -51,7 +51,7 @@ extension GameScene {
             secondBody.categoryBitMask == PhysicsCategory.goalSensor {
             
             let ball = firstBody.node as! SKSpriteNode
-            ball.removeFromParent()
+            ball.isHidden = true
             Facade.shared.opponentPlayerDidScore()
             Facade.shared.sendMessage(ScoreMessage())
             self.updateScoreLabels()

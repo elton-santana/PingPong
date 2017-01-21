@@ -107,9 +107,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
         self.setContactTestBitMask()
         self.setNameLabels()
         
-        self.finishLabel?.removeFromParent()
-        self.playAgainButton?.removeFromParent()
-        self.mainMenuButton?.removeFromParent()
+        self.finishLabel?.alpha = 0
+        self.playAgainButton?.alpha = 0
+        self.mainMenuButton?.alpha = 0
 
     
     }
@@ -162,6 +162,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
         let velocity = CGVector(dx: 0, dy: -250)
         self.ball?.physicsBody?.velocity = velocity
         self.ball?.position = CGPoint.zero
+        self.ball?.isHidden = false
     }
     
     func updateScoreLabels(){
