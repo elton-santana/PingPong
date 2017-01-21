@@ -33,16 +33,12 @@ class WaitingPlayerViewController: UIViewController {
 
 extension WaitingPlayerViewController: ConnectionResponder {
     var allowedMessages: [JSONConvertibleMessage.Type] {
-        return [TextMessage.self, PingMessage.self]
+        return [PingMessage.self]
     }
     
     func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
         
         switch message {
-        case let textMessage as TextMessage:
-                print(textMessage.sender)
-                print(textMessage.content)
-       
         case let pingMessage as PingMessage:
             print(pingMessage.sender)
             Facade.shared.initializeMatch(with: pingMessage.sender, atHome: true)
