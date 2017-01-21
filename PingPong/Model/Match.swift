@@ -11,20 +11,34 @@ import UIKit
 
 class Match {
     
-    let opponent: Player = Player()
+    let opponentPlayer: Player = Player()
     let localPlayer: Player = Player()
+    var localPlayerIsPlayerAtHome: Bool = false
     
-    init(withOpponentName opponent: String){
-        self.opponent.name = opponent
+    init(withOpponentName opponent: String, atHome: Bool){
+        self.opponentPlayer.name = opponent
         self.localPlayer.name = UIDevice.current.name
+        self.localPlayerIsPlayerAtHome = atHome
     }
     
+    func getLocalPlayerName()-> String{
+        return self.localPlayer.name
+    }
     func getOpponentName() -> String{
-        return self.opponent.name
+        return self.opponentPlayer.name
     }
     
     func areBothPlayersReady() -> Bool{
-        return self.opponent.isReady && self.localPlayer.isReady
+        return self.opponentPlayer.isReady && self.localPlayer.isReady
+    }
+    func getPlayerWithTheBestScoreName()->String{
+        var winnerName = ""
+        if self.opponentPlayer.score > self.localPlayer.score{
+            winnerName = self.opponentPlayer.name
+        }else if self.opponentPlayer.score < self.localPlayer.score{
+            winnerName = self.localPlayer.name
+        }
+        return winnerName
     }
     
 }

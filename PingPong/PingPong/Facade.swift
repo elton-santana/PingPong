@@ -9,20 +9,21 @@
 import Foundation
 import Tibei
 
-class Facade: NSObject{
+class Facade {
     static let shared = Facade()
-    private override init() {
-        super.init()
-        
-    }
+
     
     let serviceIdentifier = "_pingPong"
     let localSender = UIDevice.current.name
-    var server: ServerMessenger?
+    var server: ServerMessenger
     var connection: ConnectionID?
-    let client = ClientMessenger()
+    var client: ClientMessenger
     
     
+    private init() {
+        self.client = ClientMessenger()
+        self.server = ServerMessenger(serviceIdentifier: self.serviceIdentifier)
+    }
     
     
     func browseForServices(){
@@ -31,6 +32,10 @@ class Facade: NSObject{
     
     func registerClientResponder(_ responder: ConnectionResponder){
         self.client.registerResponder(responder)
+    }
+    
+    func unregisterClientResponder(_ responder: ConnectionResponder){
+        self.client.unregisterResponder(responder)
     }
     
     func connect(serviceName: String){
@@ -45,11 +50,15 @@ class Facade: NSObject{
     }
     
     func publishServer(){
-        self.server = ServerMessenger(serviceIdentifier: serviceIdentifier)
+        self.server.publishService()
     }
     
     func registerServerResponder(_ responder: ConnectionResponder){
-        self.server?.registerResponder(responder)
+        self.server.registerResponder(responder)
+    }
+    
+    func unregisterServerResponder(_ responder: ConnectionResponder){
+        self.server.unregisterResponder(responder)
     }
     
     func registerServerConnectionID(_ id: ConnectionID){
@@ -57,9 +66,9 @@ class Facade: NSObject{
     }
     
     func sendMessage<Message: JSONConvertibleMessage>(_ message: Message){
-        guard self.server == nil else {
+        guard self.connection == nil else {
             do {
-                try  self.server?.sendMessage(message, toConnectionWithID: self.connection!)
+                try  self.server.sendMessage(message, toConnectionWithID: self.connection!)
                 
             } catch {
                 print("Error trying to send message:")
@@ -83,21 +92,41 @@ class Facade: NSObject{
     
     var currentMatch: Match?
     
-    func initializeMatch(with opponent: String){
-        self.currentMatch = Match(withOpponentName: opponent)
+    func initializeMatch(with opponent: String, atHome: Bool){
+        self.currentMatch = Match(withOpponentName: opponent, atHome: atHome)
     }
-    func getOpponentName() -> String{
+    func getLocalPlayerName() -> String{
+        return (self.currentMatch?.getLocalPlayerName())!
+    }
+    func getOpponentPlayerName() -> String{
         return (self.currentMatch?.getOpponentName())!
     }
-    
     func changeLocalPlayerStatus(to status: Bool){
         self.currentMatch?.localPlayer.isReady = status
     }
-    func changeOpponentStatus(to status: Bool){
-        self.currentMatch?.opponent.isReady = status
+    func changeOpponentPlayerStatus(to status: Bool){
+        self.currentMatch?.opponentPlayer.isReady = status
     }
     func areBothPlayersReady() -> Bool{
         return (self.currentMatch?.areBothPlayersReady())!
+    }
+    func localPlayerIsAtHome()-> Bool{
+        return (self.currentMatch?.localPlayerIsPlayerAtHome)!
+    }
+    func localPlayerDidScore(){
+        self.currentMatch?.localPlayer.improveScore()
+    }
+    func opponentPlayerDidScore(){
+        self.currentMatch?.opponentPlayer.improveScore()
+    }
+    func getLocalPlayerScore()-> Int{
+        return (self.currentMatch?.localPlayer.score)!
+    }
+    func getOpponentPlayerScore()-> Int{
+        return (self.currentMatch?.opponentPlayer.score)!
+    }
+    func getPlayerWithBestScoreName() -> String{
+        return (self.currentMatch?.getPlayerWithTheBestScoreName())!
     }
     
     

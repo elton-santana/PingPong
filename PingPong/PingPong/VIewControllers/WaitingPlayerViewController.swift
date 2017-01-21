@@ -15,11 +15,20 @@ class WaitingPlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+   
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         Facade.shared.publishServer()
         Facade.shared.registerServerResponder(self)
-        
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        Facade.shared.unregisterServerResponder(self)
+    }
 }
 
 extension WaitingPlayerViewController: ConnectionResponder {
@@ -34,10 +43,9 @@ extension WaitingPlayerViewController: ConnectionResponder {
                 print(textMessage.sender)
                 print(textMessage.content)
        
-            
         case let pingMessage as PingMessage:
             print(pingMessage.sender)
-            Facade.shared.initializeMatch(with: pingMessage.sender)
+            Facade.shared.initializeMatch(with: pingMessage.sender, atHome: true)
             Facade.shared.sendMessage(PingMessage(sender: UIDevice.current.name))
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "WaitingPlayerToPrepareToPlaySegue", sender: self)

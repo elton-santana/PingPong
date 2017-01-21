@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="top" id="ptv-2M-icM"/>
                         <viewControllerLayoutGuide type="bottom" id="u9C-Jr-VG0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fHC-P1-i17">
+                    <view key="view" contentMode="scaleToFill" id="fHC-P1-i17" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -30,11 +30,11 @@
                                         <rect key="frame" x="0.0" y="28" width="296" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GmP-JH-XtB" id="eDr-sw-3GE">
-                                            <rect key="frame" x="0.0" y="0.0" width="296" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="296" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M1w-lv-dQe">
-                                                    <rect key="frame" x="15" y="0.0" width="266" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="266" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -72,21 +72,21 @@
                         <viewControllerLayoutGuide type="top" id="O5F-8T-xGD"/>
                         <viewControllerLayoutGuide type="bottom" id="UGp-Sa-o1S"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dyg-Wy-GGW">
+                    <view key="view" contentMode="scaleToFill" id="dyg-Wy-GGW" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get a friend and make it connect on &quot;iPhone Name&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w8-iY-Pao">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wait other player connect with &quot;Your Phone Name&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w8-iY-Pao">
                                 <rect key="frame" x="185" y="28" width="198" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pHL-ko-jHv">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pHL-ko-jHv">
                                 <rect key="frame" x="266" y="164" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="color" red="0.78039215689999997" green="0.1843137255" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,7 +107,7 @@
                         <viewControllerLayoutGuide type="top" id="iOc-P4-XWJ"/>
                         <viewControllerLayoutGuide type="bottom" id="I59-Yz-C3B"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ciW-Xx-HHc">
+                    <view key="view" contentMode="scaleToFill" id="ciW-Xx-HHc" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -143,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSZ-1T-hTs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1582.3943661971832" y="45"/>
+            <point key="canvasLocation" x="-1630" y="45"/>
         </scene>
         <!--Prepare To Play View Controller-->
         <scene sceneID="kHe-z2-B7t">
@@ -153,7 +153,7 @@
                         <viewControllerLayoutGuide type="top" id="rAn-6W-1yB"/>
                         <viewControllerLayoutGuide type="bottom" id="Uuk-HN-9mJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sek-7a-8op">
+                    <view key="view" contentMode="scaleToFill" id="sek-7a-8op" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -183,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEI-wb-syt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-222.88732394366198" y="45"/>
+            <point key="canvasLocation" x="-181" y="45"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -198,10 +198,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="fC6-uu-zOV" kind="unwind" unwindAction="unwindToHomeSegue:" id="bfw-b3-Z99"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <exit id="fC6-uu-zOV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="482" y="46"/>
+            <point key="canvasLocation" x="539" y="45"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
