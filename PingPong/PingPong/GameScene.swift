@@ -68,7 +68,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     
         self.physicsWorld.contactDelegate = self
         
-        self.motionManager.startGyroUpdates(to: OperationQueue.current!) { (gyroData: CMGyroData?, NSError) in
+        
+        
+        self.motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (accelometerData: CMAccelerometerData?, NSError) in
             self.moveRacket()
             if(NSError != nil) {
                 print("\(NSError)")
