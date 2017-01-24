@@ -88,6 +88,17 @@ class Facade {
         
     }
     
+    func closeConnection(){
+        if self.localPlayerIsAtHome(){
+            self.server.unpublishService()
+        }else{
+            self.client.disconnect()
+        }
+        self.connection = nil
+        self.currentMatch = nil
+    }
+    
+    
     //MARK: Match related code
     
     var currentMatch: Match?
