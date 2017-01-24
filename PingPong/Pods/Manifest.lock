@@ -1,11 +1,11 @@
 PODS:
-  - Tibei (0.1.2)
+  - Tibei (0.1.3)
 
 DEPENDENCIES:
   - Tibei
 
 SPEC CHECKSUMS:
-  Tibei: b2dd2ae1e15b2c0c652eedbc14bd484ed7c1d996
+  Tibei: 59ecdf74007d3cabed940539d79fdabbcc69c530
 
 PODFILE CHECKSUM: 9543bfe967072b4aa18b5579c16dbc64e4f3889b
 
