@@ -46,6 +46,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     
     // Game Over
     
+    var gameOverDelegate: GameOverDelegate?
     var finishLabel: SKLabelNode?
     var playAgainButton: SKSpriteNode?
     var mainMenuButton: SKSpriteNode?
@@ -55,7 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     var motionManager : CMMotionManager = {
         let motion = CMMotionManager()
         motion.accelerometerUpdateInterval = 0.01
-        
+        motion.gyroUpdateInterval = 0.01
         return motion
         
     }()
@@ -68,14 +69,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     
         self.physicsWorld.contactDelegate = self
         
-        
-        
-        self.motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (accelometerData: CMAccelerometerData?, NSError) in
-            self.moveRacket()
+        self.motionManager.startGyroUpdates(to: OperationQueue.current!) { (gyroData: CMGyroData?, NSError) in
+            self.moveRacketWithGyroscope()
             if(NSError != nil) {
                 print("\(NSError)")
             }
-
+        }
+        self.motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (accelometerData: CMAccelerometerData?, NSError) in
+            self.moveRacketWithAccelerometer()
+            if(NSError != nil) {
+                print("\(NSError)")
+            }
         }
         
         self.initializeNodesVariables()
@@ -174,7 +178,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     
     
     func touchDown(atPoint pos : CGPoint) {
-        self.playerRacket?.position.x = pos.x
+        if (self.mainMenuButton?.contains(pos))! && self.gameIsOver(){
+            self.mainMenuButton?.alpha = 0.5
+            self.gameOverDelegate?.unwindToMenu()
+        }
     }
     
     func touchMoved(toPoint pos : CGPoint) {

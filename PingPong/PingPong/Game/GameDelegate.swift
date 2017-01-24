@@ -14,3 +14,9 @@ protocol GameDelegate {
     func fireBall(withInitialX coord: CGFloat, andVelocity velocity: CGVector)
     func updateLocalScore()
 }
+
+protocol GameOverDelegate{
+    
+    func unwindToMenu()
+    
+}

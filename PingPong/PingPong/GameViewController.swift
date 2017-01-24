@@ -29,11 +29,11 @@ class GameViewController: UIViewController {
                 sceneNode.entities = scene.entities
                 sceneNode.graphs = scene.graphs
                 self.gameDelegate = sceneNode
+                sceneNode.gameOverDelegate = self
                 
                 // Set the scale mode to scale to fit the window
                 sceneNode.scaleMode = .fill
                 
-//                TODO: - Ajustar o size pra não rolar um muito maior que o outro
                 
                 // Present the scene
                 if let view = self.view as! SKView? {
@@ -76,6 +76,13 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+}
+
+extension GameViewController: GameOverDelegate{
+    
+    func unwindToMenu() {
+        self.performSegue(withIdentifier: "UnwindToMenuSegue", sender: self)
     }
 }
 
