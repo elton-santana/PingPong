@@ -12,14 +12,13 @@ import CoreMotion
 
 extension GameScene{
     
-    func moveRacket() {
+    func moveRacketWithAccelerometer() {
         
-        let yForce = self.motionManager.accelerometerData!.acceleration.y
+        let yGForce = self.motionManager.accelerometerData!.acceleration.y
 
         let dxVelocity = self.playerRacket?.physicsBody?.velocity.dx
         
-        
-        self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! - 60*CGFloat(yForce)
+        self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! - 60*CGFloat(yGForce)
         
         //"lock" the racket on the game area
         
@@ -32,4 +31,29 @@ extension GameScene{
             self.playerRacket?.physicsBody?.velocity.dx = 0
         }
     }
+    
+    func moveRacketWithGyroscope() {
+        
+        let gyroForce = self.motionManager.gyroData!.rotationRate.y
+        
+        let dxVelocity = self.playerRacket?.physicsBody?.velocity.dx
+        
+        if gyroForce > 1 || gyroForce < -1{
+            self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! + 60*CGFloat(gyroForce)
+        }
+        
+        //"lock" the racket on the game area
+        
+        if (playerRacket?.position.x)! > self.frame.maxX - ((playerRacket?.size.width)!*(0.7)){
+            playerRacket?.position.x = self.frame.maxX - ((playerRacket?.size.width)!*(0.7))
+            self.playerRacket?.physicsBody?.velocity.dx = 0
+        }
+        if (playerRacket?.position.x)! < self.frame.minX + ((playerRacket?.size.width)!*(0.7)){
+            playerRacket?.position.x = self.frame.minX + ((playerRacket?.size.width)!*(0.7))
+            self.playerRacket?.physicsBody?.velocity.dx = 0
+        }
+    }
+
+    
+    
 }
