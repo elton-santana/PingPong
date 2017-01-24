@@ -17,7 +17,7 @@ class PrepareToPlayViewController: UIViewController {
         super.viewDidLoad()
 
         
-        self.playWithLabel.text = Facade.shared.getOpponentPlayerName()
+        self.playWithLabel.text = "You will play \(Facade.shared.getOpponentPlayerName())"
 
         
     }

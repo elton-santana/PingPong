@@ -15,8 +15,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.presentSKView()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,40 +30,6 @@ class HomeViewController: UIViewController {
         self.showConnectionPopUp()
     }
     
-    func presentSKView(){
-        
-        if let scene = GKScene(fileNamed: "BackgroundScene") {
-            
-            // Get the SKScene from the loaded GKScene
-            if let sceneNode = scene.rootNode as! BackgroundScene? {
-                
-                // Set the scale mode to scale to fit the window
-                sceneNode.scaleMode = .fill
-                                
-                // Present the scene
-                if let view = self.view as! SKView? {
-                    view.presentScene(sceneNode)
-                    
-                    view.ignoresSiblingOrder = true
-                    
-                    view.showsFPS = true
-                    view.showsNodeCount = true
-                }
-            }
-        }
-//        if let view = self.view as! SKView? {
-//
-//            let scene = BackgroundScene(fileNamed:"BackgroundScene")
-//            scene?.scaleMode = .aspectFill
-//            view.presentScene(scene)
-//            
-//            view.ignoresSiblingOrder = true
-//            view.showsPhysics = false
-//            view.showsFPS = false
-//            view.showsNodeCount = false
-//        
-//        }
-    }
     
     func showConnectionPopUp(){
         

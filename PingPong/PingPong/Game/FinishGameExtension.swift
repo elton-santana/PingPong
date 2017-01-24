@@ -27,7 +27,7 @@ extension GameScene {
         let fadeIn = SKAction.fadeIn(withDuration: 1)
         
         self.finishLabel?.run(fadeIn)
-        self.playAgainButton?.run(fadeIn)
+//        self.playAgainButton?.run(fadeIn)
         self.mainMenuButton?.run(fadeIn)
         
     }
