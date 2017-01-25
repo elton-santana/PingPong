@@ -14,8 +14,9 @@ class ChooseConnectionViewController: UIViewController, UITableViewDataSource, U
  {
     
     @IBOutlet weak var servicesTableView: UITableView!
+    @IBOutlet weak var browsingIndicator: UIActivityIndicatorView!
     
-    var availableServices: [String] = ["Browsing Available Matchs"]
+    var availableServices: [String] = ["Browsing Available Matches"]
     
     
     
@@ -86,7 +87,9 @@ class ChooseConnectionViewController: UIViewController, UITableViewDataSource, U
         
         Facade.shared.unregisterClientResponder(self)
     }
-    
+    @IBAction func cancelButtonAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "UnwindSegueHomeSegue", sender: self)
+    }
 }
 
 
@@ -113,7 +116,14 @@ extension ChooseConnectionViewController: ClientConnectionResponder {
 
     func availableServicesChanged(availableServiceIDs: [String]) {
         
-        self.availableServices = availableServiceIDs
+        if availableServiceIDs.isEmpty{
+            self.availableServices = ["Browsing Available Matches"]
+            self.browsingIndicator.isHidden = false
+        }else{
+            self.availableServices = availableServiceIDs
+            self.browsingIndicator.isHidden = true
+        }
+        
         DispatchQueue.main.async {
             self.servicesTableView.reloadData()
         }
