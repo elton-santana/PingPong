@@ -137,7 +137,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     
     func startGame(){
         if Facade.shared.localPlayerIsAtHome(){
-            let velocity = CGVector(dx: 0, dy: -250)
+            let velocity = CGVector(dx: 0, dy: -300)
             self.ball?.physicsBody?.velocity = velocity
         }else{
             self.ball?.isHidden = true
@@ -146,7 +146,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     
     func fireBall(withInitialX coord: CGFloat, andVelocity velocity: CGVector){
         
-        self.ball?.position = CGPoint(x: self.size.width/2 * coord, y: self.frame.maxY)
+        self.ball?.position = CGPoint(x: self.size.width/2 * coord, y: self.frame.maxY + (self.playerRacket?.size.height)!/2)
         self.ball?.physicsBody?.velocity = CGVector(dx: -velocity.dx, dy: -velocity.dy)
         self.ball?.isHidden = false
         
@@ -165,7 +165,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     }
     
     func restart(){
-        let velocity = CGVector(dx: 0, dy: -250)
+        let velocity = CGVector(dx: 0, dy: -300)
         self.ball?.physicsBody?.velocity = velocity
         self.ball?.position = CGPoint.zero
         self.ball?.isHidden = false
@@ -178,6 +178,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     
     
     func touchDown(atPoint pos : CGPoint) {
+        self.playerRacket?.position.x = pos.x
         if (self.mainMenuButton?.contains(pos))! && self.gameIsOver(){
             self.mainMenuButton?.alpha = 0.5
             self.gameOverDelegate?.unwindToMenu()

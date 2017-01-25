@@ -34,8 +34,13 @@ extension GameScene {
            secondBody.categoryBitMask == PhysicsCategory.racket {
             
             let ball = firstBody.node as! SKSpriteNode
+            let racket = secondBody.node as! SKSpriteNode
+            
             let ballVelocity = ball.physicsBody?.velocity
-            ball.physicsBody?.velocity.dy = -(ballVelocity?.dy)!
+            let racketVelocityDx = racket.physicsBody?.velocity.dx
+            
+            ball.physicsBody?.velocity.dy = -ballVelocity!.dy + (0.7)*(racketVelocityDx)!
+            ball.physicsBody?.velocity.dx = ballVelocity!.dx + (0.4)*(racketVelocityDx)!
         }
         if firstBody.categoryBitMask == PhysicsCategory.ball &&
             secondBody.categoryBitMask == PhysicsCategory.transferSensor {

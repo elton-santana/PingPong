@@ -18,7 +18,7 @@ extension GameScene{
 
         let dxVelocity = self.playerRacket?.physicsBody?.velocity.dx
         
-        self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! - 60*CGFloat(yGForce)
+        self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! - 100*CGFloat(yGForce)
         
         //"lock" the racket on the game area
         
@@ -39,7 +39,7 @@ extension GameScene{
         let dxVelocity = self.playerRacket?.physicsBody?.velocity.dx
         
         if gyroForce > 1 || gyroForce < -1{
-            self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! + 60*CGFloat(gyroForce)
+            self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! + 90*CGFloat(gyroForce)
         }
         
         //"lock" the racket on the game area
