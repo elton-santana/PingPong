@@ -17,7 +17,6 @@ class PrepareToPlayViewController: UIViewController {
         super.viewDidLoad()
 
         
-        self.playWithLabel.text = "You will play with \(Facade.shared.getOpponentPlayerName())"
 
         
     }
@@ -28,12 +27,18 @@ class PrepareToPlayViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        if Facade.shared.localPlayerIsAtHome(){
+        if Facade.shared.localDeviceIsServer!{
             Facade.shared.registerServerResponder(self)
         }else{
             Facade.shared.registerClientResponder(self)
         }
+        
+        DispatchQueue.main.async {
+            self.playWithLabel.text = "You will play with \(Facade.shared.getOpponentPlayerName())"
+        }
+        
     }
+    
     
     
     @IBAction func startButtonAction(_ sender: UIButton) {
@@ -45,7 +50,6 @@ class PrepareToPlayViewController: UIViewController {
     
     func checkPlayersStatus(){
         if Facade.shared.areBothPlayersReady(){
-            
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "PrepareToPlayToGameSegue", sender: self)
             }
@@ -54,12 +58,11 @@ class PrepareToPlayViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         
-        if Facade.shared.localPlayerIsAtHome(){
+        if Facade.shared.localDeviceIsServer!{
             Facade.shared.unregisterServerResponder(self)
         }else{
             Facade.shared.unregisterClientResponder(self)
         }
-        
     }
     
 }

@@ -13,7 +13,8 @@ extension GameScene {
     
     func gameIsOver() -> Bool{
         var isOver = false
-        if Facade.shared.getLocalPlayerScore() >= self.maxScore || Facade.shared.getOpponentPlayerScore() >= self.maxScore {
+        if Facade.shared.getLocalPlayerScore() >= self.maxScore ||
+            Facade.shared.getOpponentPlayerScore() >= self.maxScore {
             isOver = true
         }
         return isOver

@@ -53,13 +53,20 @@ class GameViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if Facade.shared.localPlayerIsAtHome(){
+        if Facade.shared.localDeviceIsServer!{
             Facade.shared.registerServerResponder(self)
         }else{
             Facade.shared.registerClientResponder(self)
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        if Facade.shared.localDeviceIsServer!{
+            Facade.shared.unregisterServerResponder(self)
+        }else{
+            Facade.shared.unregisterClientResponder(self)
+        }
+    }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
