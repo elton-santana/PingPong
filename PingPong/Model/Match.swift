@@ -41,4 +41,8 @@ class Match {
         return winnerName
     }
     
+    func restartMatch(){
+        self.localPlayer.score = 0
+        self.opponentPlayer.score = 0
+    }
 }

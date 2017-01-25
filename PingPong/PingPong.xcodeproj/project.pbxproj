@@ -29,6 +29,9 @@
 		954D3B441E1497AA0064374F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B421E1497AA0064374F /* Main.storyboard */; };
 		954D3B461E1497AA0064374F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B451E1497AA0064374F /* Assets.xcassets */; };
 		95A5A6221E39184F00E7BD08 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5A6211E39184F00E7BD08 /* TutorialViewController.swift */; };
+		95A5A6241E393E4700E7BD08 /* ReplayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5A6231E393E4700E7BD08 /* ReplayExtension.swift */; };
+		95A5A6261E393FD400E7BD08 /* RestartMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5A6251E393FD400E7BD08 /* RestartMessage.swift */; };
+		95A5A6281E39477500E7BD08 /* NotRestartMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5A6271E39477500E7BD08 /* NotRestartMessage.swift */; };
 		95F0FD6B1E36D06C00AB78A2 /* PTMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F0FD691E36D06C00AB78A2 /* PTMono-Bold.ttf */; };
 		95F0FD6C1E36D06C00AB78A2 /* PTMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F0FD6A1E36D06C00AB78A2 /* PTMono-Regular.ttf */; };
 		95F41B321E235E7C0087CACC /* ContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F41B311E235E7C0087CACC /* ContactExtension.swift */; };
@@ -79,6 +82,9 @@
 		954D3B451E1497AA0064374F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		954D3B471E1497AA0064374F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A5A6211E39184F00E7BD08 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = VIewControllers/TutorialViewController.swift; sourceTree = "<group>"; };
+		95A5A6231E393E4700E7BD08 /* ReplayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReplayExtension.swift; path = Game/ReplayExtension.swift; sourceTree = "<group>"; };
+		95A5A6251E393FD400E7BD08 /* RestartMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestartMessage.swift; path = Messages/RestartMessage.swift; sourceTree = "<group>"; };
+		95A5A6271E39477500E7BD08 /* NotRestartMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotRestartMessage.swift; path = Messages/NotRestartMessage.swift; sourceTree = "<group>"; };
 		95F0FD691E36D06C00AB78A2 /* PTMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PTMono-Bold.ttf"; path = "Fonts/PTMono-Bold.ttf"; sourceTree = "<group>"; };
 		95F0FD6A1E36D06C00AB78A2 /* PTMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PTMono-Regular.ttf"; path = "Fonts/PTMono-Regular.ttf"; sourceTree = "<group>"; };
 		95F41B311E235E7C0087CACC /* ContactExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactExtension.swift; path = Game/ContactExtension.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 				954D3B1E1E1497680064374F /* GameScene.swift */,
 				95F41B371E23C8650087CACC /* RacketMoveExtension.swift */,
 				95F41B351E23BA820087CACC /* FinishGameExtension.swift */,
+				95A5A6231E393E4700E7BD08 /* ReplayExtension.swift */,
 				95F41B311E235E7C0087CACC /* ContactExtension.swift */,
 				95FBBB901E325583003C3EC1 /* GameDelegate.swift */,
 			);
@@ -227,6 +234,8 @@
 				95F468641E2265C300D01E3B /* StatusMessage.swift */,
 				95F41B331E238FD00087CACC /* ScoreMessage.swift */,
 				95F468491E2069AE00D01E3B /* PingMessage.swift */,
+				95A5A6251E393FD400E7BD08 /* RestartMessage.swift */,
+				95A5A6271E39477500E7BD08 /* NotRestartMessage.swift */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -464,8 +473,11 @@
 				95F41B361E23BA820087CACC /* FinishGameExtension.swift in Sources */,
 				95A5A6221E39184F00E7BD08 /* TutorialViewController.swift in Sources */,
 				95F4684F1E206E9E00D01E3B /* Facade.swift in Sources */,
+				95A5A6281E39477500E7BD08 /* NotRestartMessage.swift in Sources */,
+				95A5A6241E393E4700E7BD08 /* ReplayExtension.swift in Sources */,
 				95FBBB911E325583003C3EC1 /* GameDelegate.swift in Sources */,
 				95F4684A1E2069AE00D01E3B /* PingMessage.swift in Sources */,
+				95A5A6261E393FD400E7BD08 /* RestartMessage.swift in Sources */,
 				95F468591E21961E00D01E3B /* Player.swift in Sources */,
 				954D3B211E1497680064374F /* GameViewController.swift in Sources */,
 				95F41B321E235E7C0087CACC /* ContactExtension.swift in Sources */,
