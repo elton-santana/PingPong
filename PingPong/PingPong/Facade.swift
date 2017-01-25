@@ -96,7 +96,7 @@ class Facade {
             self.client.disconnect()
         }
         self.connection = nil
-        self.currentMatch = nil
+//        self.currentMatch = nil
     }
     
     
