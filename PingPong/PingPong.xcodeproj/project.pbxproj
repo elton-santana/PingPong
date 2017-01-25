@@ -28,6 +28,7 @@
 		954D3B411E1497AA0064374F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D3B401E1497AA0064374F /* GameViewController.swift */; };
 		954D3B441E1497AA0064374F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B421E1497AA0064374F /* Main.storyboard */; };
 		954D3B461E1497AA0064374F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954D3B451E1497AA0064374F /* Assets.xcassets */; };
+		95A5A6221E39184F00E7BD08 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5A6211E39184F00E7BD08 /* TutorialViewController.swift */; };
 		95F0FD6B1E36D06C00AB78A2 /* PTMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F0FD691E36D06C00AB78A2 /* PTMono-Bold.ttf */; };
 		95F0FD6C1E36D06C00AB78A2 /* PTMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F0FD6A1E36D06C00AB78A2 /* PTMono-Regular.ttf */; };
 		95F41B321E235E7C0087CACC /* ContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F41B311E235E7C0087CACC /* ContactExtension.swift */; };
@@ -77,6 +78,7 @@
 		954D3B431E1497AA0064374F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		954D3B451E1497AA0064374F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		954D3B471E1497AA0064374F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95A5A6211E39184F00E7BD08 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = VIewControllers/TutorialViewController.swift; sourceTree = "<group>"; };
 		95F0FD691E36D06C00AB78A2 /* PTMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PTMono-Bold.ttf"; path = "Fonts/PTMono-Bold.ttf"; sourceTree = "<group>"; };
 		95F0FD6A1E36D06C00AB78A2 /* PTMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PTMono-Regular.ttf"; path = "Fonts/PTMono-Regular.ttf"; sourceTree = "<group>"; };
 		95F41B311E235E7C0087CACC /* ContactExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactExtension.swift; path = Game/ContactExtension.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				952A14E01E1EF0D90088BA44 /* HomeViewController.swift */,
+				95A5A6211E39184F00E7BD08 /* TutorialViewController.swift */,
 				952A14E21E1EF13B0088BA44 /* WaitingPlayerViewController.swift */,
 				952A14E81E1EF1B60088BA44 /* ChooseConnectionViewController.swift */,
 				952A14E61E1EF17B0088BA44 /* PrepareToPlayViewController.swift */,
@@ -459,6 +462,7 @@
 			files = (
 				954D3B1F1E1497680064374F /* GameScene.swift in Sources */,
 				95F41B361E23BA820087CACC /* FinishGameExtension.swift in Sources */,
+				95A5A6221E39184F00E7BD08 /* TutorialViewController.swift in Sources */,
 				95F4684F1E206E9E00D01E3B /* Facade.swift in Sources */,
 				95FBBB911E325583003C3EC1 /* GameDelegate.swift in Sources */,
 				95F4684A1E2069AE00D01E3B /* PingMessage.swift in Sources */,

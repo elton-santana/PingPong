@@ -53,6 +53,9 @@ class Facade {
     func publishServer(){
         self.server.publishService()
     }
+    func unplubishServer(){
+        self.server.unpublishService()
+    }
     
     func registerServerResponder(_ responder: ConnectionResponder){
         self.server.registerResponder(responder)

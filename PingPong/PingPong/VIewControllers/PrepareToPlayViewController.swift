@@ -13,10 +13,11 @@ class PrepareToPlayViewController: UIViewController {
     
     @IBOutlet weak var playWithLabel: UILabel!
 
+    @IBOutlet weak var waitingLabel: UILabel!
+    @IBOutlet weak var waitingIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
 
         
     }
@@ -46,6 +47,8 @@ class PrepareToPlayViewController: UIViewController {
         Facade.shared.sendMessage(StatusMessage(content: true))
         sender.isHidden = true
         self.checkPlayersStatus()
+        self.waitingLabel.isHidden = false
+        self.waitingIndicator.isHidden = false
     }
     
     func checkPlayersStatus(){
