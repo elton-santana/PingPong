@@ -97,46 +97,7 @@
                                                             <attributes>
                                                                 <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <font key="NSFont" size="20" name="PTMono-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                    <tabStops>
-                                                                        <textTab alignment="left" location="28">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="56">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="84">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="112">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="140">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="168">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="196">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="224">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="252">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="280">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="308">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="336">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                    </tabStops>
-                                                                </paragraphStyle>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -509,7 +470,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcB-dd-h8j">
-                                <rect key="frame" x="171" y="36.5" width="227" height="24"/>
+                                <rect key="frame" x="171" y="36" width="227" height="24"/>
                                 <attributedString key="attributedText">
                                     <fragment content="How to play">
                                         <attributes>
@@ -521,7 +482,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="385-Ro-hJp">
-                                <rect key="frame" x="290" y="69.5" width="244" height="69"/>
+                                <rect key="frame" x="290" y="70" width="244" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="385-Ro-hJp" secondAttribute="height" multiplier="244:69" id="wZO-tF-7HZ"/>
                                 </constraints>
@@ -572,8 +533,8 @@
                                     </attributedString>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tutorialImage" translatesAutoresizingMaskIntoConstraints="NO" id="NFg-Zs-5RF">
-                                <rect key="frame" x="337" y="175" width="144" height="73"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorialImage" translatesAutoresizingMaskIntoConstraints="NO" id="NFg-Zs-5RF">
+                                <rect key="frame" x="327" y="159" width="170" height="86.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NFg-Zs-5RF" secondAttribute="height" multiplier="144:73" id="3gX-1Y-9FM"/>
                                 </constraints>
@@ -599,7 +560,7 @@
                             <constraint firstItem="ZHU-yS-jjU" firstAttribute="width" secondItem="kDb-f9-Rit" secondAttribute="width" id="X3e-Gq-Lbf"/>
                             <constraint firstItem="5hC-I6-PdH" firstAttribute="centerX" secondItem="Nw9-yN-xc7" secondAttribute="centerX" id="XSu-7j-BGl"/>
                             <constraint firstItem="M9c-Zx-xys" firstAttribute="centerY" secondItem="Nw9-yN-xc7" secondAttribute="centerY" id="YAL-3U-rPJ"/>
-                            <constraint firstItem="NFg-Zs-5RF" firstAttribute="top" secondItem="385-Ro-hJp" secondAttribute="bottom" constant="36.5" id="d6r-Hb-iXh"/>
+                            <constraint firstItem="NFg-Zs-5RF" firstAttribute="top" secondItem="385-Ro-hJp" secondAttribute="bottom" constant="20" id="d6r-Hb-iXh"/>
                             <constraint firstItem="NFg-Zs-5RF" firstAttribute="centerX" secondItem="385-Ro-hJp" secondAttribute="centerX" id="edR-35-OeV"/>
                             <constraint firstItem="FcB-dd-h8j" firstAttribute="width" secondItem="Nw9-yN-xc7" secondAttribute="width" multiplier="0.4" id="gUh-GN-4rn"/>
                             <constraint firstItem="M9c-Zx-xys" firstAttribute="height" secondItem="Nw9-yN-xc7" secondAttribute="height" id="iGZ-1S-TKj"/>
@@ -714,46 +675,7 @@
                                         <fragment content="Waiting other player">
                                             <attributes>
                                                 <font key="NSFont" size="20" name="PTMono-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                    <tabStops>
-                                                        <textTab alignment="left" location="28">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="56">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="84">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="112">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="140">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="168">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="196">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="224">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="252">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="280">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="308">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="336">
-                                                            <options/>
-                                                        </textTab>
-                                                    </tabStops>
-                                                </paragraphStyle>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
