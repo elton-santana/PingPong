@@ -51,7 +51,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     var playAgainButton: SKSpriteNode?
     var mainMenuButton: SKSpriteNode?
     
-    let maxScore = 5
+    let maxScore = 2
     
     var motionManager : CMMotionManager = {
         let motion = CMMotionManager()
@@ -169,6 +169,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
         self.ball?.physicsBody?.velocity = velocity
         self.ball?.position = CGPoint.zero
         self.ball?.isHidden = false
+        self.playerRacket?.position.x = 0
     }
     
     func updateScoreLabels(){
@@ -179,10 +180,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     
     func touchDown(atPoint pos : CGPoint) {
         self.playerRacket?.position.x = pos.x
-        if (self.mainMenuButton?.contains(pos))! && self.gameIsOver(){
-            self.mainMenuButton?.alpha = 0.5
-            self.gameOverDelegate?.unwindToMenu()
+        if self.gameIsOver(){
+            if (self.mainMenuButton?.contains(pos))!{
+                self.mainMenuButton?.alpha = 0.5
+                self.gameOverDelegate?.unwindToMenu()
+            }
+            if (self.playAgainButton?.contains(pos))! && Facade.shared.localDeviceIsServer!{
+                self.gameOverDelegate?.showWaitingInterface()
+                Facade.shared.sendMessage(RestartMessage())
+            }
         }
+        
+        
+        
     }
     
     func touchMoved(toPoint pos : CGPoint) {

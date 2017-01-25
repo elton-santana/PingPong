@@ -28,8 +28,13 @@ extension GameScene {
         let fadeIn = SKAction.fadeIn(withDuration: 1)
         
         self.finishLabel?.run(fadeIn)
-//        self.playAgainButton?.run(fadeIn)
         self.mainMenuButton?.run(fadeIn)
+        
+        if Facade.shared.localDeviceIsServer!{
+            self.playAgainButton?.run(fadeIn)
+        }else{
+            self.mainMenuButton?.position.x = 0
+        }
         
     }
     

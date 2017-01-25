@@ -15,6 +15,8 @@ class GameViewController: UIViewController {
     
     var gameDelegate: GameDelegate?
 
+    @IBOutlet weak var waitingBlurFx: UIVisualEffectView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -84,6 +86,36 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    func confirmRestart(){
+        
+        let popUp = UIAlertController(title: "\(Facade.shared.getOpponentPlayerName()) wants to restart the game! Restart?", message: "", preferredStyle: .alert)
+        
+        let notRestartMatchAction = UIAlertAction(title: "No", style: .destructive) { (notRestartMatchAction) in
+           Facade.shared.sendMessage(NotRestartMessage())
+        }
+        popUp.addAction(notRestartMatchAction)
+        
+        let restartMatchAction = UIAlertAction(title: "Yes", style: .default) { (restartMatchAction) in
+            Facade.shared.sendMessage(RestartMessage())
+            self.gameDelegate?.restartMatch()
+        }
+        popUp.addAction(restartMatchAction)
+        
+        self.present(popUp, animated: true, completion: nil)
+        
+    }
+    
+    func showRecusePopUp(){
+        let popUp = UIAlertController(title: "\(Facade.shared.getOpponentPlayerName()) don't want to restart!", message: "", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        popUp.addAction(okAction)
+        
+        
+        self.present(popUp, animated: true, completion: nil)
+    }
+    
 }
 
 extension GameViewController: GameOverDelegate{
@@ -92,12 +124,15 @@ extension GameViewController: GameOverDelegate{
         self.performSegue(withIdentifier: "UnwindToMenuSegue", sender: self)
         Facade.shared.closeConnection()
     }
+    func showWaitingInterface() {
+        self.waitingBlurFx.isHidden = false
+    }
 }
 
 
 extension GameViewController: ConnectionResponder {
     var allowedMessages: [JSONConvertibleMessage.Type] {
-        return [BallMessage.self, ScoreMessage.self]
+        return [BallMessage.self, ScoreMessage.self, RestartMessage.self, NotRestartMessage.self]
     }
     
     func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
@@ -109,6 +144,19 @@ extension GameViewController: ConnectionResponder {
                                                 dy: ballMessage.velocityDy))
         case _ as ScoreMessage:
             self.gameDelegate?.updateLocalScore()
+        
+        case _ as RestartMessage:
+            if Facade.shared.localDeviceIsServer!{
+                self.gameDelegate?.restartMatch()
+                self.waitingBlurFx.isHidden = true
+            }else{
+                self.confirmRestart()
+            }
+            
+        case _ as NotRestartMessage:
+            self.waitingBlurFx.isHidden = true
+            self.showRecusePopUp()
+            
             
         default:
             break

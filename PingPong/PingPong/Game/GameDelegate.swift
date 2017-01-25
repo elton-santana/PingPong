@@ -13,10 +13,12 @@ protocol GameDelegate {
     
     func fireBall(withInitialX coord: CGFloat, andVelocity velocity: CGVector)
     func updateLocalScore()
+    func restartMatch()
 }
 
 protocol GameOverDelegate{
-    
+
+    func showWaitingInterface()
     func unwindToMenu()
     
 }

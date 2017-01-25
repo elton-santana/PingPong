@@ -99,7 +99,6 @@ class Facade {
             self.client.disconnect()
         }
         self.connection = nil
-//        self.currentMatch = nil
     }
     
     
@@ -144,7 +143,8 @@ class Facade {
     func getPlayerWithBestScoreName() -> String{
         return (self.currentMatch?.getPlayerWithTheBestScoreName())!
     }
-    
-    
-    
+    func restartMatch(){
+        self.currentMatch?.restartMatch()
+    }
+   
 }
