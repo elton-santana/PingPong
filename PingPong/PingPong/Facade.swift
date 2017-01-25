@@ -16,6 +16,7 @@ class Facade {
     let serviceIdentifier = "_pingPong"
     let localSender = UIDevice.current.name
     var server: ServerMessenger
+    var localDeviceIsServer: Bool?
     var connection: ConnectionID?
     var client: ClientMessenger
     
@@ -104,6 +105,7 @@ class Facade {
     var currentMatch: Match?
     
     func initializeMatch(with opponent: String, atHome: Bool){
+        self.localDeviceIsServer = atHome
         self.currentMatch = Match(withOpponentName: opponent, atHome: atHome)
     }
     func getLocalPlayerName() -> String{
