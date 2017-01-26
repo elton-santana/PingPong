@@ -51,7 +51,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     var playAgainButton: SKSpriteNode?
     var mainMenuButton: SKSpriteNode?
     
-    let maxScore = 2
+    let maxScore = 5
     
     var motionManager : CMMotionManager = {
         let motion = CMMotionManager()
