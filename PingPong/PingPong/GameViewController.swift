@@ -9,9 +9,14 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import Tibei
 
 class GameViewController: UIViewController {
+    
+    var gameDelegate: GameDelegate?
 
+    @IBOutlet weak var waitingBlurFx: UIVisualEffectView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,9 +30,12 @@ class GameViewController: UIViewController {
                 // Copy gameplay related content over to the scene
                 sceneNode.entities = scene.entities
                 sceneNode.graphs = scene.graphs
+                self.gameDelegate = sceneNode
+                sceneNode.gameOverDelegate = self
                 
                 // Set the scale mode to scale to fit the window
-                sceneNode.scaleMode = .aspectFill
+                sceneNode.scaleMode = .fill
+                
                 
                 // Present the scene
                 if let view = self.view as! SKView? {
@@ -35,8 +43,8 @@ class GameViewController: UIViewController {
                     
                     view.ignoresSiblingOrder = true
                     
-                    view.showsFPS = true
-                    view.showsNodeCount = true
+                    view.showsFPS = false
+                    view.showsNodeCount = false
                 }
             }
         }
@@ -44,6 +52,22 @@ class GameViewController: UIViewController {
 
     override var shouldAutorotate: Bool {
         return true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if Facade.shared.localDeviceIsServer!{
+            Facade.shared.registerServerResponder(self)
+        }else{
+            Facade.shared.registerClientResponder(self)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if Facade.shared.localDeviceIsServer!{
+            Facade.shared.unregisterServerResponder(self)
+        }else{
+            Facade.shared.unregisterClientResponder(self)
+        }
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -62,4 +86,96 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    func confirmRestart(){
+        
+        let popUp = UIAlertController(title: "\(Facade.shared.getOpponentPlayerName()) wants to restart the game! Restart?", message: "", preferredStyle: .alert)
+        
+        let notRestartMatchAction = UIAlertAction(title: "No", style: .destructive) { (notRestartMatchAction) in
+           Facade.shared.sendMessage(NotRestartMessage())
+        }
+        popUp.addAction(notRestartMatchAction)
+        
+        let restartMatchAction = UIAlertAction(title: "Yes", style: .default) { (restartMatchAction) in
+            Facade.shared.sendMessage(RestartMessage())
+            self.gameDelegate?.restartMatch()
+        }
+        popUp.addAction(restartMatchAction)
+        
+        self.present(popUp, animated: true, completion: nil)
+        
+    }
+    
+    func showRecusePopUp(){
+        let popUp = UIAlertController(title: "\(Facade.shared.getOpponentPlayerName()) don't want to restart!", message: "", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        popUp.addAction(okAction)
+        
+        
+        self.present(popUp, animated: true, completion: nil)
+    }
+    
+}
+
+extension GameViewController: GameOverDelegate{
+    
+    func unwindToMenu() {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "UnwindToMenuSegue", sender: self)
+        }
+        Facade.shared.closeConnection()
+    }
+    func showWaitingInterface() {
+        self.waitingBlurFx.isHidden = false
+    }
+}
+
+//MARK: Connection extension
+
+
+extension GameViewController: ConnectionResponder {
+    var allowedMessages: [JSONConvertibleMessage.Type] {
+        return [BallMessage.self, ScoreMessage.self, RestartMessage.self, NotRestartMessage.self]
+    }
+    
+    func processMessage(_ message: JSONConvertibleMessage, fromConnectionWithID connectionID: ConnectionID) {
+        
+        switch message {
+        case let ballMessage as BallMessage:
+            self.gameDelegate?.fireBall(withInitialX: ballMessage.coord,
+                          andVelocity: CGVector(dx: ballMessage.velocityDx,
+                                                dy: ballMessage.velocityDy))
+        case _ as ScoreMessage:
+            self.gameDelegate?.updateLocalScore()
+        
+        case _ as RestartMessage:
+            if Facade.shared.localDeviceIsServer!{
+                self.gameDelegate?.restartMatch()
+                self.waitingBlurFx.isHidden = true
+            }else{
+                self.confirmRestart()
+            }
+            
+        case _ as NotRestartMessage:
+            self.waitingBlurFx.isHidden = true
+            self.showRecusePopUp()
+            
+            
+        default:
+            break
+        }
+    }
+    
+    func acceptedConnection(withID connectionID: ConnectionID) {
+    }
+    
+    func lostConnection(withID connectionID: ConnectionID) {
+    }
+    
+    func processError(_ error: Error, fromConnectionWithID connectionID: ConnectionID?) {
+        print("Error raised from connection #\(connectionID?.hashValue):")
+        print(error)
+    }
+    
 }
