@@ -98,6 +98,8 @@ class Facade {
         }else{
             self.client.disconnect()
         }
+        self.client = ClientMessenger()
+        self.server = ServerMessenger(serviceIdentifier: self.serviceIdentifier)
         self.connection = nil
     }
     

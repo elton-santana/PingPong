@@ -51,7 +51,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     var playAgainButton: SKSpriteNode?
     var mainMenuButton: SKSpriteNode?
     
-    let maxScore = 2
+    let maxScore = 5
     
     var motionManager : CMMotionManager = {
         let motion = CMMotionManager()
@@ -179,7 +179,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     
     
     func touchDown(atPoint pos : CGPoint) {
-        self.playerRacket?.position.x = pos.x
+        //self.playerRacket?.position.x = pos.x
         if self.gameIsOver(){
             if (self.mainMenuButton?.contains(pos))!{
                 self.mainMenuButton?.alpha = 0.5

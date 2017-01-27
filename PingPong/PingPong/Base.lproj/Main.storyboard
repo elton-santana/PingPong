@@ -86,11 +86,11 @@
                                         <rect key="frame" x="0.0" y="28" width="352" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="-1" contentMode="center" tableViewCell="GmP-JH-XtB" id="eDr-sw-3GE">
-                                            <rect key="frame" x="0.0" y="0.0" width="352" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="352" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M1w-lv-dQe">
-                                                    <rect key="frame" x="15" y="0.0" width="322" height="44"/>
+                                                    <rect key="frame" x="15" y="0.0" width="322" height="44.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Browsing Avaiables matches">
@@ -489,7 +489,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="The purpose is to  throw back the ball bouncing with your racket. Who gets five point first wins the game.">
                                         <attributes>
-                                            <font key="NSFont" size="20" name="PTMono-Regular"/>
+                                            <font key="NSFont" size="19" name="PTMono-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -512,8 +512,7 @@
                                     <constraint firstAttribute="width" secondItem="ZHU-yS-jjU" secondAttribute="height" multiplier="122:53" id="EAl-zO-77G"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Click play to open a new match. Ask your friend to click play to  join your match. When both press press start the game begins. </string>
+                                    <fragment content="Click play to open a new match. Ask your friend to click play to  join your match. When both press start the game begins. ">
                                         <attributes>
                                             <font key="NSFont" size="19" name="PTMono-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -523,8 +522,7 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact-widthClass=compact">
                                     <attributedString key="attributedText">
-                                        <fragment>
-                                            <string key="content">Click play to open a new match. Ask your friend to click play to  join your match. When both press press start the game begins. </string>
+                                        <fragment content="Click play to open a new match. Ask your friend to click play to  join your match. When both press  start the game begins. ">
                                             <attributes>
                                                 <font key="NSFont" size="15" name="PTMono-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
