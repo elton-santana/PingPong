@@ -57,14 +57,14 @@ extension GameScene {
                         ball.physicsBody?.velocity.dx = -200
                     }
                 }
-                if abs(Double(ballVelocity!.dy)) < Double(200){
-                    if ballVelocity!.dy > CGFloat(0){
-                        ball.physicsBody?.velocity.dy = 200
-                    }else{
-                        ball.physicsBody?.velocity.dy = -200
-                    }
+            }
+            
+            if abs(Double(ballVelocity!.dy)) < Double(200){
+                if ballVelocity!.dy > CGFloat(0){
+                    ball.physicsBody?.velocity.dy = 200
                 }
             }
+            
             print(ball.physicsBody!.velocity)
         }
         if firstBody.categoryBitMask == PhysicsCategory.ball &&

@@ -165,6 +165,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
         self.ball?.position = CGPoint.zero
         self.ball?.isHidden = false
         self.playerRacket?.position.x = 0
+        self.playerRacket?.physicsBody?.velocity.dx = 0
     }
     
     func updateScoreLabels(){
