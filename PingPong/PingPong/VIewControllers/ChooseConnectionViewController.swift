@@ -13,12 +13,24 @@ import Tibei
 class ChooseConnectionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
  {
     
+    @IBOutlet weak var chooseWhoPlayLabel: UILabel!
     @IBOutlet weak var servicesTableView: UITableView!
     @IBOutlet weak var browsingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var browsingLabel: UILabel!
     
-    var availableServices: [String] = ["Browsing Available Matches"]
-    
-    
+    var availableServices: [String] = [] {
+        didSet{
+            if self.availableServices.isEmpty{
+                self.chooseWhoPlayLabel.isHidden = true
+                self.browsingIndicator.isHidden = false
+                self.browsingLabel.isHidden = false
+            }else{
+                self.chooseWhoPlayLabel.isHidden = false
+                self.browsingIndicator.isHidden = true
+                self.browsingLabel.isHidden = true
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

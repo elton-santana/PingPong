@@ -32,6 +32,7 @@
 		95A5A6241E393E4700E7BD08 /* ReplayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5A6231E393E4700E7BD08 /* ReplayExtension.swift */; };
 		95A5A6261E393FD400E7BD08 /* RestartMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5A6251E393FD400E7BD08 /* RestartMessage.swift */; };
 		95A5A6281E39477500E7BD08 /* NotRestartMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5A6271E39477500E7BD08 /* NotRestartMessage.swift */; };
+		95ED64411E3AA67500DDF977 /* popUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95ED64401E3AA67500DDF977 /* popUpView.xib */; };
 		95F0FD6B1E36D06C00AB78A2 /* PTMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F0FD691E36D06C00AB78A2 /* PTMono-Bold.ttf */; };
 		95F0FD6C1E36D06C00AB78A2 /* PTMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F0FD6A1E36D06C00AB78A2 /* PTMono-Regular.ttf */; };
 		95F41B321E235E7C0087CACC /* ContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F41B311E235E7C0087CACC /* ContactExtension.swift */; };
@@ -49,6 +50,7 @@
 		95F468631E21CC7100D01E3B /* BallMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468611E21CC7100D01E3B /* BallMessage.swift */; };
 		95F468651E2265C300D01E3B /* StatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468641E2265C300D01E3B /* StatusMessage.swift */; };
 		95F468661E2265C300D01E3B /* StatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F468641E2265C300D01E3B /* StatusMessage.swift */; };
+		95F497D71E3B772E0075EBAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F497D61E3B772E0075EBAD /* Extensions.swift */; };
 		95FBBB911E325583003C3EC1 /* GameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBBB901E325583003C3EC1 /* GameDelegate.swift */; };
 		D11E788988D94A5B32E9E5DB /* Pods_PingPong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3444526D7812A99775693C /* Pods_PingPong.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +87,7 @@
 		95A5A6231E393E4700E7BD08 /* ReplayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReplayExtension.swift; path = Game/ReplayExtension.swift; sourceTree = "<group>"; };
 		95A5A6251E393FD400E7BD08 /* RestartMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestartMessage.swift; path = Messages/RestartMessage.swift; sourceTree = "<group>"; };
 		95A5A6271E39477500E7BD08 /* NotRestartMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotRestartMessage.swift; path = Messages/NotRestartMessage.swift; sourceTree = "<group>"; };
+		95ED64401E3AA67500DDF977 /* popUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = popUpView.xib; path = UIComponents/popUpView.xib; sourceTree = "<group>"; };
 		95F0FD691E36D06C00AB78A2 /* PTMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PTMono-Bold.ttf"; path = "Fonts/PTMono-Bold.ttf"; sourceTree = "<group>"; };
 		95F0FD6A1E36D06C00AB78A2 /* PTMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PTMono-Regular.ttf"; path = "Fonts/PTMono-Regular.ttf"; sourceTree = "<group>"; };
 		95F41B311E235E7C0087CACC /* ContactExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactExtension.swift; path = Game/ContactExtension.swift; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 		95F4685B1E21962E00D01E3B /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Model/Match.swift; sourceTree = "<group>"; };
 		95F468611E21CC7100D01E3B /* BallMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BallMessage.swift; path = Messages/BallMessage.swift; sourceTree = "<group>"; };
 		95F468641E2265C300D01E3B /* StatusMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusMessage.swift; path = Messages/StatusMessage.swift; sourceTree = "<group>"; };
+		95F497D61E3B772E0075EBAD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		95FBBB901E325583003C3EC1 /* GameDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameDelegate.swift; path = Game/GameDelegate.swift; sourceTree = "<group>"; };
 		994BCDF418EC9BC80502D64B /* Pods-PingPongtvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PingPongtvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PingPongtvOS/Pods-PingPongtvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DB3444526D7812A99775693C /* Pods_PingPong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PingPong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,12 +195,14 @@
 			children = (
 				9526E8BB1E1D5F6B00F0D9BA /* Game */,
 				9526E8C11E1D626600F0D9BA /* ViewControllers */,
+				95ED643F1E3AA63000DDF977 /* UIComponents */,
 				95F4684E1E206E9E00D01E3B /* Facade.swift */,
 				954D3B251E1497680064374F /* Assets.xcassets */,
 				954D3B221E1497680064374F /* Main.storyboard */,
 				954D3B271E1497680064374F /* LaunchScreen.storyboard */,
 				954D3B2A1E1497680064374F /* Info.plist */,
 				954D3B181E1497680064374F /* AppDelegate.swift */,
+				95F497D61E3B772E0075EBAD /* Extensions.swift */,
 			);
 			path = PingPong;
 			sourceTree = "<group>";
@@ -215,6 +221,14 @@
 				954D3B471E1497AA0064374F /* Info.plist */,
 			);
 			path = PingPongtvOS;
+			sourceTree = "<group>";
+		};
+		95ED643F1E3AA63000DDF977 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				95ED64401E3AA67500DDF977 /* popUpView.xib */,
+			);
+			name = UIComponents;
 			sourceTree = "<group>";
 		};
 		95F0FD6D1E36D09400AB78A2 /* Fonts */ = {
@@ -352,6 +366,7 @@
 				954D3B241E1497680064374F /* Main.storyboard in Resources */,
 				954D3B1B1E1497680064374F /* GameScene.sks in Resources */,
 				954D3B261E1497680064374F /* Assets.xcassets in Resources */,
+				95ED64411E3AA67500DDF977 /* popUpView.xib in Resources */,
 				954D3B291E1497680064374F /* LaunchScreen.storyboard in Resources */,
 				954D3B1D1E1497680064374F /* Actions.sks in Resources */,
 			);
@@ -488,6 +503,7 @@
 				95F468651E2265C300D01E3B /* StatusMessage.swift in Sources */,
 				95F41B341E238FD00087CACC /* ScoreMessage.swift in Sources */,
 				95F4685C1E21962E00D01E3B /* Match.swift in Sources */,
+				95F497D71E3B772E0075EBAD /* Extensions.swift in Sources */,
 				952A14E91E1EF1B60088BA44 /* ChooseConnectionViewController.swift in Sources */,
 				95F468471E20699B00D01E3B /* TextMessage.swift in Sources */,
 				95F41B381E23C8650087CACC /* RacketMoveExtension.swift in Sources */,

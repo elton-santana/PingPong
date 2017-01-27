@@ -55,7 +55,7 @@
                                     <constraint firstAttribute="width" secondItem="7Pq-dH-iXl" secondAttribute="height" multiplier="248:21" id="Zjd-a0-DcB"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="Choose who play with">
+                                    <fragment content="Choose Who play with">
                                         <attributes>
                                             <font key="NSFont" size="36" name="PTMono-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -65,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact-widthClass=compact">
                                     <attributedString key="attributedText">
-                                        <fragment content="Choose who play with">
+                                        <fragment content="Choose Who play with">
                                             <attributes>
                                                 <font key="NSFont" size="21" name="PTMono-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -74,8 +74,24 @@
                                     </attributedString>
                                 </variation>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SJu-Vg-srM">
-                                <rect key="frame" x="108.5" y="75.5" width="352" height="169"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGr-bK-k37">
+                                <rect key="frame" x="85" y="118.5" width="398" height="19.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Browsing avaiables matches">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="PTMono-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Dcz-T5-sjn">
+                                <rect key="frame" x="266" y="166" width="37" height="37"/>
+                                <color key="color" red="0.15993532539999999" green="0.67110615969999998" blue="0.88774442669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SJu-Vg-srM">
+                                <rect key="frame" x="108" y="76" width="352" height="169"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SJu-Vg-srM" secondAttribute="height" multiplier="27:13" id="t6W-qB-C0p"/>
@@ -86,14 +102,14 @@
                                         <rect key="frame" x="0.0" y="28" width="352" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="-1" contentMode="center" tableViewCell="GmP-JH-XtB" id="eDr-sw-3GE">
-                                            <rect key="frame" x="0.0" y="0.0" width="352" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="352" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M1w-lv-dQe">
-                                                    <rect key="frame" x="15" y="0.0" width="322" height="44.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="322" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <attributedString key="attributedText">
-                                                        <fragment content="Browsing Avaiables matches">
+                                                        <fragment content="text">
                                                             <attributes>
                                                                 <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <font key="NSFont" size="20" name="PTMono-Regular"/>
@@ -104,7 +120,7 @@
                                                     <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <variation key="heightClass=compact-widthClass=compact">
                                                         <attributedString key="attributedText">
-                                                            <fragment content="Browsing Avaiables matches">
+                                                            <fragment content="text">
                                                                 <attributes>
                                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <font key="NSFont" size="20" name="PTMono-Regular"/>
@@ -124,12 +140,11 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Px-PM-3rz">
                                 <rect key="frame" x="242" y="254.5" width="85" height="35.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8Px-PM-3rz" secondAttribute="height" multiplier="12:5" id="rfI-iF-css"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="29"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="Cancel" backgroundImage="backgroundButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=compact-widthClass=compact">
@@ -139,13 +154,10 @@
                                     <action selector="cancelButtonAction:" destination="KEj-ro-dz6" eventType="touchUpInside" id="wUu-e5-RyP"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Dcz-T5-sjn">
-                                <rect key="frame" x="266" y="165.5" width="37" height="37"/>
-                                <color key="color" red="0.15993532539999999" green="0.67110615969999998" blue="0.88774442669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oGr-bK-k37" firstAttribute="centerX" secondItem="fHC-P1-i17" secondAttribute="centerX" id="0NT-KU-O6Y"/>
                             <constraint firstItem="8Px-PM-3rz" firstAttribute="width" secondItem="fHC-P1-i17" secondAttribute="width" multiplier="0.15" id="0rP-y7-IHX"/>
                             <constraint firstItem="8Px-PM-3rz" firstAttribute="centerY" secondItem="fHC-P1-i17" secondAttribute="centerY" multiplier="1.7" id="3Ad-VH-fYP"/>
                             <constraint firstItem="vC5-v8-Nos" firstAttribute="centerX" secondItem="fHC-P1-i17" secondAttribute="centerX" id="4Ey-y2-ILu"/>
@@ -158,8 +170,10 @@
                             <constraint firstItem="8Px-PM-3rz" firstAttribute="centerX" secondItem="fHC-P1-i17" secondAttribute="centerX" id="M7U-Dg-s3f"/>
                             <constraint firstItem="pv4-5A-nLQ" firstAttribute="height" secondItem="fHC-P1-i17" secondAttribute="height" id="OJ6-j7-DPe"/>
                             <constraint firstItem="pv4-5A-nLQ" firstAttribute="centerY" secondItem="fHC-P1-i17" secondAttribute="centerY" id="QDn-GS-iff"/>
+                            <constraint firstItem="oGr-bK-k37" firstAttribute="width" secondItem="fHC-P1-i17" secondAttribute="width" multiplier="0.7" id="Qkx-Vu-ARB"/>
                             <constraint firstItem="rS6-WA-7Md" firstAttribute="height" secondItem="fHC-P1-i17" secondAttribute="height" id="Se6-Qv-Jiu"/>
                             <constraint firstItem="vC5-v8-Nos" firstAttribute="width" secondItem="fHC-P1-i17" secondAttribute="width" id="VC7-Tc-jY3"/>
+                            <constraint firstItem="oGr-bK-k37" firstAttribute="centerY" secondItem="fHC-P1-i17" secondAttribute="centerY" multiplier="0.8" id="ZYW-fb-a8K"/>
                             <constraint firstItem="Dcz-T5-sjn" firstAttribute="centerY" secondItem="fHC-P1-i17" secondAttribute="centerY" multiplier="1.15" id="aur-4p-0xM"/>
                             <constraint firstItem="7Pq-dH-iXl" firstAttribute="centerX" secondItem="fHC-P1-i17" secondAttribute="centerX" id="dZf-Ql-QWX"/>
                             <constraint firstItem="7Pq-dH-iXl" firstAttribute="centerY" secondItem="fHC-P1-i17" secondAttribute="centerY" multiplier="0.3" id="hTg-oq-ZV8"/>
@@ -171,6 +185,7 @@
                     </view>
                     <connections>
                         <outlet property="browsingIndicator" destination="Dcz-T5-sjn" id="5ZZ-p2-nDR"/>
+                        <outlet property="chooseWhoPlayLabel" destination="7Pq-dH-iXl" id="Qft-18-6ag"/>
                         <outlet property="servicesTableView" destination="SJu-Vg-srM" id="Wqc-a2-JhF"/>
                         <segue destination="Ggs-1J-7po" kind="show" identifier="ChooseConnectionToPrepareToPlaySegue" id="5Hv-rX-4Eh"/>
                         <segue destination="eEN-tt-yl7" kind="unwind" identifier="UnwindSegueHomeSegue" unwindAction="unwindToHomeSegue:" id="mFc-cq-hyy"/>
@@ -211,12 +226,12 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w8-iY-Pao">
-                                <rect key="frame" x="85.5" y="19.5" width="398" height="121"/>
+                                <rect key="frame" x="85" y="20" width="398" height="121"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3w8-iY-Pao" secondAttribute="height" multiplier="293:89" id="ABT-bF-0kw"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="Wait other player connect with your device">
+                                    <fragment content="Waiting for other player connect with your device">
                                         <attributes>
                                             <font key="NSFont" size="33" name="PTMono-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -226,7 +241,7 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact-widthClass=compact">
                                     <attributedString key="attributedText">
-                                        <fragment content="Wait other player connect with your device">
+                                        <fragment content="Waiting for other player connect with your device">
                                             <attributes>
                                                 <font key="NSFont" size="17" name="PTMono-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -240,13 +255,12 @@
                                 <color key="color" red="0.15993532539999999" green="0.67110615969999998" blue="0.88774442669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLl-ya-RGl">
-                                <rect key="frame" x="241.5" y="254.5" width="85" height="35.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="242" y="255" width="85" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TLl-ya-RGl" secondAttribute="height" multiplier="12:5" id="UDa-0E-39c"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="29"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="Cancel" backgroundImage="backgroundButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=compact-widthClass=compact">
@@ -256,6 +270,31 @@
                                     <action selector="cancelButtonAction:" destination="fpT-wJ-3pU" eventType="touchUpInside" id="c9J-K7-hSY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1S-JK-Ma6">
+                                <rect key="frame" x="246" y="0.0" width="322" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="text">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="20" name="PTMono-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <attributedString key="attributedText">
+                                        <fragment content="text">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="20" name="PTMono-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -305,7 +344,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="yBz-oG-2aQ">
-                                <rect key="frame" x="193" y="100.5" width="182" height="79"/>
+                                <rect key="frame" x="193" y="101" width="182" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yBz-oG-2aQ" secondAttribute="height" multiplier="23:10" id="2QK-NU-BhG"/>
                                 </constraints>
@@ -325,13 +364,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9e-6z-LCV">
-                                <rect key="frame" x="173" y="201.5" width="222" height="35.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="173" y="202" width="222" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="o9e-6z-LCV" secondAttribute="height" multiplier="44:7" id="yge-T7-RCa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PTMono-Bold" family="PT Mono" pointSize="23"/>
-                                <state key="normal" title="Play">
+                                <state key="normal" title="Play" backgroundImage="backgroundButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=compact-widthClass=compact">
@@ -342,13 +380,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPi-bp-Qyk">
-                                <rect key="frame" x="184.5" y="249" width="199" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="185" y="249" width="199" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nPi-bp-Qyk" secondAttribute="height" multiplier="20:3" id="dmj-PS-gzW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="23"/>
-                                <state key="normal" title="How To Play">
+                                <state key="normal" title="How To Play" backgroundImage="backgroundButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=compact-widthClass=compact">
@@ -429,12 +466,11 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N86-7Q-BMb">
                                 <rect key="frame" x="185" y="273" width="199" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="N86-7Q-BMb" secondAttribute="height" multiplier="20:3" id="nkt-7M-Bu2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="23"/>
-                                <state key="normal" title="Return">
+                                <state key="normal" title="Return" backgroundImage="backgroundButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=compact-widthClass=compact">
@@ -532,7 +568,7 @@
                                 </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorialImage" translatesAutoresizingMaskIntoConstraints="NO" id="NFg-Zs-5RF">
-                                <rect key="frame" x="327" y="159" width="170" height="86.5"/>
+                                <rect key="frame" x="327" y="159" width="170" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NFg-Zs-5RF" secondAttribute="height" multiplier="144:73" id="3gX-1Y-9FM"/>
                                 </constraints>
@@ -613,12 +649,11 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJW-gW-cp2">
                                 <rect key="frame" x="224" y="231" width="120" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PJW-gW-cp2" secondAttribute="height" multiplier="12:5" id="tzd-ZW-625"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PTMono-Bold" family="PT Mono" pointSize="33"/>
-                                <state key="normal" title="Start">
+                                <state key="normal" title="Start" backgroundImage="backgroundButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=compact-widthClass=compact">
@@ -629,7 +664,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQA-14-L9j">
-                                <rect key="frame" x="28.5" y="70" width="511" height="20"/>
+                                <rect key="frame" x="29" y="70" width="511" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Play with">
                                         <attributes>
@@ -651,7 +686,7 @@
                                 </variation>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="U7o-UC-0iT">
-                                <rect key="frame" x="265.5" y="188.5" width="37" height="37"/>
+                                <rect key="frame" x="266" y="188.5" width="37" height="37"/>
                                 <color key="color" red="0.15993532539999999" green="0.67110615969999998" blue="0.88774442669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTU-j0-E1l">
@@ -735,7 +770,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="F6A-Ym-4A1">
-                                            <rect key="frame" x="266" y="141.5" width="37" height="37"/>
+                                            <rect key="frame" x="266" y="142" width="37" height="37"/>
                                             <color key="color" red="0.15993532539999999" green="0.67110615969999998" blue="0.88774442669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </activityIndicatorView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-Wp-vFL">
@@ -793,6 +828,7 @@
     </scenes>
     <resources>
         <image name="background" width="1137" height="648"/>
+        <image name="backgroundButton" width="255" height="44"/>
         <image name="logo" width="300" height="124"/>
         <image name="tutorialImage" width="1136" height="640"/>
     </resources>
