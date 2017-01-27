@@ -35,6 +35,9 @@ class WaitingPlayerViewController: UIViewController {
     }
 }
 
+//MARK: Connection extension
+
+
 extension WaitingPlayerViewController: ConnectionResponder {
     var allowedMessages: [JSONConvertibleMessage.Type] {
         return [PingMessage.self]
@@ -46,7 +49,7 @@ extension WaitingPlayerViewController: ConnectionResponder {
         case let pingMessage as PingMessage:
             print(pingMessage.sender)
             Facade.shared.initializeMatch(with: pingMessage.sender, atHome: true)
-            Facade.shared.sendMessage(PingMessage(sender: UIDevice.current.name))
+            Facade.shared.sendMessage(PingMessage())
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "WaitingPlayerToPrepareToPlaySegue", sender: self)
             }

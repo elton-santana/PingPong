@@ -17,7 +17,7 @@ class Match {
     
     init(withOpponentName opponent: String, atHome: Bool){
         self.opponentPlayer.name = opponent
-        self.localPlayer.name = UIDevice.current.name
+        self.localPlayer.name = UIDevice.current.name.formatIphoneName()
         self.localPlayerIsPlayerAtHome = atHome
     }
     

@@ -75,7 +75,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGr-bK-k37">
-                                <rect key="frame" x="85" y="118.5" width="398" height="19.5"/>
+                                <rect key="frame" x="85" y="118.5" width="398" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Browsing avaiables matches">
                                         <attributes>
@@ -90,7 +90,7 @@
                                 <rect key="frame" x="266" y="166" width="37" height="37"/>
                                 <color key="color" red="0.15993532539999999" green="0.67110615969999998" blue="0.88774442669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
-                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SJu-Vg-srM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SJu-Vg-srM">
                                 <rect key="frame" x="108" y="76" width="352" height="169"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -109,7 +109,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="322" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <attributedString key="attributedText">
-                                                        <fragment content="text">
+                                                        <fragment content=" ">
                                                             <attributes>
                                                                 <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <font key="NSFont" size="20" name="PTMono-Regular"/>
@@ -120,7 +120,7 @@
                                                     <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <variation key="heightClass=compact-widthClass=compact">
                                                         <attributedString key="attributedText">
-                                                            <fragment content="text">
+                                                            <fragment content=" ">
                                                                 <attributes>
                                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <font key="NSFont" size="20" name="PTMono-Regular"/>
@@ -185,6 +185,7 @@
                     </view>
                     <connections>
                         <outlet property="browsingIndicator" destination="Dcz-T5-sjn" id="5ZZ-p2-nDR"/>
+                        <outlet property="browsingLabel" destination="oGr-bK-k37" id="2ea-1T-xnW"/>
                         <outlet property="chooseWhoPlayLabel" destination="7Pq-dH-iXl" id="Qft-18-6ag"/>
                         <outlet property="servicesTableView" destination="SJu-Vg-srM" id="Wqc-a2-JhF"/>
                         <segue destination="Ggs-1J-7po" kind="show" identifier="ChooseConnectionToPrepareToPlaySegue" id="5Hv-rX-4Eh"/>
@@ -194,7 +195,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="du3-8C-Uua" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eEN-tt-yl7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-900" y="-313.125"/>
+            <point key="canvasLocation" x="-911" y="-313"/>
         </scene>
         <!--Waiting Player View Controller-->
         <scene sceneID="NH0-tT-5Uy">
@@ -270,31 +271,6 @@
                                     <action selector="cancelButtonAction:" destination="fpT-wJ-3pU" eventType="touchUpInside" id="c9J-K7-hSY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1S-JK-Ma6">
-                                <rect key="frame" x="246" y="0.0" width="322" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="text">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="20" name="PTMono-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <attributedString key="attributedText">
-                                        <fragment content="text">
-                                            <attributes>
-                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="20" name="PTMono-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -326,7 +302,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M09-TO-r2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="GNQ-rR-c8y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-900" y="440.625"/>
+            <point key="canvasLocation" x="-910" y="441"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="ExK-hi-S2B">
@@ -749,7 +725,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEI-wb-syt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-181.69014084507043" y="45"/>
+            <point key="canvasLocation" x="-189" y="45"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">

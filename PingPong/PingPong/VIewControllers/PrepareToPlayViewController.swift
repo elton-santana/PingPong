@@ -70,6 +70,9 @@ class PrepareToPlayViewController: UIViewController {
     
 }
 
+//MARK: Connection extension
+
+
 extension PrepareToPlayViewController: ConnectionResponder {
     var allowedMessages: [JSONConvertibleMessage.Type] {
         return [StatusMessage.self]

@@ -11,8 +11,8 @@ import Tibei
 class PingMessage: JSONConvertibleMessage {
     var sender: String
     
-    init(sender: String) {
-        self.sender = sender
+    init() {
+        self.sender = UIDevice.current.name.formatIphoneName()
     }
     
     required init(jsonObject: [String : Any]) {

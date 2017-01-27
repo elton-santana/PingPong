@@ -148,5 +148,4 @@ class Facade {
     func restartMatch(){
         self.currentMatch?.restartMatch()
     }
-   
 }
