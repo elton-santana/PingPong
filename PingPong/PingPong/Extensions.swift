@@ -13,9 +13,12 @@ extension String {
         
         if deviceName.hasSuffix("'s iPhone") {
             return deviceName.replacingOccurrences(of: "'s iPhone", with: "")
-            
         } else if deviceName.hasPrefix("iPhone de ") {
             return deviceName.replacingOccurrences(of: "iPhone de ", with: "")
+        } else if deviceName.hasPrefix("iPod de ") {
+            return deviceName.replacingOccurrences(of: "iPod de ", with: "")
+        } else if deviceName.hasPrefix("'s iPad") {
+            return deviceName.replacingOccurrences(of: "'s iPad", with: "")
         }
         return deviceName
     }
