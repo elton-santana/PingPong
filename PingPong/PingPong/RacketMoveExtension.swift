@@ -12,48 +12,25 @@ import CoreMotion
 
 extension GameScene{
     
-    func moveRacketWithAccelerometer() {
+    func moveRacket() {
         
-        let yGForce = self.motionManager.accelerometerData!.acceleration.y
+        let yGForce = self.motionManager.deviceMotion!.attitude.pitch
+      
 
         let dxVelocity = self.playerRacket?.physicsBody?.velocity.dx
         
-        self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! - 100*CGFloat(yGForce)
+        self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! + 100*CGFloat(yGForce)
         
         //"lock" the racket on the game area
         
-        if (playerRacket?.position.x)! > self.frame.maxX - ((playerRacket?.size.width)!*(0.7)){
-            playerRacket?.position.x = self.frame.maxX - ((playerRacket?.size.width)!*(0.7))
+        if (playerRacket?.position.x)! > self.frame.maxX - ((playerRacket?.size.width)!*(0.6)){
+            playerRacket?.position.x = self.frame.maxX - ((playerRacket?.size.width)!*(0.6))
             self.playerRacket?.physicsBody?.velocity.dx = 0
         }
-        if (playerRacket?.position.x)! < self.frame.minX + ((playerRacket?.size.width)!*(0.7)){
-            playerRacket?.position.x = self.frame.minX + ((playerRacket?.size.width)!*(0.7))
-            self.playerRacket?.physicsBody?.velocity.dx = 0
-        }
-    }
-    
-    func moveRacketWithGyroscope() {
-        
-        let gyroForce = self.motionManager.gyroData!.rotationRate.y
-        
-        let dxVelocity = self.playerRacket?.physicsBody?.velocity.dx
-        
-        if gyroForce > 1 || gyroForce < -1{
-            self.playerRacket?.physicsBody?.velocity.dx = dxVelocity! + 90*CGFloat(gyroForce)
-        }
-        
-        //"lock" the racket on the game area
-        
-        if (playerRacket?.position.x)! > self.frame.maxX - ((playerRacket?.size.width)!*(0.7)){
-            playerRacket?.position.x = self.frame.maxX - ((playerRacket?.size.width)!*(0.7))
-            self.playerRacket?.physicsBody?.velocity.dx = 0
-        }
-        if (playerRacket?.position.x)! < self.frame.minX + ((playerRacket?.size.width)!*(0.7)){
-            playerRacket?.position.x = self.frame.minX + ((playerRacket?.size.width)!*(0.7))
+        if (playerRacket?.position.x)! < self.frame.minX + ((playerRacket?.size.width)!*(0.6)){
+            playerRacket?.position.x = self.frame.minX + ((playerRacket?.size.width)!*(0.6))
             self.playerRacket?.physicsBody?.velocity.dx = 0
         }
     }
-
-    
     
 }

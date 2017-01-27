@@ -8,8 +8,8 @@
 
 import SpriteKit
 import GameplayKit
-import Tibei
 import CoreMotion
+import Tibei
 
 struct PhysicsCategory {
     static let ball: UInt32 = 1
@@ -55,8 +55,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     
     var motionManager : CMMotionManager = {
         let motion = CMMotionManager()
-        motion.accelerometerUpdateInterval = 0.01
-        motion.gyroUpdateInterval = 0.01
+        motion.deviceMotionUpdateInterval = 0.01
         return motion
         
     }()
@@ -69,18 +68,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     
         self.physicsWorld.contactDelegate = self
         
-        self.motionManager.startGyroUpdates(to: OperationQueue.current!) { (gyroData: CMGyroData?, NSError) in
-            self.moveRacketWithGyroscope()
+        
+        self.motionManager.startDeviceMotionUpdates(to: OperationQueue.current!) { (deviceMotionData: CMDeviceMotion?, NSError) in
+            self.moveRacket()
             if(NSError != nil) {
                 print("\(NSError)")
             }
         }
-        self.motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (accelometerData: CMAccelerometerData?, NSError) in
-            self.moveRacketWithAccelerometer()
-            if(NSError != nil) {
-                print("\(NSError)")
-            }
-        }
+       
         
         self.initializeNodesVariables()
         
@@ -170,6 +165,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
         self.ball?.position = CGPoint.zero
         self.ball?.isHidden = false
         self.playerRacket?.position.x = 0
+        self.playerRacket?.physicsBody?.velocity.dx = 0
     }
     
     func updateScoreLabels(){
