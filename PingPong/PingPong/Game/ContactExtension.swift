@@ -30,6 +30,7 @@ extension GameScene {
             let ballVelocity = ball.physicsBody?.velocity
             ball.physicsBody?.velocity.dx = -(ballVelocity?.dx)!
         }
+        
         if firstBody.categoryBitMask == PhysicsCategory.ball &&
            secondBody.categoryBitMask == PhysicsCategory.racket {
             
@@ -39,7 +40,7 @@ extension GameScene {
             var ballVelocity = ball.physicsBody?.velocity
             let racketVelocityDx = racket.physicsBody?.velocity.dx
             
-            ball.physicsBody?.velocity.dy = -ballVelocity!.dy + (0.7)*(racketVelocityDx)!
+            ball.physicsBody?.velocity.dy = -ballVelocity!.dy + CGFloat((0.4)*abs(racketVelocityDx!))
             ball.physicsBody?.velocity.dx = ballVelocity!.dx + (0.4)*(racketVelocityDx)!
             
             ballVelocity = ball.physicsBody?.velocity
@@ -65,8 +66,11 @@ extension GameScene {
                 }
             }
             
+           
+            
             print(ball.physicsBody!.velocity)
         }
+        
         if firstBody.categoryBitMask == PhysicsCategory.ball &&
             secondBody.categoryBitMask == PhysicsCategory.transferSensor {
             
@@ -76,6 +80,7 @@ extension GameScene {
             ball.isHidden = true
             Facade.shared.sendMessage(BallMessage(coord: normalizedCoord, velocity: ballVelocity!))
         }
+        
         if firstBody.categoryBitMask == PhysicsCategory.ball &&
             secondBody.categoryBitMask == PhysicsCategory.goalSensor {
             
@@ -88,6 +93,7 @@ extension GameScene {
                 self.finishGame()
             }
         }
+        
         
     }
 

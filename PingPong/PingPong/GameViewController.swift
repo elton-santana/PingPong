@@ -121,7 +121,9 @@ class GameViewController: UIViewController {
 extension GameViewController: GameOverDelegate{
     
     func unwindToMenu() {
-        self.performSegue(withIdentifier: "UnwindToMenuSegue", sender: self)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "UnwindToMenuSegue", sender: self)
+        }
         Facade.shared.closeConnection()
     }
     func showWaitingInterface() {

@@ -14,7 +14,6 @@ class Facade {
 
     
     let serviceIdentifier = "_pingPong"
-    let localSender = UIDevice.current.name
     var server: ServerMessenger
     var localDeviceIsServer: Bool?
     var connection: ConnectionID?
@@ -25,6 +24,7 @@ class Facade {
         self.client = ClientMessenger()
         self.server = ServerMessenger(serviceIdentifier: self.serviceIdentifier)
     }
+    
     
     
     func browseForServices(){
@@ -53,7 +53,7 @@ class Facade {
     func publishServer(){
         self.server.publishService()
     }
-    func unplubishServer(){
+    func unpublishServer(){
         self.server.unpublishService()
     }
     

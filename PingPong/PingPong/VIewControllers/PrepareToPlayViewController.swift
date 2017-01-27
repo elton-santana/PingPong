@@ -30,6 +30,7 @@ class PrepareToPlayViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if Facade.shared.localDeviceIsServer!{
             Facade.shared.registerServerResponder(self)
+            Facade.shared.unpublishServer()
         }else{
             Facade.shared.registerClientResponder(self)
         }

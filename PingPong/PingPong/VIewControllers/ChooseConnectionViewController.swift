@@ -104,7 +104,9 @@ class ChooseConnectionViewController: UIViewController, UITableViewDataSource, U
         Facade.shared.unregisterClientResponder(self)
     }
     @IBAction func cancelButtonAction(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "UnwindSegueHomeSegue", sender: self)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "UnwindSegueHomeSegue", sender: self)
+        }
     }
 }
 

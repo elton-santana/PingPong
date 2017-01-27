@@ -803,7 +803,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="1137" height="648"/>
+        <image name="background" width="1136" height="640"/>
         <image name="backgroundButton" width="255" height="44"/>
         <image name="logo" width="300" height="124"/>
         <image name="tutorialImage" width="1136" height="640"/>
