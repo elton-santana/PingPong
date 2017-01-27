@@ -129,6 +129,8 @@ extension GameViewController: GameOverDelegate{
     }
 }
 
+//MARK: Connection extension
+
 
 extension GameViewController: ConnectionResponder {
     var allowedMessages: [JSONConvertibleMessage.Type] {

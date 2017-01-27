@@ -13,12 +13,28 @@ import Tibei
 class ChooseConnectionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
  {
     
+    @IBOutlet weak var chooseWhoPlayLabel: UILabel!
     @IBOutlet weak var servicesTableView: UITableView!
     @IBOutlet weak var browsingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var browsingLabel: UILabel!
     
-    var availableServices: [String] = ["Browsing Available Matches"]
-    
-    
+    var availableServices: [String] = [] {
+        didSet{
+            if self.availableServices.isEmpty{
+                self.chooseWhoPlayLabel.isHidden = true
+                self.servicesTableView.isHidden = true
+                
+                self.browsingIndicator.isHidden = false
+                self.browsingLabel.isHidden = false
+            }else{
+                self.chooseWhoPlayLabel.isHidden = false
+                self.servicesTableView.isHidden = false
+                
+                self.browsingIndicator.isHidden = true
+                self.browsingLabel.isHidden = true
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +108,7 @@ class ChooseConnectionViewController: UIViewController, UITableViewDataSource, U
     }
 }
 
+//MARK: Connection extension
 
 extension ChooseConnectionViewController: ClientConnectionResponder {
     var allowedMessages: [JSONConvertibleMessage.Type] {
@@ -106,23 +123,15 @@ extension ChooseConnectionViewController: ClientConnectionResponder {
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "ChooseConnectionToPrepareToPlaySegue", sender: self)
             }
-            
-            print(pingMessage.sender)
-            
+                        
         default:
             break
         }
     }
 
     func availableServicesChanged(availableServiceIDs: [String]) {
-        
-        if availableServiceIDs.isEmpty{
-            self.availableServices = ["Browsing Available Matches"]
-            self.browsingIndicator.isHidden = false
-        }else{
-            self.availableServices = availableServiceIDs
-            self.browsingIndicator.isHidden = true
-        }
+ 
+        self.availableServices = availableServiceIDs
         
         DispatchQueue.main.async {
             self.servicesTableView.reloadData()
@@ -130,7 +139,7 @@ extension ChooseConnectionViewController: ClientConnectionResponder {
     }
     
     func acceptedConnection(withID connectionID: ConnectionID) {
-        Facade.shared.sendMessage(PingMessage(sender: UIDevice.current.name))
+        Facade.shared.sendMessage(PingMessage())
 
     }
 }
