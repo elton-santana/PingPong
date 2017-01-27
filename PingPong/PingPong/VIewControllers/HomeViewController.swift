@@ -46,11 +46,16 @@ class HomeViewController: UIViewController {
     }
     
     func goToWaitingPlayer(alert: UIAlertAction!){
-        self.performSegue(withIdentifier: "HomeToWaitingPlayerSegue", sender: self)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "HomeToWaitingPlayerSegue", sender: self)
+
+        }
     }
     
     func goToChooseConnection(alert: UIAlertAction!){
-        self.performSegue(withIdentifier: "HomeToChooseConnectionSegue", sender: self)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "HomeToChooseConnectionSegue", sender: self)
+        }
     }
 
 

@@ -30,8 +30,10 @@ class WaitingPlayerViewController: UIViewController {
         Facade.shared.unregisterServerResponder(self)
     }
     @IBAction func cancelButtonAction(_ sender: UIButton) {
-        Facade.shared.unplubishServer()
-        self.performSegue(withIdentifier: "UnwindSegueHomeSegue", sender: self)
+        Facade.shared.unpublishServer()
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "UnwindSegueHomeSegue", sender: self)
+        }
     }
 }
 

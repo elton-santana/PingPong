@@ -22,7 +22,10 @@ class TutorialViewController: UIViewController {
     }
     
     @IBAction func returnButtonAction(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "UnwindSegueHomeSegue", sender: self)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "UnwindSegueHomeSegue", sender: self)
+
+        }
     }
 
 }
