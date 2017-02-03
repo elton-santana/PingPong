@@ -140,8 +140,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GameDelegate {
     }
     
     func fireBall(withInitialX coord: CGFloat, andVelocity velocity: CGVector){
-        
-        self.ball?.position = CGPoint(x: self.size.width/2 * coord, y: self.frame.maxY + (self.playerRacket?.size.height)!/2)
+        print("fire ball at \(coord)")
+        self.ball?.position = CGPoint(x: -self.size.width/2 * coord, y: self.frame.maxY + (self.playerRacket?.size.height)!/2)
         self.ball?.physicsBody?.velocity = CGVector(dx: -velocity.dx, dy: -velocity.dy)
         self.ball?.isHidden = false
         
