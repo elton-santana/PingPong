@@ -33,12 +33,12 @@ class HomeViewController: UIViewController {
     
     func showConnectionPopUp(){
         
-        let popUp = UIAlertController(title: "Choose how start to play", message: "", preferredStyle: .alert)
+        let popUp = UIAlertController(title: "Choose how to start playing", message: "", preferredStyle: .alert)
         
-        let startMatchAction = UIAlertAction(title: "Open a new match", style: .default, handler: self.goToWaitingPlayer)
+        let startMatchAction = UIAlertAction(title: "New match", style: .default, handler: self.goToWaitingPlayer)
         popUp.addAction(startMatchAction)
         
-        let joinAnExistingMatchAction = UIAlertAction(title: "Join an existing match", style: .default, handler: self.goToChooseConnection)
+        let joinAnExistingMatchAction = UIAlertAction(title: "Join a match", style: .default, handler: self.goToChooseConnection)
         popUp.addAction(joinAnExistingMatchAction)
         
         self.present(popUp, animated: true, completion: nil)
